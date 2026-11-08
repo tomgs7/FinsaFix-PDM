@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uma linha da tabela curta da pré-visualização: data, equipamento e detalhe (com a duração). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/if_item_gap">
+
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="@dimen/relatorio_coluna_data"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Secondary"
+        android:textColor="@color/if_on_surface" />
+
+    <TextView
+        android:id="@+id/equipamento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/if_item_gap"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Secondary"
+        android:textColor="@color/if_on_surface" />
+
+    <TextView
+        android:id="@+id/detalhe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Secondary"
+        android:textColor="@color/if_on_surface" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ícone da aplicação: um "F" branco em negrito. Fica dentro dos 66 dp centrais (zona segura dos ícones adaptativos). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- O F desenhado em 32×32, ampliado 2,6× e centrado (31×42 no meio dos 108) -->
+    <group
+        android:scaleX="2.6"
+        android:scaleY="2.6"
+        android:translateX="12.4"
+        android:translateY="12.4">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M10,8h12v3.5h-8v3h6.5v3.5h-6.5v6h-4z" />
+    </group>
+</vector>

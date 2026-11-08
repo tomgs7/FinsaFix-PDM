@@ -1,0 +1,37 @@
+# Gradle e compilação
+.gradle/
+build/
+local.properties
+.kotlin/
+.externalNativeBuild/
+.cxx/
+
+# Pacotes gerados (o APK da entrega fica fora do Git)
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Android Studio: ignora o que é pessoal e guarda só o que ajuda a abrir o projeto
+.idea/*
+!.idea/.gitignore
+!.idea/AndroidProjectSystem.xml
+!.idea/compiler.xml
+!.idea/gradle.xml
+!.idea/misc.xml
+!.idea/runConfigurations.xml
+!.idea/vcs.xml
+*.iml
+captures/
+
+# Definições locais do Claude Code, logs e lixo do sistema
+.claude/
+*.log
+hs_err_pid*
+.DS_Store
+Thumbs.db
+
+.idea/
+
+# Guias de estudo pessoais (não vão para o repositório)
+docs/GUIA-*.pdf

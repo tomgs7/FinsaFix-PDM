@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Chefe: autorizações de trabalho, checklists com Não OK, passagens de turno e (oficina) rondas não conformes. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_ecra">
+
+        <LinearLayout
+            android:id="@+id/blocoAutorizacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/if_item_gap"
+                android:text="@string/validar_explicacao"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_on_surface_variant" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listaAutorizacoes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                    <TextView
+                        android:id="@+id/textoSemAutorizacoes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/if_card_padding"
+                        android:text="@string/validar_vazio"
+                        android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                        android:textColor="@color/if_on_surface_variant"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tituloRenovar"
+            style="@style/FinsaFix.TituloSeccao"
+            android:layout_marginTop="@dimen/if_section_gap"
+            android:text="@string/validar_renovar" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cartaoRenovar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaRenovar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:id="@+id/textoSemRenovar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/if_card_padding"
+                    android:text="@string/validar_sem_renovar"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tituloChecklists"
+            style="@style/FinsaFix.TituloSeccao"
+            android:layout_marginTop="@dimen/if_section_gap"
+            android:text="@string/validar_checklists" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cartaoChecklists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaChecklists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:id="@+id/textoSemChecklists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/if_card_padding"
+                    android:text="@string/validar_sem_checklists"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tituloRondas"
+            style="@style/FinsaFix.TituloSeccao"
+            android:layout_marginTop="@dimen/if_section_gap"
+            android:text="@string/validar_rondas" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cartaoRondas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaRondas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:id="@+id/textoSemRondas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/if_card_padding"
+                    android:text="@string/validar_sem_rondas"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:layout_marginTop="@dimen/if_section_gap"
+            android:text="@string/validar_passagens" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaPassagens"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:id="@+id/textoSemPassagens"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/if_card_padding"
+                    android:text="@string/validar_sem_passagens"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Menu do técnico (8 itens). Os ids são os dos destinos do nav_graph. No tablet cabem 7; o Histórico vai para "Mais". -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/avariasTecnicoFragment"
+        android:icon="@drawable/ic_layers"
+        android:title="@string/menu_avarias" />
+    <item
+        android:id="@+id/minhasFragment"
+        android:icon="@drawable/ic_wrench"
+        android:title="@string/titulo_minhas" />
+    <item
+        android:id="@+id/paragensFragment"
+        android:icon="@drawable/ic_pause"
+        android:title="@string/titulo_paragens" />
+    <item
+        android:id="@+id/preventivaFragment"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/titulo_preventiva" />
+    <item
+        android:id="@+id/rondasFragment"
+        android:icon="@drawable/ic_fact_check"
+        android:title="@string/titulo_rondas" />
+    <item
+        android:id="@+id/stockFragment"
+        android:icon="@drawable/ic_box"
+        android:title="@string/titulo_stock" />
+    <item
+        android:id="@+id/turnoFragment"
+        android:icon="@drawable/ic_swap"
+        android:title="@string/titulo_turno" />
+    <item
+        android:id="@+id/historicoFragment"
+        android:icon="@drawable/ic_history"
+        android:title="@string/titulo_historico" />
+</menu>

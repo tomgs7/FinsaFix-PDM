@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/if_card_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textoNome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+                android:textColor="@color/if_on_surface" />
+
+            <TextView
+                android:id="@+id/textoEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoLimite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface_variant" />
+
+        <pt.ubi.di.pdm.finsafix.ui.parametros.BarraLimites
+            android:id="@+id/barraLimites"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Campo de valor: tocar abre o teclado numérico. -->
+        <LinearLayout
+            android:id="@+id/campoValor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/if_numfield_height"
+            android:layout_marginTop="@dimen/if_item_gap"
+            android:background="@drawable/fundo_campo_valor"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:id="@+id/textoValor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Value"
+                android:textColor="@color/if_on_surface" />
+
+            <TextView
+                android:id="@+id/textoUnidade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_on_surface_variant" />
+
+            <ImageView
+                android:layout_width="@dimen/if_icon"
+                android:layout_height="@dimen/if_icon"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_edit"
+                app:tint="@color/if_on_surface_variant" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoAviso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/aviso_fora_limite"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_error_text"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoAvisarChefe"
+            style="@style/Widget.FinsaFix.Button.Tonal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/avisar_chefe"
+            android:visibility="gone"
+            app:icon="@drawable/ic_forum" />
+
+        <TextView
+            android:id="@+id/textoRegistado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface_variant" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tablet: menu à esquerda (NavigationRailView), barra de topo e conteúdo à direita. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"
+    android:baselineAligned="false">
+
+    <!-- O mesmo id e o mesmo tipo de ViewBinding (NavigationBarView) que no telemóvel. -->
+    <LinearLayout
+        android:layout_width="@dimen/if_rail_width"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        android:orientation="vertical">
+
+        <com.google.android.material.navigationrail.NavigationRailView
+            android:id="@+id/navegacao"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="?attr/colorSurface"
+            app:labelVisibilityMode="labeled"
+            app:menuGravity="top"
+            app:paddingBottomSystemWindowInsets="false"
+            app:paddingTopSystemWindowInsets="false"
+            tools:viewBindingType="com.google.android.material.navigation.NavigationBarView" />
+
+        <!-- "Mais" fica no fundo do menu lateral (a barra do Material só aceita 7 itens). -->
+        <FrameLayout
+            android:id="@+id/botaoMais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="@string/menu_mais"
+            android:focusable="true"
+            android:minHeight="@dimen/if_touch_min">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingVertical="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_menu"
+                    app:tint="?attr/colorOnSurfaceVariant" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/menu_mais"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Label"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/contadorMais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/fundo_etiqueta_tonal"
+                android:minWidth="18dp"
+                android:paddingHorizontal="5dp"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Badge"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/topo"
+            layout="@layout/barra_topo" />
+
+        <include
+
+            android:id="@+id/bannerAviso"
+
+            layout="@layout/banner_aviso" />
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/navHost"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hora grande e data. TextClock atualiza-se sozinho a cada minuto; o formato 24 h não depende da língua. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextClock
+        android:id="@+id/relogio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="HH:mm"
+        android:format24Hour="HH:mm"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Display"
+        android:textColor="@color/if_on_surface" />
+
+    <TextView
+        android:id="@+id/textoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+        android:textColor="@color/if_on_surface_variant" />
+</LinearLayout>

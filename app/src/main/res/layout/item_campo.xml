@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Um par "rótulo / valor" dos Detalhes (ex.: "Técnico" / "Por atribuir"). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/if_item_gap"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textoRotulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+        android:textColor="@color/if_on_surface_variant" />
+
+    <TextView
+        android:id="@+id/textoValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+        android:textColor="@color/if_on_surface" />
+</LinearLayout>

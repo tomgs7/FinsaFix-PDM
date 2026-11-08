@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Um técnico no Estado da oficina: nome, "Em turno" ou o turno, e o que está a fazer. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/if_card_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textoNome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+            android:textColor="@color/if_on_surface" />
+
+        <TextView
+            android:id="@+id/textoTurno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface_variant" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textoEstado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+        android:textColor="@color/if_on_surface_variant" />
+</LinearLayout>

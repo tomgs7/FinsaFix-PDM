@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tablet, duas colunas: à esquerda o cabeçalho e a cronologia; à direita as ações do técnico e os detalhes. Mesmas partes do telemóvel. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <!--
+            Espaço com padding (e não com margin no filho): o NestedScrollView passa as margens do filho
+            à RecyclerView como altura disponível, e a lista só mostrava um evento.
+        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margem_ecra">
+
+            <include
+                android:id="@+id/cabecalho"
+                layout="@layout/parte_detalhe_cabecalho" />
+
+            <include
+                android:id="@+id/cronologia"
+                layout="@layout/parte_detalhe_cronologia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margem_ecra">
+
+            <include
+                android:id="@+id/tecnico"
+                layout="@layout/parte_detalhe_tecnico" />
+
+            <include
+                android:id="@+id/equipa"
+                layout="@layout/parte_detalhe_equipa" />
+
+            <include
+                android:id="@+id/dados"
+                layout="@layout/parte_detalhe_dados" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

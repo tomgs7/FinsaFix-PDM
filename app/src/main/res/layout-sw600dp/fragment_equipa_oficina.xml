@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Equipa no tablet: o resumo por cima; por baixo as intervenções em curso (esquerda) e os técnicos (direita). -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_ecra">
+
+        <TextView
+            android:id="@+id/textoResumo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/if_section_gap"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+            android:textColor="@color/if_on_surface" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/intervencoes"
+                layout="@layout/parte_equipa_intervencoes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/if_section_gap"
+                android:layout_weight="1.4" />
+
+            <include
+                android:id="@+id/tecnicos"
+                layout="@layout/parte_equipa_tecnicos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

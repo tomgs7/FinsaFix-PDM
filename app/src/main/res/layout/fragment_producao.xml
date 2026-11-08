@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Plano do turno, totais e registos (o registo abre numa janela ou folha). Mesmo layout no telemóvel e no tablet (margem maior no tablet). -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margem_formulario"
+        android:paddingVertical="@dimen/margem_ecra">
+
+        <!-- Plano do turno: planeado, produzido, falta, ritmo necessário e as ordens -->
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:text="@string/plano_titulo" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/if_section_gap">
+
+            <TextView
+                android:id="@+id/textoPlano"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:padding="@dimen/if_card_padding"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_on_surface" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoAbrirRegisto"
+            style="@style/Widget.FinsaFix.Button.Main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/producao_registar"
+            app:icon="@drawable/ic_chart"
+            app:iconGravity="textStart" />
+
+        <!-- Turno atual: total e registos -->
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:layout_marginTop="@dimen/if_section_gap"
+            android:text="@string/producao_turno_atual" />
+
+        <TextView
+            android:id="@+id/textoTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.FinsaFix.HeadlineSmall"
+            android:textColor="@color/if_on_surface" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaRegistos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:id="@+id/textoSemRegistos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/if_card_padding"
+                    android:text="@string/producao_sem_registos"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

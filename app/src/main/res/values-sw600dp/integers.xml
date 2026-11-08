@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 3 colunas no tablet -->
+    <integer name="colunas_equipamentos">3</integer>
+    <integer name="colunas_parametros">2</integer>
+    <integer name="itens_no_menu">7</integer>
+</resources>

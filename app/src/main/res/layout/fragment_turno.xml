@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Turno (operador, técnico e chefe de oficina): o que passa para o próximo turno (só chefe de oficina), notas, confirmar a receção, turno em curso, horário e receções. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_ecra">
+
+        <LinearLayout
+            android:id="@+id/blocoPassa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/if_section_gap"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FinsaFix.TituloSeccao"
+                android:text="@string/passa_titulo" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listaPassa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                    <TextView
+                        android:id="@+id/textoPassaVazio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/if_card_padding"
+                        android:text="@string/passa_vazio"
+                        android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                        android:textColor="@color/if_on_surface_variant"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:text="@string/turno_notas_titulo" />
+
+        <TextView
+            android:id="@+id/textoNotas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface_variant" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaNotas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:id="@+id/textoSemNotas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/if_card_padding"
+                    android:text="@string/turno_sem_notas"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoLi"
+            style="@style/Widget.FinsaFix.Button.Main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/if_item_gap"
+            android:text="@string/turno_li_notas"
+            app:icon="@drawable/ic_check_circle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoNota"
+            style="@style/Widget.FinsaFix.Button.Tonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/turno_deixar_nota"
+            app:icon="@drawable/ic_note" />
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:layout_marginTop="@dimen/if_section_gap"
+            android:text="@string/turno_em_curso_titulo" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/if_card_padding">
+
+                <TextView
+                    android:id="@+id/textoTurnoAtual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+                    android:textColor="@color/if_on_surface" />
+
+                <TextView
+                    android:id="@+id/textoDecorrido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:layout_marginTop="@dimen/if_section_gap"
+            android:text="@string/turno_horario_titulo" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textoHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/if_card_padding"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_on_surface" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:layout_marginTop="@dimen/if_section_gap"
+            android:text="@string/turno_rececoes_titulo" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaRececoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:id="@+id/textoSemRececoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/if_card_padding"
+                    android:text="@string/turno_sem_rececoes"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

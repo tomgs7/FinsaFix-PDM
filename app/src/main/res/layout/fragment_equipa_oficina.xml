@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Equipa no telemóvel: o resumo, as intervenções em curso e, por baixo, os técnicos. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_ecra">
+
+        <TextView
+            android:id="@+id/textoResumo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/if_section_gap"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+            android:textColor="@color/if_on_surface" />
+
+        <include
+            android:id="@+id/intervencoes"
+            layout="@layout/parte_equipa_intervencoes" />
+
+        <include
+            android:id="@+id/tecnicos"
+            layout="@layout/parte_equipa_tecnicos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/if_section_gap" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

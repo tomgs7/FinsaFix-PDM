@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Menu do chefe de secção. Os ids são os dos destinos do nav_graph. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/seccaoFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/titulo_seccao" />
+    <item
+        android:id="@+id/pedidosFragment"
+        android:icon="@drawable/ic_forum"
+        android:title="@string/titulo_pedidos" />
+    <item
+        android:id="@+id/planoFragment"
+        android:icon="@drawable/ic_clipboard"
+        android:title="@string/titulo_plano" />
+    <item
+        android:id="@+id/resumoChefeFragment"
+        android:icon="@drawable/ic_chart"
+        android:title="@string/titulo_resumo" />
+    <item
+        android:id="@+id/validarFragment"
+        android:icon="@drawable/ic_fact_check"
+        android:title="@string/titulo_validar" />
+</menu>

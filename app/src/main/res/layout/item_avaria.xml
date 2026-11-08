@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/if_checklist_row_min"
+    android:orientation="horizontal"
+    android:padding="@dimen/if_card_padding">
+
+    <ImageView
+        android:id="@+id/iconeEspecialidade"
+        android:layout_width="@dimen/if_icon"
+        android:layout_height="@dimen/if_icon"
+        android:layout_gravity="top"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:importantForAccessibility="no" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--
+            Prioridade, estado e código. O ChipGroup é usado só como contentor que passa para a linha
+            seguinte quando não há espaço (no telemóvel o código ia partir-se a meio).
+        -->
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipSpacingHorizontal="12dp"
+            app:chipSpacingVertical="2dp">
+
+            <TextView
+                android:id="@+id/textoPrioridade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body" />
+
+            <TextView
+                android:id="@+id/textoEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body" />
+
+            <TextView
+                android:id="@+id/textoCodigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_on_surface_variant" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/textoTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+            android:textColor="@color/if_on_surface" />
+
+        <TextView
+            android:id="@+id/textoLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface_variant" />
+
+        <TextView
+            android:id="@+id/textoTempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface_variant" />
+
+        <!-- Só nas avarias com a máquina parada: o Chronometer conta o tempo (HH:MM:SS, formatado no AvariaAdapter) -->
+        <Chronometer
+            android:id="@+id/cronometroParada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_pause"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/if_warn_text"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_warn_text"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textoRetoma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_pause"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/if_warn_text"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_warn_text"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textoNota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_note"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/if_on_surface_variant"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/if_icon"
+        android:layout_height="@dimen/if_icon"
+        android:layout_marginStart="8dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_chev"
+        app:tint="@color/if_on_surface_variant" />
+</LinearLayout>

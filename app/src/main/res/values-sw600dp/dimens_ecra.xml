@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margem_ecra">24dp</dimen>
+    <dimen name="margem_formulario">160dp</dimen>
+    <dimen name="paragem_chip_max">130dp</dimen>
+    <dimen name="largura_janela">640dp</dimen>
+</resources>

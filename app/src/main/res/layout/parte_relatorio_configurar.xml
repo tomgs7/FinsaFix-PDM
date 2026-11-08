@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Relatórios: o cartão "Configurar relatório" (período, secção, o que incluir) e os botões de exportar. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/FinsaFix.TituloSeccao"
+        android:text="@string/relatorio_configurar" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/if_card_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/relatorio_periodo_titulo"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label"
+                android:textColor="@color/if_on_surface_variant" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/periodo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/if_item_gap"
+                app:checkedButton="@id/botao7dias"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botao7dias"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/if_btn_height"
+                    android:text="@string/periodo_7" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botao30dias"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/if_btn_height"
+                    android:text="@string/periodo_30" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/if_card_padding"
+                android:text="@string/relatorio_secao_titulo"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label"
+                android:textColor="@color/if_on_surface_variant" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botaoSecao"
+                style="@style/Widget.FinsaFix.Button.Tonal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/if_item_gap"
+                app:icon="@drawable/ic_factory" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/if_card_padding"
+                android:text="@string/relatorio_incluir_titulo"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label"
+                android:textColor="@color/if_on_surface_variant" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkAvarias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:minHeight="@dimen/if_touch_min"
+                android:text="@string/relatorio_incluir_avarias" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkParagens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:minHeight="@dimen/if_touch_min"
+                android:text="@string/relatorio_incluir_paragens" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkIndicadores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:minHeight="@dimen/if_touch_min"
+                android:text="@string/relatorio_incluir_indicadores" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkPreventivas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:minHeight="@dimen/if_touch_min"
+                android:text="@string/relatorio_incluir_preventivas" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botaoPdf"
+        style="@style/Widget.FinsaFix.Button.Main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/if_section_gap"
+        android:text="@string/relatorio_exportar_pdf"
+        app:icon="@drawable/ic_download" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botaoCsv"
+        style="@style/Widget.FinsaFix.Button.Tonal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/if_item_gap"
+        android:text="@string/relatorio_exportar_csv"
+        app:icon="@drawable/ic_download" />
+</LinearLayout>

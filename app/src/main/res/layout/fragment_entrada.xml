@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Uma coluna: telemóvel e tablet na vertical (em 800 dp de largura, duas colunas ficavam apertadas).
+    O tablet na horizontal usa layout-sw600dp-land/fragment_entrada.xml.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_ecra">
+
+        <include
+            android:id="@+id/cabecalho"
+            layout="@layout/parte_entrada_marca" />
+
+        <include
+            android:id="@+id/infoPosto"
+            layout="@layout/parte_entrada_posto" />
+
+        <include
+            android:id="@+id/hora"
+            layout="@layout/parte_entrada_hora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/if_section_gap" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/if_section_gap">
+
+            <include
+                android:id="@+id/quemEsta"
+                layout="@layout/parte_entrada_pessoas" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

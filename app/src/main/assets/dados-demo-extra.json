@@ -1,0 +1,1432 @@
+{
+ "instrucoes": [
+  {
+   "id": "1arr-PARQ-EST",
+   "secao": "PARQ-EST",
+   "titulo": "Arranque da linha",
+   "min": 10,
+   "passos": [
+    "Confirme que a checklist de arranque do turno está feita — Sem a checklist feita, não arranque a linha.",
+    "Retire o seu cadeado e confirme que ninguém está dentro da zona da máquina — Olhe à volta da máquina e avise em voz alta que vai arrancar.",
+    "Rearme as paragens de emergência e o quadro de comando — As luzes de falha devem apagar-se.",
+    "Arranque em modo manual e esteja atento a ruídos e vibrações — Se ouvir algo fora do normal, pare e reporte uma avaria.",
+    "Passe a modo automático e acompanhe os primeiros minutos — Confirme os primeiros produtos antes de se afastar.",
+    "Registe as leituras dos parâmetros do turno no FinsaFix — Menu › Controlo."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 30240
+  },
+  {
+   "id": "2loto-PARQ-EST",
+   "secao": "PARQ-EST",
+   "titulo": "Paragem segura e bloqueio (LOTO)",
+   "min": 8,
+   "passos": [
+    "Avise a equipa da secção e o chefe de turno — Diga que máquina vai parar e porquê.",
+    "Pare a máquina pelo comando normal — Use a paragem de emergência só em caso de perigo.",
+    "Desligue e bloqueie a energia com o seu cadeado pessoal — Cada pessoa que vai intervir coloca o seu próprio cadeado.",
+    "Liberte o ar comprimido e a pressão hidráulica — Confirme no manómetro que a pressão está a zero.",
+    "Coloque a etiqueta com o seu nome e a data — A etiqueta fica junto ao cadeado.",
+    "Tente arrancar para confirmar que a máquina não liga — Volte a pôr o comando na posição de desligado."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 31680
+  },
+  {
+   "id": "3troca-PARQ-EST",
+   "secao": "PARQ-EST",
+   "titulo": "Troca das facas da estilhadora",
+   "min": 30,
+   "passos": [
+    "Faça a paragem segura e o bloqueio (LOTO) — Siga o procedimento “Paragem segura e bloqueio”.",
+    "Prepare as peças e as ferramentas — Confirme a referência das peças antes de começar.",
+    "Use o EPI indicado — Luvas anticorte, óculos de proteção, calçado de segurança e proteção auditiva.",
+    "Faça a troca pela ordem do manual da máquina — Em caso de dúvida, pare e peça ajuda ao chefe de turno.",
+    "Retire as ferramentas e confirme que as proteções estão no lugar — Conte as ferramentas: nenhuma pode ficar dentro da máquina.",
+    "Retire o bloqueio e faça o arranque de teste — Siga o procedimento “Arranque da linha”."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 33120
+  },
+  {
+   "id": "4lim-PARQ-EST",
+   "secao": "PARQ-EST",
+   "titulo": "Limpeza de fim de turno",
+   "min": 15,
+   "passos": [
+    "Pare a máquina e faça o bloqueio (LOTO) — Nunca limpe com a máquina em automático.",
+    "Aspire o pó acumulado — não use ar comprimido — O pó de madeira acumulado é risco de incêndio.",
+    "Limpe sensores e fotocélulas com pano seco — Não use água nem solventes.",
+    "Arrume a zona e deixe os corredores livres — Paletes e restos no sítio certo.",
+    "Deixe uma nota em Turno se houver algo a assinalar — Menu › Turno."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 34560
+  },
+  {
+   "id": "1arr-PARQ-REC",
+   "secao": "PARQ-REC",
+   "titulo": "Arranque da linha",
+   "min": 10,
+   "passos": [
+    "Confirme que a checklist de arranque do turno está feita — Sem a checklist feita, não arranque a linha.",
+    "Retire o seu cadeado e confirme que ninguém está dentro da zona da máquina — Olhe à volta da máquina e avise em voz alta que vai arrancar.",
+    "Rearme as paragens de emergência e o quadro de comando — As luzes de falha devem apagar-se.",
+    "Arranque em modo manual e esteja atento a ruídos e vibrações — Se ouvir algo fora do normal, pare e reporte uma avaria.",
+    "Passe a modo automático e acompanhe os primeiros minutos — Confirme os primeiros produtos antes de se afastar.",
+    "Registe as leituras dos parâmetros do turno no FinsaFix — Menu › Controlo."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 30240
+  },
+  {
+   "id": "2loto-PARQ-REC",
+   "secao": "PARQ-REC",
+   "titulo": "Paragem segura e bloqueio (LOTO)",
+   "min": 8,
+   "passos": [
+    "Avise a equipa da secção e o chefe de turno — Diga que máquina vai parar e porquê.",
+    "Pare a máquina pelo comando normal — Use a paragem de emergência só em caso de perigo.",
+    "Desligue e bloqueie a energia com o seu cadeado pessoal — Cada pessoa que vai intervir coloca o seu próprio cadeado.",
+    "Liberte o ar comprimido e a pressão hidráulica — Confirme no manómetro que a pressão está a zero.",
+    "Coloque a etiqueta com o seu nome e a data — A etiqueta fica junto ao cadeado.",
+    "Tente arrancar para confirmar que a máquina não liga — Volte a pôr o comando na posição de desligado."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 31680
+  },
+  {
+   "id": "3troca-PARQ-REC",
+   "secao": "PARQ-REC",
+   "titulo": "Limpeza dos crivos",
+   "min": 30,
+   "passos": [
+    "Faça a paragem segura e o bloqueio (LOTO) — Siga o procedimento “Paragem segura e bloqueio”.",
+    "Prepare as peças e as ferramentas — Confirme a referência das peças antes de começar.",
+    "Use o EPI indicado — Luvas anticorte, óculos de proteção, calçado de segurança e proteção auditiva.",
+    "Faça a troca pela ordem do manual da máquina — Em caso de dúvida, pare e peça ajuda ao chefe de turno.",
+    "Retire as ferramentas e confirme que as proteções estão no lugar — Conte as ferramentas: nenhuma pode ficar dentro da máquina.",
+    "Retire o bloqueio e faça o arranque de teste — Siga o procedimento “Arranque da linha”."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 33120
+  },
+  {
+   "id": "4lim-PARQ-REC",
+   "secao": "PARQ-REC",
+   "titulo": "Limpeza de fim de turno",
+   "min": 15,
+   "passos": [
+    "Pare a máquina e faça o bloqueio (LOTO) — Nunca limpe com a máquina em automático.",
+    "Aspire o pó acumulado — não use ar comprimido — O pó de madeira acumulado é risco de incêndio.",
+    "Limpe sensores e fotocélulas com pano seco — Não use água nem solventes.",
+    "Arrume a zona e deixe os corredores livres — Paletes e restos no sítio certo.",
+    "Deixe uma nota em Turno se houver algo a assinalar — Menu › Turno."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 34560
+  },
+  {
+   "id": "1arr-CALD",
+   "secao": "CALD",
+   "titulo": "Arranque da linha",
+   "min": 10,
+   "passos": [
+    "Confirme que a checklist de arranque do turno está feita — Sem a checklist feita, não arranque a linha.",
+    "Retire o seu cadeado e confirme que ninguém está dentro da zona da máquina — Olhe à volta da máquina e avise em voz alta que vai arrancar.",
+    "Rearme as paragens de emergência e o quadro de comando — As luzes de falha devem apagar-se.",
+    "Arranque em modo manual e esteja atento a ruídos e vibrações — Se ouvir algo fora do normal, pare e reporte uma avaria.",
+    "Passe a modo automático e acompanhe os primeiros minutos — Confirme os primeiros produtos antes de se afastar.",
+    "Registe as leituras dos parâmetros do turno no FinsaFix — Menu › Controlo."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 30240
+  },
+  {
+   "id": "2loto-CALD",
+   "secao": "CALD",
+   "titulo": "Paragem segura e bloqueio (LOTO)",
+   "min": 8,
+   "passos": [
+    "Avise a equipa da secção e o chefe de turno — Diga que máquina vai parar e porquê.",
+    "Pare a máquina pelo comando normal — Use a paragem de emergência só em caso de perigo.",
+    "Desligue e bloqueie a energia com o seu cadeado pessoal — Cada pessoa que vai intervir coloca o seu próprio cadeado.",
+    "Liberte o ar comprimido e a pressão hidráulica — Confirme no manómetro que a pressão está a zero.",
+    "Coloque a etiqueta com o seu nome e a data — A etiqueta fica junto ao cadeado.",
+    "Tente arrancar para confirmar que a máquina não liga — Volte a pôr o comando na posição de desligado."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 31680
+  },
+  {
+   "id": "3troca-CALD",
+   "secao": "CALD",
+   "titulo": "Limpeza da grelha móvel",
+   "min": 30,
+   "passos": [
+    "Faça a paragem segura e o bloqueio (LOTO) — Siga o procedimento “Paragem segura e bloqueio”.",
+    "Prepare as peças e as ferramentas — Confirme a referência das peças antes de começar.",
+    "Use o EPI indicado — Luvas anticorte, óculos de proteção, calçado de segurança e proteção auditiva.",
+    "Faça a troca pela ordem do manual da máquina — Em caso de dúvida, pare e peça ajuda ao chefe de turno.",
+    "Retire as ferramentas e confirme que as proteções estão no lugar — Conte as ferramentas: nenhuma pode ficar dentro da máquina.",
+    "Retire o bloqueio e faça o arranque de teste — Siga o procedimento “Arranque da linha”."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 33120
+  },
+  {
+   "id": "4lim-CALD",
+   "secao": "CALD",
+   "titulo": "Limpeza de fim de turno",
+   "min": 15,
+   "passos": [
+    "Pare a máquina e faça o bloqueio (LOTO) — Nunca limpe com a máquina em automático.",
+    "Aspire o pó acumulado — não use ar comprimido — O pó de madeira acumulado é risco de incêndio.",
+    "Limpe sensores e fotocélulas com pano seco — Não use água nem solventes.",
+    "Arrume a zona e deixe os corredores livres — Paletes e restos no sítio certo.",
+    "Deixe uma nota em Turno se houver algo a assinalar — Menu › Turno."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 34560
+  },
+  {
+   "id": "1arr-DESF",
+   "secao": "DESF",
+   "titulo": "Arranque da linha",
+   "min": 10,
+   "passos": [
+    "Confirme que a checklist de arranque do turno está feita — Sem a checklist feita, não arranque a linha.",
+    "Retire o seu cadeado e confirme que ninguém está dentro da zona da máquina — Olhe à volta da máquina e avise em voz alta que vai arrancar.",
+    "Rearme as paragens de emergência e o quadro de comando — As luzes de falha devem apagar-se.",
+    "Arranque em modo manual e esteja atento a ruídos e vibrações — Se ouvir algo fora do normal, pare e reporte uma avaria.",
+    "Passe a modo automático e acompanhe os primeiros minutos — Confirme os primeiros produtos antes de se afastar.",
+    "Registe as leituras dos parâmetros do turno no FinsaFix — Menu › Controlo."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 30240
+  },
+  {
+   "id": "2loto-DESF",
+   "secao": "DESF",
+   "titulo": "Paragem segura e bloqueio (LOTO)",
+   "min": 8,
+   "passos": [
+    "Avise a equipa da secção e o chefe de turno — Diga que máquina vai parar e porquê.",
+    "Pare a máquina pelo comando normal — Use a paragem de emergência só em caso de perigo.",
+    "Desligue e bloqueie a energia com o seu cadeado pessoal — Cada pessoa que vai intervir coloca o seu próprio cadeado.",
+    "Liberte o ar comprimido e a pressão hidráulica — Confirme no manómetro que a pressão está a zero.",
+    "Coloque a etiqueta com o seu nome e a data — A etiqueta fica junto ao cadeado.",
+    "Tente arrancar para confirmar que a máquina não liga — Volte a pôr o comando na posição de desligado."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 31680
+  },
+  {
+   "id": "3troca-DESF",
+   "secao": "DESF",
+   "titulo": "Inspeção do refinador",
+   "min": 30,
+   "passos": [
+    "Faça a paragem segura e o bloqueio (LOTO) — Siga o procedimento “Paragem segura e bloqueio”.",
+    "Prepare as peças e as ferramentas — Confirme a referência das peças antes de começar.",
+    "Use o EPI indicado — Luvas anticorte, óculos de proteção, calçado de segurança e proteção auditiva.",
+    "Faça a troca pela ordem do manual da máquina — Em caso de dúvida, pare e peça ajuda ao chefe de turno.",
+    "Retire as ferramentas e confirme que as proteções estão no lugar — Conte as ferramentas: nenhuma pode ficar dentro da máquina.",
+    "Retire o bloqueio e faça o arranque de teste — Siga o procedimento “Arranque da linha”."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 33120
+  },
+  {
+   "id": "4lim-DESF",
+   "secao": "DESF",
+   "titulo": "Limpeza de fim de turno",
+   "min": 15,
+   "passos": [
+    "Pare a máquina e faça o bloqueio (LOTO) — Nunca limpe com a máquina em automático.",
+    "Aspire o pó acumulado — não use ar comprimido — O pó de madeira acumulado é risco de incêndio.",
+    "Limpe sensores e fotocélulas com pano seco — Não use água nem solventes.",
+    "Arrume a zona e deixe os corredores livres — Paletes e restos no sítio certo.",
+    "Deixe uma nota em Turno se houver algo a assinalar — Menu › Turno."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 34560
+  },
+  {
+   "id": "1arr-SEC",
+   "secao": "SEC",
+   "titulo": "Arranque da linha",
+   "min": 10,
+   "passos": [
+    "Confirme que a checklist de arranque do turno está feita — Sem a checklist feita, não arranque a linha.",
+    "Retire o seu cadeado e confirme que ninguém está dentro da zona da máquina — Olhe à volta da máquina e avise em voz alta que vai arrancar.",
+    "Rearme as paragens de emergência e o quadro de comando — As luzes de falha devem apagar-se.",
+    "Arranque em modo manual e esteja atento a ruídos e vibrações — Se ouvir algo fora do normal, pare e reporte uma avaria.",
+    "Passe a modo automático e acompanhe os primeiros minutos — Confirme os primeiros produtos antes de se afastar.",
+    "Registe as leituras dos parâmetros do turno no FinsaFix — Menu › Controlo."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 30240
+  },
+  {
+   "id": "2loto-SEC",
+   "secao": "SEC",
+   "titulo": "Paragem segura e bloqueio (LOTO)",
+   "min": 8,
+   "passos": [
+    "Avise a equipa da secção e o chefe de turno — Diga que máquina vai parar e porquê.",
+    "Pare a máquina pelo comando normal — Use a paragem de emergência só em caso de perigo.",
+    "Desligue e bloqueie a energia com o seu cadeado pessoal — Cada pessoa que vai intervir coloca o seu próprio cadeado.",
+    "Liberte o ar comprimido e a pressão hidráulica — Confirme no manómetro que a pressão está a zero.",
+    "Coloque a etiqueta com o seu nome e a data — A etiqueta fica junto ao cadeado.",
+    "Tente arrancar para confirmar que a máquina não liga — Volte a pôr o comando na posição de desligado."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 31680
+  },
+  {
+   "id": "3troca-SEC",
+   "secao": "SEC",
+   "titulo": "Limpeza dos ciclones",
+   "min": 30,
+   "passos": [
+    "Faça a paragem segura e o bloqueio (LOTO) — Siga o procedimento “Paragem segura e bloqueio”.",
+    "Prepare as peças e as ferramentas — Confirme a referência das peças antes de começar.",
+    "Use o EPI indicado — Luvas anticorte, óculos de proteção, calçado de segurança e proteção auditiva.",
+    "Faça a troca pela ordem do manual da máquina — Em caso de dúvida, pare e peça ajuda ao chefe de turno.",
+    "Retire as ferramentas e confirme que as proteções estão no lugar — Conte as ferramentas: nenhuma pode ficar dentro da máquina.",
+    "Retire o bloqueio e faça o arranque de teste — Siga o procedimento “Arranque da linha”."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 33120
+  },
+  {
+   "id": "4lim-SEC",
+   "secao": "SEC",
+   "titulo": "Limpeza de fim de turno",
+   "min": 15,
+   "passos": [
+    "Pare a máquina e faça o bloqueio (LOTO) — Nunca limpe com a máquina em automático.",
+    "Aspire o pó acumulado — não use ar comprimido — O pó de madeira acumulado é risco de incêndio.",
+    "Limpe sensores e fotocélulas com pano seco — Não use água nem solventes.",
+    "Arrume a zona e deixe os corredores livres — Paletes e restos no sítio certo.",
+    "Deixe uma nota em Turno se houver algo a assinalar — Menu › Turno."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 34560
+  },
+  {
+   "id": "1arr-PREN-MDF",
+   "secao": "PREN-MDF",
+   "titulo": "Arranque da linha",
+   "min": 10,
+   "passos": [
+    "Confirme que a checklist de arranque do turno está feita — Sem a checklist feita, não arranque a linha.",
+    "Retire o seu cadeado e confirme que ninguém está dentro da zona da máquina — Olhe à volta da máquina e avise em voz alta que vai arrancar.",
+    "Rearme as paragens de emergência e o quadro de comando — As luzes de falha devem apagar-se.",
+    "Arranque em modo manual e esteja atento a ruídos e vibrações — Se ouvir algo fora do normal, pare e reporte uma avaria.",
+    "Passe a modo automático e acompanhe os primeiros minutos — Confirme os primeiros produtos antes de se afastar.",
+    "Registe as leituras dos parâmetros do turno no FinsaFix — Menu › Controlo."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 30240
+  },
+  {
+   "id": "2loto-PREN-MDF",
+   "secao": "PREN-MDF",
+   "titulo": "Paragem segura e bloqueio (LOTO)",
+   "min": 8,
+   "passos": [
+    "Avise a equipa da secção e o chefe de turno — Diga que máquina vai parar e porquê.",
+    "Pare a máquina pelo comando normal — Use a paragem de emergência só em caso de perigo.",
+    "Desligue e bloqueie a energia com o seu cadeado pessoal — Cada pessoa que vai intervir coloca o seu próprio cadeado.",
+    "Liberte o ar comprimido e a pressão hidráulica — Confirme no manómetro que a pressão está a zero.",
+    "Coloque a etiqueta com o seu nome e a data — A etiqueta fica junto ao cadeado.",
+    "Tente arrancar para confirmar que a máquina não liga — Volte a pôr o comando na posição de desligado."
+   ],
+   "estado": "por_validar",
+   "validadaPor": null,
+   "validadaHaMin": null
+  },
+  {
+   "id": "3troca-PREN-MDF",
+   "secao": "PREN-MDF",
+   "titulo": "Mudança de espessura",
+   "min": 30,
+   "passos": [
+    "Faça a paragem segura e o bloqueio (LOTO) — Siga o procedimento “Paragem segura e bloqueio”.",
+    "Prepare as peças e as ferramentas — Confirme a referência das peças antes de começar.",
+    "Use o EPI indicado — Luvas anticorte, óculos de proteção, calçado de segurança e proteção auditiva.",
+    "Faça a troca pela ordem do manual da máquina — Em caso de dúvida, pare e peça ajuda ao chefe de turno.",
+    "Retire as ferramentas e confirme que as proteções estão no lugar — Conte as ferramentas: nenhuma pode ficar dentro da máquina.",
+    "Retire o bloqueio e faça o arranque de teste — Siga o procedimento “Arranque da linha”."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 33120
+  },
+  {
+   "id": "4lim-PREN-MDF",
+   "secao": "PREN-MDF",
+   "titulo": "Limpeza de fim de turno",
+   "min": 15,
+   "passos": [
+    "Pare a máquina e faça o bloqueio (LOTO) — Nunca limpe com a máquina em automático.",
+    "Aspire o pó acumulado — não use ar comprimido — O pó de madeira acumulado é risco de incêndio.",
+    "Limpe sensores e fotocélulas com pano seco — Não use água nem solventes.",
+    "Arrume a zona e deixe os corredores livres — Paletes e restos no sítio certo.",
+    "Deixe uma nota em Turno se houver algo a assinalar — Menu › Turno."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 34560
+  },
+  {
+   "id": "1arr-PREN-SP",
+   "secao": "PREN-SP",
+   "titulo": "Arranque da linha",
+   "min": 10,
+   "passos": [
+    "Confirme que a checklist de arranque do turno está feita — Sem a checklist feita, não arranque a linha.",
+    "Retire o seu cadeado e confirme que ninguém está dentro da zona da máquina — Olhe à volta da máquina e avise em voz alta que vai arrancar.",
+    "Rearme as paragens de emergência e o quadro de comando — As luzes de falha devem apagar-se.",
+    "Arranque em modo manual e esteja atento a ruídos e vibrações — Se ouvir algo fora do normal, pare e reporte uma avaria.",
+    "Passe a modo automático e acompanhe os primeiros minutos — Confirme os primeiros produtos antes de se afastar.",
+    "Registe as leituras dos parâmetros do turno no FinsaFix — Menu › Controlo."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 30240
+  },
+  {
+   "id": "2loto-PREN-SP",
+   "secao": "PREN-SP",
+   "titulo": "Paragem segura e bloqueio (LOTO)",
+   "min": 8,
+   "passos": [
+    "Avise a equipa da secção e o chefe de turno — Diga que máquina vai parar e porquê.",
+    "Pare a máquina pelo comando normal — Use a paragem de emergência só em caso de perigo.",
+    "Desligue e bloqueie a energia com o seu cadeado pessoal — Cada pessoa que vai intervir coloca o seu próprio cadeado.",
+    "Liberte o ar comprimido e a pressão hidráulica — Confirme no manómetro que a pressão está a zero.",
+    "Coloque a etiqueta com o seu nome e a data — A etiqueta fica junto ao cadeado.",
+    "Tente arrancar para confirmar que a máquina não liga — Volte a pôr o comando na posição de desligado."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 31680
+  },
+  {
+   "id": "3troca-PREN-SP",
+   "secao": "PREN-SP",
+   "titulo": "Mudança de espessura",
+   "min": 30,
+   "passos": [
+    "Faça a paragem segura e o bloqueio (LOTO) — Siga o procedimento “Paragem segura e bloqueio”.",
+    "Prepare as peças e as ferramentas — Confirme a referência das peças antes de começar.",
+    "Use o EPI indicado — Luvas anticorte, óculos de proteção, calçado de segurança e proteção auditiva.",
+    "Faça a troca pela ordem do manual da máquina — Em caso de dúvida, pare e peça ajuda ao chefe de turno.",
+    "Retire as ferramentas e confirme que as proteções estão no lugar — Conte as ferramentas: nenhuma pode ficar dentro da máquina.",
+    "Retire o bloqueio e faça o arranque de teste — Siga o procedimento “Arranque da linha”."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 33120
+  },
+  {
+   "id": "4lim-PREN-SP",
+   "secao": "PREN-SP",
+   "titulo": "Limpeza de fim de turno",
+   "min": 15,
+   "passos": [
+    "Pare a máquina e faça o bloqueio (LOTO) — Nunca limpe com a máquina em automático.",
+    "Aspire o pó acumulado — não use ar comprimido — O pó de madeira acumulado é risco de incêndio.",
+    "Limpe sensores e fotocélulas com pano seco — Não use água nem solventes.",
+    "Arrume a zona e deixe os corredores livres — Paletes e restos no sítio certo.",
+    "Deixe uma nota em Turno se houver algo a assinalar — Menu › Turno."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 34560
+  },
+  {
+   "id": "1arr-LIX-MDF",
+   "secao": "LIX-MDF",
+   "titulo": "Arranque da linha",
+   "min": 10,
+   "passos": [
+    "Confirme que a checklist de arranque do turno está feita — Sem a checklist feita, não arranque a linha.",
+    "Retire o seu cadeado e confirme que ninguém está dentro da zona da máquina — Olhe à volta da máquina e avise em voz alta que vai arrancar.",
+    "Rearme as paragens de emergência e o quadro de comando — As luzes de falha devem apagar-se.",
+    "Arranque em modo manual e esteja atento a ruídos e vibrações — Se ouvir algo fora do normal, pare e reporte uma avaria.",
+    "Passe a modo automático e acompanhe os primeiros minutos — Confirme os primeiros produtos antes de se afastar.",
+    "Registe as leituras dos parâmetros do turno no FinsaFix — Menu › Controlo."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 30240
+  },
+  {
+   "id": "2loto-LIX-MDF",
+   "secao": "LIX-MDF",
+   "titulo": "Paragem segura e bloqueio (LOTO)",
+   "min": 8,
+   "passos": [
+    "Avise a equipa da secção e o chefe de turno — Diga que máquina vai parar e porquê.",
+    "Pare a máquina pelo comando normal — Use a paragem de emergência só em caso de perigo.",
+    "Desligue e bloqueie a energia com o seu cadeado pessoal — Cada pessoa que vai intervir coloca o seu próprio cadeado.",
+    "Liberte o ar comprimido e a pressão hidráulica — Confirme no manómetro que a pressão está a zero.",
+    "Coloque a etiqueta com o seu nome e a data — A etiqueta fica junto ao cadeado.",
+    "Tente arrancar para confirmar que a máquina não liga — Volte a pôr o comando na posição de desligado."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 31680
+  },
+  {
+   "id": "3troca-LIX-MDF",
+   "secao": "LIX-MDF",
+   "titulo": "Troca de cinta de lixa",
+   "min": 30,
+   "passos": [
+    "Faça a paragem segura e o bloqueio (LOTO) — Siga o procedimento “Paragem segura e bloqueio”.",
+    "Prepare as peças e as ferramentas — Confirme a referência das peças antes de começar.",
+    "Use o EPI indicado — Luvas anticorte, óculos de proteção, calçado de segurança e proteção auditiva.",
+    "Faça a troca pela ordem do manual da máquina — Em caso de dúvida, pare e peça ajuda ao chefe de turno.",
+    "Retire as ferramentas e confirme que as proteções estão no lugar — Conte as ferramentas: nenhuma pode ficar dentro da máquina.",
+    "Retire o bloqueio e faça o arranque de teste — Siga o procedimento “Arranque da linha”."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 33120
+  },
+  {
+   "id": "4lim-LIX-MDF",
+   "secao": "LIX-MDF",
+   "titulo": "Limpeza de fim de turno",
+   "min": 15,
+   "passos": [
+    "Pare a máquina e faça o bloqueio (LOTO) — Nunca limpe com a máquina em automático.",
+    "Aspire o pó acumulado — não use ar comprimido — O pó de madeira acumulado é risco de incêndio.",
+    "Limpe sensores e fotocélulas com pano seco — Não use água nem solventes.",
+    "Arrume a zona e deixe os corredores livres — Paletes e restos no sítio certo.",
+    "Deixe uma nota em Turno se houver algo a assinalar — Menu › Turno."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 34560
+  },
+  {
+   "id": "1arr-LIX-SP",
+   "secao": "LIX-SP",
+   "titulo": "Arranque da linha",
+   "min": 10,
+   "passos": [
+    "Confirme que a checklist de arranque do turno está feita — Sem a checklist feita, não arranque a linha.",
+    "Retire o seu cadeado e confirme que ninguém está dentro da zona da máquina — Olhe à volta da máquina e avise em voz alta que vai arrancar.",
+    "Rearme as paragens de emergência e o quadro de comando — As luzes de falha devem apagar-se.",
+    "Arranque em modo manual e esteja atento a ruídos e vibrações — Se ouvir algo fora do normal, pare e reporte uma avaria.",
+    "Passe a modo automático e acompanhe os primeiros minutos — Confirme os primeiros produtos antes de se afastar.",
+    "Registe as leituras dos parâmetros do turno no FinsaFix — Menu › Controlo."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 30240
+  },
+  {
+   "id": "2loto-LIX-SP",
+   "secao": "LIX-SP",
+   "titulo": "Paragem segura e bloqueio (LOTO)",
+   "min": 8,
+   "passos": [
+    "Avise a equipa da secção e o chefe de turno — Diga que máquina vai parar e porquê.",
+    "Pare a máquina pelo comando normal — Use a paragem de emergência só em caso de perigo.",
+    "Desligue e bloqueie a energia com o seu cadeado pessoal — Cada pessoa que vai intervir coloca o seu próprio cadeado.",
+    "Liberte o ar comprimido e a pressão hidráulica — Confirme no manómetro que a pressão está a zero.",
+    "Coloque a etiqueta com o seu nome e a data — A etiqueta fica junto ao cadeado.",
+    "Tente arrancar para confirmar que a máquina não liga — Volte a pôr o comando na posição de desligado."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 31680
+  },
+  {
+   "id": "3troca-LIX-SP",
+   "secao": "LIX-SP",
+   "titulo": "Troca de cinta de lixa",
+   "min": 30,
+   "passos": [
+    "Faça a paragem segura e o bloqueio (LOTO) — Siga o procedimento “Paragem segura e bloqueio”.",
+    "Prepare as peças e as ferramentas — Confirme a referência das peças antes de começar.",
+    "Use o EPI indicado — Luvas anticorte, óculos de proteção, calçado de segurança e proteção auditiva.",
+    "Faça a troca pela ordem do manual da máquina — Em caso de dúvida, pare e peça ajuda ao chefe de turno.",
+    "Retire as ferramentas e confirme que as proteções estão no lugar — Conte as ferramentas: nenhuma pode ficar dentro da máquina.",
+    "Retire o bloqueio e faça o arranque de teste — Siga o procedimento “Arranque da linha”."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 33120
+  },
+  {
+   "id": "4lim-LIX-SP",
+   "secao": "LIX-SP",
+   "titulo": "Limpeza de fim de turno",
+   "min": 15,
+   "passos": [
+    "Pare a máquina e faça o bloqueio (LOTO) — Nunca limpe com a máquina em automático.",
+    "Aspire o pó acumulado — não use ar comprimido — O pó de madeira acumulado é risco de incêndio.",
+    "Limpe sensores e fotocélulas com pano seco — Não use água nem solventes.",
+    "Arrume a zona e deixe os corredores livres — Paletes e restos no sítio certo.",
+    "Deixe uma nota em Turno se houver algo a assinalar — Menu › Turno."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 34560
+  },
+  {
+   "id": "1arr-SCHEL",
+   "secao": "SCHEL",
+   "titulo": "Arranque da linha",
+   "min": 10,
+   "passos": [
+    "Confirme que a checklist de arranque do turno está feita — Sem a checklist feita, não arranque a linha.",
+    "Retire o seu cadeado e confirme que ninguém está dentro da zona da máquina — Olhe à volta da máquina e avise em voz alta que vai arrancar.",
+    "Rearme as paragens de emergência e o quadro de comando — As luzes de falha devem apagar-se.",
+    "Arranque em modo manual e esteja atento a ruídos e vibrações — Se ouvir algo fora do normal, pare e reporte uma avaria.",
+    "Passe a modo automático e acompanhe os primeiros minutos — Confirme os primeiros produtos antes de se afastar.",
+    "Registe as leituras dos parâmetros do turno no FinsaFix — Menu › Controlo."
+   ],
+   "estado": "por_validar",
+   "validadaPor": null,
+   "validadaHaMin": null
+  },
+  {
+   "id": "2loto-SCHEL",
+   "secao": "SCHEL",
+   "titulo": "Paragem segura e bloqueio (LOTO)",
+   "min": 8,
+   "passos": [
+    "Avise a equipa da secção e o chefe de turno — Diga que máquina vai parar e porquê.",
+    "Pare a máquina pelo comando normal — Use a paragem de emergência só em caso de perigo.",
+    "Desligue e bloqueie a energia com o seu cadeado pessoal — Cada pessoa que vai intervir coloca o seu próprio cadeado.",
+    "Liberte o ar comprimido e a pressão hidráulica — Confirme no manómetro que a pressão está a zero.",
+    "Coloque a etiqueta com o seu nome e a data — A etiqueta fica junto ao cadeado.",
+    "Tente arrancar para confirmar que a máquina não liga — Volte a pôr o comando na posição de desligado."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 31680
+  },
+  {
+   "id": "3troca-SCHEL",
+   "secao": "SCHEL",
+   "titulo": "Troca do disco de serra principal",
+   "min": 30,
+   "passos": [
+    "Faça a paragem segura e o bloqueio (LOTO) — Siga o procedimento “Paragem segura e bloqueio”.",
+    "Prepare as peças e as ferramentas — Confirme a referência das peças antes de começar.",
+    "Use o EPI indicado — Luvas anticorte, óculos de proteção, calçado de segurança e proteção auditiva.",
+    "Faça a troca pela ordem do manual da máquina — Em caso de dúvida, pare e peça ajuda ao chefe de turno.",
+    "Retire as ferramentas e confirme que as proteções estão no lugar — Conte as ferramentas: nenhuma pode ficar dentro da máquina.",
+    "Retire o bloqueio e faça o arranque de teste — Siga o procedimento “Arranque da linha”."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 33120
+  },
+  {
+   "id": "4lim-SCHEL",
+   "secao": "SCHEL",
+   "titulo": "Limpeza de fim de turno",
+   "min": 15,
+   "passos": [
+    "Pare a máquina e faça o bloqueio (LOTO) — Nunca limpe com a máquina em automático.",
+    "Aspire o pó acumulado — não use ar comprimido — O pó de madeira acumulado é risco de incêndio.",
+    "Limpe sensores e fotocélulas com pano seco — Não use água nem solventes.",
+    "Arrume a zona e deixe os corredores livres — Paletes e restos no sítio certo.",
+    "Deixe uma nota em Turno se houver algo a assinalar — Menu › Turno."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 34560
+  },
+  {
+   "id": "1arr-MULTI",
+   "secao": "MULTI",
+   "titulo": "Arranque da linha",
+   "min": 10,
+   "passos": [
+    "Confirme que a checklist de arranque do turno está feita — Sem a checklist feita, não arranque a linha.",
+    "Retire o seu cadeado e confirme que ninguém está dentro da zona da máquina — Olhe à volta da máquina e avise em voz alta que vai arrancar.",
+    "Rearme as paragens de emergência e o quadro de comando — As luzes de falha devem apagar-se.",
+    "Arranque em modo manual e esteja atento a ruídos e vibrações — Se ouvir algo fora do normal, pare e reporte uma avaria.",
+    "Passe a modo automático e acompanhe os primeiros minutos — Confirme os primeiros produtos antes de se afastar.",
+    "Registe as leituras dos parâmetros do turno no FinsaFix — Menu › Controlo."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 30240
+  },
+  {
+   "id": "2loto-MULTI",
+   "secao": "MULTI",
+   "titulo": "Paragem segura e bloqueio (LOTO)",
+   "min": 8,
+   "passos": [
+    "Avise a equipa da secção e o chefe de turno — Diga que máquina vai parar e porquê.",
+    "Pare a máquina pelo comando normal — Use a paragem de emergência só em caso de perigo.",
+    "Desligue e bloqueie a energia com o seu cadeado pessoal — Cada pessoa que vai intervir coloca o seu próprio cadeado.",
+    "Liberte o ar comprimido e a pressão hidráulica — Confirme no manómetro que a pressão está a zero.",
+    "Coloque a etiqueta com o seu nome e a data — A etiqueta fica junto ao cadeado.",
+    "Tente arrancar para confirmar que a máquina não liga — Volte a pôr o comando na posição de desligado."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 31680
+  },
+  {
+   "id": "3troca-MULTI",
+   "secao": "MULTI",
+   "titulo": "Troca do jogo de discos",
+   "min": 30,
+   "passos": [
+    "Faça a paragem segura e o bloqueio (LOTO) — Siga o procedimento “Paragem segura e bloqueio”.",
+    "Prepare as peças e as ferramentas — Confirme a referência das peças antes de começar.",
+    "Use o EPI indicado — Luvas anticorte, óculos de proteção, calçado de segurança e proteção auditiva.",
+    "Faça a troca pela ordem do manual da máquina — Em caso de dúvida, pare e peça ajuda ao chefe de turno.",
+    "Retire as ferramentas e confirme que as proteções estão no lugar — Conte as ferramentas: nenhuma pode ficar dentro da máquina.",
+    "Retire o bloqueio e faça o arranque de teste — Siga o procedimento “Arranque da linha”."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 33120
+  },
+  {
+   "id": "4lim-MULTI",
+   "secao": "MULTI",
+   "titulo": "Limpeza de fim de turno",
+   "min": 15,
+   "passos": [
+    "Pare a máquina e faça o bloqueio (LOTO) — Nunca limpe com a máquina em automático.",
+    "Aspire o pó acumulado — não use ar comprimido — O pó de madeira acumulado é risco de incêndio.",
+    "Limpe sensores e fotocélulas com pano seco — Não use água nem solventes.",
+    "Arrume a zona e deixe os corredores livres — Paletes e restos no sítio certo.",
+    "Deixe uma nota em Turno se houver algo a assinalar — Menu › Turno."
+   ],
+   "estado": "por_validar",
+   "validadaPor": null,
+   "validadaHaMin": null
+  },
+  {
+   "id": "1arr-IMP",
+   "secao": "IMP",
+   "titulo": "Arranque da linha",
+   "min": 10,
+   "passos": [
+    "Confirme que a checklist de arranque do turno está feita — Sem a checklist feita, não arranque a linha.",
+    "Retire o seu cadeado e confirme que ninguém está dentro da zona da máquina — Olhe à volta da máquina e avise em voz alta que vai arrancar.",
+    "Rearme as paragens de emergência e o quadro de comando — As luzes de falha devem apagar-se.",
+    "Arranque em modo manual e esteja atento a ruídos e vibrações — Se ouvir algo fora do normal, pare e reporte uma avaria.",
+    "Passe a modo automático e acompanhe os primeiros minutos — Confirme os primeiros produtos antes de se afastar.",
+    "Registe as leituras dos parâmetros do turno no FinsaFix — Menu › Controlo."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 30240
+  },
+  {
+   "id": "2loto-IMP",
+   "secao": "IMP",
+   "titulo": "Paragem segura e bloqueio (LOTO)",
+   "min": 8,
+   "passos": [
+    "Avise a equipa da secção e o chefe de turno — Diga que máquina vai parar e porquê.",
+    "Pare a máquina pelo comando normal — Use a paragem de emergência só em caso de perigo.",
+    "Desligue e bloqueie a energia com o seu cadeado pessoal — Cada pessoa que vai intervir coloca o seu próprio cadeado.",
+    "Liberte o ar comprimido e a pressão hidráulica — Confirme no manómetro que a pressão está a zero.",
+    "Coloque a etiqueta com o seu nome e a data — A etiqueta fica junto ao cadeado.",
+    "Tente arrancar para confirmar que a máquina não liga — Volte a pôr o comando na posição de desligado."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 31680
+  },
+  {
+   "id": "3troca-IMP",
+   "secao": "IMP",
+   "titulo": "Troca de bobina de papel",
+   "min": 30,
+   "passos": [
+    "Faça a paragem segura e o bloqueio (LOTO) — Siga o procedimento “Paragem segura e bloqueio”.",
+    "Prepare as peças e as ferramentas — Confirme a referência das peças antes de começar.",
+    "Use o EPI indicado — Luvas anticorte, óculos de proteção, calçado de segurança e proteção auditiva.",
+    "Faça a troca pela ordem do manual da máquina — Em caso de dúvida, pare e peça ajuda ao chefe de turno.",
+    "Retire as ferramentas e confirme que as proteções estão no lugar — Conte as ferramentas: nenhuma pode ficar dentro da máquina.",
+    "Retire o bloqueio e faça o arranque de teste — Siga o procedimento “Arranque da linha”."
+   ],
+   "estado": "por_validar",
+   "validadaPor": null,
+   "validadaHaMin": null
+  },
+  {
+   "id": "4lim-IMP",
+   "secao": "IMP",
+   "titulo": "Limpeza de fim de turno",
+   "min": 15,
+   "passos": [
+    "Pare a máquina e faça o bloqueio (LOTO) — Nunca limpe com a máquina em automático.",
+    "Aspire o pó acumulado — não use ar comprimido — O pó de madeira acumulado é risco de incêndio.",
+    "Limpe sensores e fotocélulas com pano seco — Não use água nem solventes.",
+    "Arrume a zona e deixe os corredores livres — Paletes e restos no sítio certo.",
+    "Deixe uma nota em Turno se houver algo a assinalar — Menu › Turno."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 34560
+  },
+  {
+   "id": "1arr-MEL",
+   "secao": "MEL",
+   "titulo": "Arranque da linha",
+   "min": 10,
+   "passos": [
+    "Confirme que a checklist de arranque do turno está feita — Sem a checklist feita, não arranque a linha.",
+    "Retire o seu cadeado e confirme que ninguém está dentro da zona da máquina — Olhe à volta da máquina e avise em voz alta que vai arrancar.",
+    "Rearme as paragens de emergência e o quadro de comando — As luzes de falha devem apagar-se.",
+    "Arranque em modo manual e esteja atento a ruídos e vibrações — Se ouvir algo fora do normal, pare e reporte uma avaria.",
+    "Passe a modo automático e acompanhe os primeiros minutos — Confirme os primeiros produtos antes de se afastar.",
+    "Registe as leituras dos parâmetros do turno no FinsaFix — Menu › Controlo."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 30240
+  },
+  {
+   "id": "2loto-MEL",
+   "secao": "MEL",
+   "titulo": "Paragem segura e bloqueio (LOTO)",
+   "min": 8,
+   "passos": [
+    "Avise a equipa da secção e o chefe de turno — Diga que máquina vai parar e porquê.",
+    "Pare a máquina pelo comando normal — Use a paragem de emergência só em caso de perigo.",
+    "Desligue e bloqueie a energia com o seu cadeado pessoal — Cada pessoa que vai intervir coloca o seu próprio cadeado.",
+    "Liberte o ar comprimido e a pressão hidráulica — Confirme no manómetro que a pressão está a zero.",
+    "Coloque a etiqueta com o seu nome e a data — A etiqueta fica junto ao cadeado.",
+    "Tente arrancar para confirmar que a máquina não liga — Volte a pôr o comando na posição de desligado."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 31680
+  },
+  {
+   "id": "3troca-MEL",
+   "secao": "MEL",
+   "titulo": "Troca de papel decorativo",
+   "min": 30,
+   "passos": [
+    "Faça a paragem segura e o bloqueio (LOTO) — Siga o procedimento “Paragem segura e bloqueio”.",
+    "Prepare as peças e as ferramentas — Confirme a referência das peças antes de começar.",
+    "Use o EPI indicado — Luvas anticorte, óculos de proteção, calçado de segurança e proteção auditiva.",
+    "Faça a troca pela ordem do manual da máquina — Em caso de dúvida, pare e peça ajuda ao chefe de turno.",
+    "Retire as ferramentas e confirme que as proteções estão no lugar — Conte as ferramentas: nenhuma pode ficar dentro da máquina.",
+    "Retire o bloqueio e faça o arranque de teste — Siga o procedimento “Arranque da linha”."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 33120
+  },
+  {
+   "id": "4lim-MEL",
+   "secao": "MEL",
+   "titulo": "Limpeza de fim de turno",
+   "min": 15,
+   "passos": [
+    "Pare a máquina e faça o bloqueio (LOTO) — Nunca limpe com a máquina em automático.",
+    "Aspire o pó acumulado — não use ar comprimido — O pó de madeira acumulado é risco de incêndio.",
+    "Limpe sensores e fotocélulas com pano seco — Não use água nem solventes.",
+    "Arrume a zona e deixe os corredores livres — Paletes e restos no sítio certo.",
+    "Deixe uma nota em Turno se houver algo a assinalar — Menu › Turno."
+   ],
+   "estado": "validada",
+   "validadaPor": "marta",
+   "validadaHaMin": 34560
+  }
+ ],
+ "preventivas": [
+  {
+   "equipamento": "PARQ-EST-1",
+   "titulo": "Troca do jogo de facas da estilhadora",
+   "esp": "mecanica",
+   "intervaloH": 120,
+   "desdeUltimaH": 112,
+   "ultimaPor": "carlos"
+  },
+  {
+   "equipamento": "PARQ-EST-3",
+   "titulo": "Teste do detetor de metais",
+   "esp": "eletrica",
+   "intervaloH": 168,
+   "desdeUltimaH": 40,
+   "ultimaPor": "joao"
+  },
+  {
+   "equipamento": "PARQ-REC-1",
+   "titulo": "Inversão / troca dos martelos do triturador",
+   "esp": "mecanica",
+   "intervaloH": 300,
+   "desdeUltimaH": 180,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "CALD-2",
+   "titulo": "Limpeza e inspeção da grelha móvel",
+   "esp": "mecanica",
+   "intervaloH": 500,
+   "desdeUltimaH": 515,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "CALD-3",
+   "titulo": "Calibração dos termopares do óleo térmico",
+   "esp": "eletrica",
+   "intervaloH": 720,
+   "desdeUltimaH": 700,
+   "ultimaPor": "joao"
+  },
+  {
+   "equipamento": "DESF-1",
+   "titulo": "Inspeção dos segmentos de refinação",
+   "esp": "mecanica",
+   "intervaloH": 400,
+   "desdeUltimaH": 372,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "DESF-2",
+   "titulo": "Verificação do empanque da Plug Screw",
+   "esp": "mecanica",
+   "intervaloH": 720,
+   "desdeUltimaH": 50,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "SEC-2",
+   "titulo": "Inspeção das palhetas das eclusas",
+   "esp": "mecanica",
+   "intervaloH": 250,
+   "desdeUltimaH": 262,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "SEC-1",
+   "titulo": "Verificação da sonda de humidade ótica",
+   "esp": "eletrica",
+   "intervaloH": 336,
+   "desdeUltimaH": 120,
+   "ultimaPor": "joao"
+  },
+  {
+   "equipamento": "PREN-MDF-1",
+   "titulo": "Lubrificação das correntes de rolos",
+   "esp": "mecanica",
+   "intervaloH": 168,
+   "desdeUltimaH": 120,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "PREN-MDF-1",
+   "titulo": "Inspeção da cinta de aço",
+   "esp": "mecanica",
+   "intervaloH": 1000,
+   "desdeUltimaH": 640,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "PREN-SP-3",
+   "titulo": "Limpeza dos bicos de pulverização de cola",
+   "esp": "mecanica",
+   "intervaloH": 72,
+   "desdeUltimaH": 70,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "PREN-SP-3",
+   "titulo": "Calibração da célula de carga do tapete",
+   "esp": "eletrica",
+   "intervaloH": 720,
+   "desdeUltimaH": 310,
+   "ultimaPor": "joao"
+  },
+  {
+   "equipamento": "LIX-MDF-1",
+   "titulo": "Troca das cintas de lixa grão 60",
+   "esp": "mecanica",
+   "intervaloH": 80,
+   "desdeUltimaH": 61,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "LIX-SP-1",
+   "titulo": "Troca das cintas de lixa grão 80",
+   "esp": "mecanica",
+   "intervaloH": 80,
+   "desdeUltimaH": 30,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "SCHEL-1",
+   "titulo": "Afiação / troca do disco principal",
+   "esp": "mecanica",
+   "intervaloH": 60,
+   "desdeUltimaH": 58,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "SCHEL-2",
+   "titulo": "Verificação dos sensores de segurança das pinças",
+   "esp": "eletrica",
+   "intervaloH": 336,
+   "desdeUltimaH": 345,
+   "ultimaPor": "joao"
+  },
+  {
+   "equipamento": "MULTI-1",
+   "titulo": "Troca do jogo de discos",
+   "esp": "mecanica",
+   "intervaloH": 150,
+   "desdeUltimaH": 90,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "MULTI-2",
+   "titulo": "Limpeza e alinhamento das fotocélulas SICK",
+   "esp": "eletrica",
+   "intervaloH": 336,
+   "desdeUltimaH": 340,
+   "ultimaPor": "joao"
+  },
+  {
+   "equipamento": "IMP-1",
+   "titulo": "Limpeza do banho e troca de filtros",
+   "esp": "mecanica",
+   "intervaloH": 48,
+   "desdeUltimaH": 30,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "IMP-1",
+   "titulo": "Revisão do quadro e ventilação do variador",
+   "esp": "eletrica",
+   "intervaloH": 720,
+   "desdeUltimaH": 690,
+   "ultimaPor": "joao"
+  },
+  {
+   "equipamento": "MEL-1",
+   "titulo": "Verificação dos vedantes do cilindro principal",
+   "esp": "mecanica",
+   "intervaloH": 500,
+   "desdeUltimaH": 420,
+   "ultimaPor": "joaquim"
+  },
+  {
+   "equipamento": "MEL-3",
+   "titulo": "Troca das ventosas de vácuo",
+   "esp": "mecanica",
+   "intervaloH": 400,
+   "desdeUltimaH": 200,
+   "ultimaPor": "joaquim"
+  }
+ ],
+ "pecas": [
+  {
+   "id": "PREN-MDF-K1",
+   "nome": "Válvula proporcional Bosch Rexroth",
+   "equipamento": "PREN-MDF-1",
+   "esp": "mecanica",
+   "minimo": 1,
+   "stock": 0,
+   "pedidaPor": "mario",
+   "pedidaHaMin": 600
+  },
+  {
+   "id": "PREN-MDF-K2",
+   "nome": "Junta hidráulica alta pressão",
+   "equipamento": "PREN-MDF-1",
+   "esp": "mecanica",
+   "minimo": 2,
+   "stock": 5,
+   "pedidaPor": null,
+   "pedidaHaMin": null
+  },
+  {
+   "id": "PREN-MDF-K3",
+   "nome": "Cinta de aço inox",
+   "equipamento": "PREN-MDF-1",
+   "esp": "mecanica",
+   "minimo": 1,
+   "stock": 2,
+   "pedidaPor": null,
+   "pedidaHaMin": null
+  },
+  {
+   "id": "LIX-MDF-K1",
+   "nome": "Cinta de lixa grão 60",
+   "equipamento": "LIX-MDF-1",
+   "esp": "mecanica",
+   "minimo": 4,
+   "stock": 3,
+   "pedidaPor": null,
+   "pedidaHaMin": null
+  },
+  {
+   "id": "IMP-K2",
+   "nome": "Filtro de banho de melamina",
+   "equipamento": "IMP-1",
+   "esp": "mecanica",
+   "minimo": 4,
+   "stock": 2,
+   "pedidaPor": null,
+   "pedidaHaMin": null
+  },
+  {
+   "id": "SCHEL-K1",
+   "nome": "Disco de serra principal Ø450",
+   "equipamento": "SCHEL-1",
+   "esp": "mecanica",
+   "minimo": 2,
+   "stock": 6,
+   "pedidaPor": null,
+   "pedidaHaMin": null
+  },
+  {
+   "id": "SCHEL-K2",
+   "nome": "Disco incisor",
+   "equipamento": "SCHEL-1",
+   "esp": "mecanica",
+   "minimo": 2,
+   "stock": 4,
+   "pedidaPor": null,
+   "pedidaHaMin": null
+  },
+  {
+   "id": "SCHEL-K3",
+   "nome": "Cilindro pneumático da pinça",
+   "equipamento": "SCHEL-2",
+   "esp": "mecanica",
+   "minimo": 1,
+   "stock": 2,
+   "pedidaPor": null,
+   "pedidaHaMin": null
+  },
+  {
+   "id": "CALD-K2",
+   "nome": "Termopar Tipo K",
+   "equipamento": "CALD-3",
+   "esp": "eletrica",
+   "minimo": 2,
+   "stock": 1,
+   "pedidaPor": null,
+   "pedidaHaMin": null
+  },
+  {
+   "id": "PREN-SP-K4",
+   "nome": "Encoder do acionamento principal",
+   "equipamento": "PREN-SP-1",
+   "esp": "eletrica",
+   "minimo": 1,
+   "stock": 0,
+   "pedidaPor": null,
+   "pedidaHaMin": null
+  },
+  {
+   "id": "MULTI-K3",
+   "nome": "Fotocélula SICK",
+   "equipamento": "MULTI-2",
+   "esp": "eletrica",
+   "minimo": 2,
+   "stock": 1,
+   "pedidaPor": null,
+   "pedidaHaMin": null
+  },
+  {
+   "id": "SCHEL-K4",
+   "nome": "Sensor indutivo M18",
+   "equipamento": "SCHEL-2",
+   "esp": "eletrica",
+   "minimo": 2,
+   "stock": 5,
+   "pedidaPor": null,
+   "pedidaHaMin": null
+  }
+ ],
+ "registos": [
+  {
+   "tipo": "ajuda",
+   "secao": "SCHEL",
+   "pessoa": "jose",
+   "texto": "Falta um operador na mesa elevatória",
+   "estado": "aberto",
+   "haMin": 7,
+   "extra": "chefe",
+   "urgente": true,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "ajuda",
+   "secao": "SCHEL",
+   "pessoa": "jose",
+   "texto": "Dúvida na sequência de corte da OP-4562",
+   "estado": "a_caminho",
+   "haMin": 26,
+   "extra": "chefe",
+   "urgente": false,
+   "tratadoPor": "ch_schel",
+   "resposta": "Vou daqui a 10 min",
+   "tratadoHaMin": 24
+  },
+  {
+   "tipo": "ajuda",
+   "secao": "SCHEL",
+   "pessoa": "jose",
+   "texto": "Lascas no corte de MDF 19 mm",
+   "estado": "atendido",
+   "haMin": 300,
+   "extra": "qualidade",
+   "urgente": false,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "ajuda",
+   "secao": "SCHEL",
+   "pessoa": "jose",
+   "texto": "Confirmar troca para MDF 10 mm",
+   "estado": "fechado",
+   "haMin": 360,
+   "extra": "chefe",
+   "urgente": false,
+   "tratadoPor": "ch_schel",
+   "resposta": "Pode avançar",
+   "tratadoHaMin": 348
+  },
+  {
+   "tipo": "material",
+   "secao": "SCHEL",
+   "pessoa": "jose",
+   "texto": "10 × Paletes vazias",
+   "estado": "aberto",
+   "haMin": 25,
+   "extra": null,
+   "urgente": false,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "material",
+   "secao": "SCHEL",
+   "pessoa": "jose",
+   "texto": "200 × Cantoneiras",
+   "estado": "recebido",
+   "haMin": 190,
+   "extra": null,
+   "urgente": false,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "nota",
+   "secao": "SCHEL",
+   "pessoa": "miguel",
+   "texto": "Ficaram 6 tabuleiros de 19 mm por cortar na mesa elevatória 2.",
+   "estado": "ativa",
+   "haMin": 300,
+   "extra": "atencao",
+   "urgente": false,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "nota",
+   "secao": "SCHEL",
+   "pessoa": "diogo",
+   "texto": "Serra Schelling: disco principal com ruído no final do turno. Vigiar a vibração no arranque.",
+   "estado": "ativa",
+   "haMin": 570,
+   "extra": "atencao",
+   "urgente": false,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "nota",
+   "secao": "OFI-MEC",
+   "pessoa": "mario",
+   "texto": "Prensa MDF: válvula proporcional de reserva chega amanhã. Manter vigilância à pressão da zona 3.",
+   "estado": "ativa",
+   "haMin": 240,
+   "extra": "informacao",
+   "urgente": false,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "nota",
+   "secao": "SCHEL",
+   "pessoa": "marta",
+   "texto": "Auditoria de segurança LOTO na quinta-feira às 10h. Os cadeados pessoais devem estar identificados.",
+   "estado": "ativa",
+   "haMin": 1650,
+   "extra": "informacao",
+   "urgente": false,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "nota",
+   "secao": "OFI-MEC",
+   "pessoa": "marta",
+   "texto": "Auditoria de segurança LOTO na quinta-feira às 10h. Os cadeados pessoais devem estar identificados.",
+   "estado": "ativa",
+   "haMin": 1650,
+   "extra": "informacao",
+   "urgente": false,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "nota",
+   "secao": "OFI-ELE",
+   "pessoa": "marta",
+   "texto": "Auditoria de segurança LOTO na quinta-feira às 10h. Os cadeados pessoais devem estar identificados.",
+   "estado": "ativa",
+   "haMin": 1650,
+   "extra": "informacao",
+   "urgente": false,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "rececao",
+   "secao": "SCHEL",
+   "pessoa": "diogo",
+   "texto": "",
+   "estado": "por_confirmar",
+   "haMin": 900,
+   "extra": "M",
+   "urgente": false,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "rececao",
+   "secao": "SCHEL",
+   "pessoa": "miguel",
+   "texto": "",
+   "estado": "por_confirmar",
+   "haMin": 1380,
+   "extra": "M",
+   "urgente": false,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "rececao",
+   "secao": "SCHEL",
+   "pessoa": "jose",
+   "texto": "",
+   "estado": "confirmada",
+   "haMin": 1860,
+   "extra": "M",
+   "urgente": false,
+   "tratadoPor": "ch_schel",
+   "resposta": null,
+   "tratadoHaMin": 1830
+  },
+  {
+   "tipo": "rececao",
+   "secao": "OFI-MEC",
+   "pessoa": "mario",
+   "texto": "",
+   "estado": "por_confirmar",
+   "haMin": 600,
+   "extra": "M",
+   "urgente": false,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "rececao",
+   "secao": "OFI-MEC",
+   "pessoa": "joaquim",
+   "texto": "",
+   "estado": "confirmada",
+   "haMin": 1750,
+   "extra": "M",
+   "urgente": false,
+   "tratadoPor": "ch_ofmec",
+   "resposta": null,
+   "tratadoHaMin": 1730
+  },
+  {
+   "tipo": "ronda",
+   "secao": "PREN-MDF",
+   "pessoa": "carlos",
+   "texto": "Pequena fuga na junta da zona 3",
+   "estado": "nao_conforme",
+   "haMin": 300,
+   "extra": "Fugas (óleo, ar, vapor)",
+   "urgente": false,
+   "tratadoPor": null,
+   "resposta": null,
+   "tratadoHaMin": null
+  },
+  {
+   "tipo": "ronda",
+   "secao": "CALD",
+   "pessoa": "joaquim",
+   "texto": "Pó acumulado junto aos sem-fins",
+   "estado": "validada",
+   "haMin": 1260,
+   "extra": "Acumulação de pó / limpeza",
+   "urgente": false,
+   "tratadoPor": "ch_ofmec",
+   "resposta": null,
+   "tratadoHaMin": 1210
+  }
+ ]
+}

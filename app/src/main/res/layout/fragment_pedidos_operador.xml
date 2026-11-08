@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Operador: pedir ajuda ou material, pedidos em aberto e anteriores. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_ecra">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botaoAjuda"
+                style="@style/Widget.FinsaFix.Button.Main"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/if_item_gap"
+                android:layout_weight="1"
+                android:text="@string/pedido_pedir_ajuda"
+                app:icon="@drawable/ic_help" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botaoMaterial"
+                style="@style/Widget.FinsaFix.Button.Tonal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="@dimen/if_btn_main_height"
+                android:text="@string/pedido_pedir_material"
+                app:icon="@drawable/ic_truck" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:layout_marginTop="@dimen/if_section_gap"
+            android:text="@string/pedidos_em_aberto" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaAbertos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:id="@+id/textoSemAbertos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/if_card_padding"
+                    android:text="@string/pedidos_sem_abertos"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:layout_marginTop="@dimen/if_section_gap"
+            android:text="@string/pedidos_anteriores" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaAnteriores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:id="@+id/textoSemAnteriores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/if_card_padding"
+                    android:text="@string/pedidos_sem_anteriores"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

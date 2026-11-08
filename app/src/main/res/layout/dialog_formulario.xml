@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Reportar / editar avaria, dentro de uma janela (tablet) ou folha (telemóvel).
+    Os 5 passos estão todos aqui e só o passo atual fica visível.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Barra de progresso com 5 segmentos: os do passo atual e anteriores ficam coloridos (código) -->
+    <LinearLayout
+        android:id="@+id/barraSegmentos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <View style="@style/FinsaFix.Segmento" />
+
+        <View style="@style/FinsaFix.Segmento" />
+
+        <View style="@style/FinsaFix.Segmento" />
+
+        <View style="@style/FinsaFix.Segmento" />
+
+        <View style="@style/FinsaFix.Segmento" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textoPasso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="@dimen/if_item_gap"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+        android:textColor="@color/if_on_surface_variant" />
+
+    <TextView
+        android:id="@+id/textoPergunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="@dimen/if_item_gap"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Headline"
+        android:textColor="@color/if_on_surface" />
+
+    <!-- 0 dp com peso: se o conteúdo for alto, esta zona rola e os botões ficam sempre à vista -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
+
+            <!-- Passo 1: cartões dos equipamentos (criados no código), 2 colunas, e "Outra secção" -->
+            <GridLayout
+                android:id="@+id/grelhaEquipamentos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2" />
+
+            <!-- Passo 2: tipo de avaria -->
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/grupoTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoMecanica"
+                    style="@style/Widget.FinsaFix.Button.Escolha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tipo_mecanica_cartao"
+                    app:icon="@drawable/ic_wrench" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoEletrica"
+                    style="@style/Widget.FinsaFix.Button.Escolha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tipo_eletrica_cartao"
+                    app:icon="@drawable/ic_bolt" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoNaoSei"
+                    style="@style/Widget.FinsaFix.Button.Escolha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tipo_nao_sei_cartao"
+                    app:icon="@drawable/ic_help" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <!-- Passo 3: sintoma (chips criados no código a partir de strings.xml) e descrição opcional -->
+            <LinearLayout
+                android:id="@+id/passoSintoma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/grupoSintomas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/campoDescricao"
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/if_item_gap"
+                    android:hint="@string/descricao_hint"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="300">
+
+                    <!-- Sem maxLength: deixa-se escrever a mais para a mensagem de erro aparecer. -->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editDescricao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:minLines="3"
+                        android:textAppearance="@style/TextAppearance.FinsaFix.Body" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Passo 4: urgência com legenda e, na Crítica, "A máquina parou?" -->
+            <LinearLayout
+                android:id="@+id/passoUrgencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/grupoUrgencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/botaoBaixa"
+                        style="@style/Widget.FinsaFix.Button.Escolha"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/urgencia_baixa_cartao" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/botaoMedia"
+                        style="@style/Widget.FinsaFix.Button.Escolha"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/urgencia_media_cartao" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/botaoCritica"
+                        style="@style/Widget.FinsaFix.Button.Escolha"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/urgencia_critica_cartao"
+                        app:icon="@drawable/ic_stop_x" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <LinearLayout
+                    android:id="@+id/perguntaParou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/FinsaFix.TituloSeccao"
+                        android:layout_marginTop="@dimen/if_section_gap"
+                        android:text="@string/parou_pergunta" />
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/grupoParou"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:selectionRequired="true"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/botaoParouSim"
+                            style="@style/Widget.FinsaFix.Button.Escolha"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/parou_sim" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/botaoParouNao"
+                            style="@style/Widget.FinsaFix.Button.Escolha"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/parou_nao" />
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Passo 5: resumo com "Alterar" -->
+            <LinearLayout
+                android:id="@+id/cartaoResumo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textoResumo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="8dp"
+                        android:padding="@dimen/if_card_padding"
+                        android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                        android:textColor="@color/if_on_surface" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoAlterar"
+                    style="@style/Widget.FinsaFix.Button.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/formulario_alterar"
+                    app:icon="@drawable/ic_edit" />
+            </LinearLayout>
+
+            <!-- O que falta responder neste passo (ex.: "Escolha o equipamento"). -->
+            <TextView
+                android:id="@+id/textoAjuda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/if_item_gap"
+                android:drawableStart="@drawable/ic_info"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/if_on_surface_variant"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_on_surface_variant" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="@dimen/if_item_gap">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoAnterior"
+            style="@style/Widget.FinsaFix.Button.Tonal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/if_item_gap"
+            android:layout_weight="1"
+            android:minHeight="@dimen/if_btn_main_height"
+            android:text="@string/botao_anterior"
+            app:icon="@drawable/ic_back"
+            app:iconGravity="textStart" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoSeguinte"
+            style="@style/Widget.FinsaFix.Button.Main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/botao_seguinte"
+            app:icon="@drawable/ic_chev"
+            app:iconGravity="textEnd" />
+    </LinearLayout>
+</LinearLayout>

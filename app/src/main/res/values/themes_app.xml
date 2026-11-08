@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Acrescentos ao tema da referência (themes.xml fica igual ao sistema de design). -->
+<resources>
+    <!-- Texto das ações da barra de topo com maiúscula só na primeira palavra ("Terminar sessão"). -->
+    <style name="ThemeOverlay.FinsaFix.BarraTopo" parent="">
+        <item name="actionMenuTextAppearance">@style/TextAppearance.FinsaFix.Label</item>
+    </style>
+
+    <!-- Botões de escolha (tipo de avaria, urgência) dentro de um MaterialButtonToggleGroup: 72 dp de altura. -->
+    <style name="Widget.FinsaFix.Button.Escolha" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/if_btn_main_height</item>
+        <item name="android:textAppearance">@style/TextAppearance.FinsaFix.Label</item>
+        <!-- Ícone por cima do texto: no telemóvel não há largura para ícone + "Mecânica" lado a lado. -->
+        <item name="iconGravity">top</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="shapeAppearance">@style/Shape.FinsaFix.Small</item>
+    </style>
+
+    <!-- Janela modal (tablet): o tema da app, mas flutuante e com cantos arredondados. -->
+    <style name="Theme.FinsaFix.Janela" parent="Theme.FinsaFix">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@drawable/fundo_janela</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- Um dos 5 segmentos da barra de progresso dos assistentes (a cor é posta no código). -->
+    <style name="FinsaFix.Segmento" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">6dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginHorizontal">2dp</item>
+    </style>
+
+    <!-- Título de uma secção dentro de um ecrã (ex.: "Turno", "Quantidade"). -->
+    <style name="FinsaFix.TituloSeccao" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.FinsaFix.Title</item>
+        <item name="android:textColor">@color/if_on_surface</item>
+    </style>
+</resources>

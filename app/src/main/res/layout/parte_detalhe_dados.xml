@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "Detalhes": descrição e os campos da avaria (os rótulos são preenchidos no código, a partir de strings.xml). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/if_section_gap"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/detalhe_detalhes"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+        android:textColor="@color/if_on_surface" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/if_card_padding">
+
+            <TextView
+                android:id="@+id/textoDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_on_surface" />
+
+            <include android:id="@+id/campoEquipamento" layout="@layout/item_campo" />
+            <include android:id="@+id/campoSecao" layout="@layout/item_campo" />
+            <include android:id="@+id/campoEspecialidade" layout="@layout/item_campo" />
+            <include android:id="@+id/campoReportadaPor" layout="@layout/item_campo" />
+            <include android:id="@+id/campoAbertura" layout="@layout/item_campo" />
+            <include android:id="@+id/campoTecnico" layout="@layout/item_campo" />
+            <include android:id="@+id/campoInicio" layout="@layout/item_campo" />
+            <include android:id="@+id/campoDuracao" layout="@layout/item_campo" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

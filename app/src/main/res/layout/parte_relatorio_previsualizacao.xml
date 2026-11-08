@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Relatórios: a pré-visualização (título, números principais, tabelas curtas) ou o estado vazio. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/FinsaFix.TituloSeccao"
+        android:text="@string/relatorio_previsualizacao" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/if_card_padding">
+
+            <LinearLayout
+                android:id="@+id/estadoVazio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/if_icon_grande"
+                    android:layout_height="@dimen/if_icon_grande"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_chart"
+                    app:tint="@color/if_on_surface_variant" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/if_item_gap"
+                    android:text="@string/relatorio_sem_registos"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/folha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textoTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.HeadlineSmall"
+                    android:textColor="@color/if_on_surface" />
+
+                <TextView
+                    android:id="@+id/textoSecaoPeriodo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant" />
+
+                <TextView
+                    android:id="@+id/textoGerado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Secondary"
+                    android:textColor="@color/if_on_surface_variant" />
+
+                <GridLayout
+                    android:id="@+id/numeros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/if_card_padding"
+                    android:columnCount="2" />
+
+                <LinearLayout
+                    android:id="@+id/tabelas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

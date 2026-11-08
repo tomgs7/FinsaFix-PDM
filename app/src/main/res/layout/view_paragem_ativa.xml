@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Paragem ativa: equipamento parado e o tempo parado. Chip no tablet, faixa no telemóvel; toca e abre a avaria. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fundo_critico"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/if_touch_min"
+    android:orientation="horizontal"
+    android:paddingHorizontal="12dp"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_stop_x"
+        android:drawablePadding="6dp"
+        android:drawableTint="@color/if_on_error"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:maxWidth="@dimen/paragem_chip_max"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Label"
+        android:textColor="@color/if_on_error" />
+
+    <!-- O Chronometer conta sozinho; o MainActivity formata-o em HH:MM:SS. -->
+    <Chronometer
+        android:id="@+id/cronometro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Label"
+        android:textColor="@color/if_on_error" />
+</LinearLayout>

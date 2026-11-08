@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Telemóvel: logótipo, contexto e título, estado de gravação e avatar; por baixo a faixa da paragem ativa. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/barraTopo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/if_topbar_height"
+        android:background="?attr/colorSurface"
+        android:theme="@style/ThemeOverlay.FinsaFix.BarraTopo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Logo.Pequeno" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textoContexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Secondary"
+                    android:textColor="@color/if_on_surface_variant" />
+
+                <TextView
+                    android:id="@+id/textoTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+                    android:textColor="@color/if_on_surface" />
+            </LinearLayout>
+
+            <!-- "Guardado neste tablet": só o ícone no telemóvel. -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="8dp"
+                android:contentDescription="@string/barra_guardado"
+                android:src="@drawable/ic_cloud_done"
+                app:tint="@color/if_ok_text" />
+
+            <TextView
+                android:id="@+id/textoIniciais"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/fundo_avatar"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label"
+                android:textColor="@color/if_on_surface" />
+        </LinearLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <include
+        android:id="@+id/faixaParagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/view_paragem_ativa" />
+</LinearLayout>

@@ -1,0 +1,2201 @@
+{
+  "_nota": "Dados de demonstração do protótipo FinsaFix (fictícios). Os campos *HaMin são minutos antes do momento da instalação: na primeira execução, calcular data = agora - valor*60000. PINs são de demonstração.",
+  "turnos": {
+    "M": {
+      "k": "M",
+      "nome": "Manhã",
+      "h": "08:00–16:00",
+      "hc": "08h–16h",
+      "s": 8
+    },
+    "T": {
+      "k": "T",
+      "nome": "Tarde",
+      "h": "16:00–00:00",
+      "hc": "16h–00h",
+      "s": 16
+    },
+    "N": {
+      "k": "N",
+      "nome": "Noite",
+      "h": "00:00–08:00",
+      "hc": "00h–08h",
+      "s": 0
+    }
+  },
+  "secoes": [
+    {
+      "id": "PARQ-EST",
+      "nome": "Parque — Estilhadora",
+      "unidade": "t",
+      "equipamentos": [
+        {
+          "id": "PARQ-EST-1",
+          "nome": "Estilhadora Principal"
+        },
+        {
+          "id": "PARQ-EST-2",
+          "nome": "Descascador"
+        },
+        {
+          "id": "PARQ-EST-3",
+          "nome": "Tapete de Toros e Detetor de Metais"
+        }
+      ]
+    },
+    {
+      "id": "PARQ-REC",
+      "nome": "Parque — Reciclado",
+      "unidade": "t",
+      "equipamentos": [
+        {
+          "id": "PARQ-REC-1",
+          "nome": "Triturador de Reciclado"
+        },
+        {
+          "id": "PARQ-REC-2",
+          "nome": "Crivos de Limpeza Reciclado"
+        },
+        {
+          "id": "PARQ-REC-3",
+          "nome": "Eletroíman Overband"
+        }
+      ]
+    },
+    {
+      "id": "CALD",
+      "nome": "Caldeiras",
+      "unidade": "mwh",
+      "equipamentos": [
+        {
+          "id": "CALD-1",
+          "nome": "Caldeira de Biomassa"
+        },
+        {
+          "id": "CALD-2",
+          "nome": "Grelha Móvel e Sem-fins"
+        },
+        {
+          "id": "CALD-3",
+          "nome": "Circuito de Óleo Térmico"
+        }
+      ]
+    },
+    {
+      "id": "DESF",
+      "nome": "Desfibrador",
+      "unidade": "tf",
+      "equipamentos": [
+        {
+          "id": "DESF-1",
+          "nome": "Desfibrador MDF"
+        },
+        {
+          "id": "DESF-2",
+          "nome": "Rosca Plug Screw"
+        },
+        {
+          "id": "DESF-3",
+          "nome": "Digestor e Blow-line"
+        }
+      ]
+    },
+    {
+      "id": "SEC",
+      "nome": "Secador",
+      "unidade": "tf",
+      "equipamentos": [
+        {
+          "id": "SEC-1",
+          "nome": "Secador de Fibras / Trommel"
+        },
+        {
+          "id": "SEC-2",
+          "nome": "Ciclones e Válvulas Rotativas (Eclusas)"
+        },
+        {
+          "id": "SEC-3",
+          "nome": "Crivos Classificadores"
+        }
+      ]
+    },
+    {
+      "id": "PREN-MDF",
+      "nome": "Prensa MDF",
+      "unidade": "m3",
+      "equipamentos": [
+        {
+          "id": "PREN-MDF-1",
+          "nome": "Prensa Contínua MDF"
+        },
+        {
+          "id": "PREN-MDF-2",
+          "nome": "Formadora e Pré-Prensa MDF"
+        },
+        {
+          "id": "PREN-MDF-3",
+          "nome": "Estrela de Arrefecimento MDF"
+        }
+      ]
+    },
+    {
+      "id": "PREN-SP",
+      "nome": "Prensa SuperPan",
+      "unidade": "m3",
+      "equipamentos": [
+        {
+          "id": "PREN-SP-1",
+          "nome": "Prensa Contínua SuperPan"
+        },
+        {
+          "id": "PREN-SP-2",
+          "nome": "Cabeças Formadoras (Fibra/Partícula)"
+        },
+        {
+          "id": "PREN-SP-3",
+          "nome": "Encolagem SuperPan"
+        }
+      ]
+    },
+    {
+      "id": "LIX-MDF",
+      "nome": "Lixadora MDF",
+      "unidade": "tab",
+      "equipamentos": [
+        {
+          "id": "LIX-MDF-1",
+          "nome": "Lixadora MDF (Desbaste e Acabamento)"
+        },
+        {
+          "id": "LIX-MDF-2",
+          "nome": "Linha de Classificação MDF"
+        }
+      ]
+    },
+    {
+      "id": "LIX-SP",
+      "nome": "Lixadora SuperPan",
+      "unidade": "tab",
+      "equipamentos": [
+        {
+          "id": "LIX-SP-1",
+          "nome": "Lixadora SuperPan"
+        },
+        {
+          "id": "LIX-SP-2",
+          "nome": "Empilhador da Lixadora SP"
+        }
+      ]
+    },
+    {
+      "id": "SCHEL",
+      "nome": "Schelling",
+      "unidade": "tabc",
+      "equipamentos": [
+        {
+          "id": "SCHEL-1",
+          "nome": "Serra Schelling"
+        },
+        {
+          "id": "SCHEL-2",
+          "nome": "Carro Empurrador e Pinças Schelling"
+        },
+        {
+          "id": "SCHEL-3",
+          "nome": "Mesas Elevatórias Schelling"
+        }
+      ]
+    },
+    {
+      "id": "MULTI",
+      "nome": "Multi Serra",
+      "unidade": "tabc",
+      "equipamentos": [
+        {
+          "id": "MULTI-1",
+          "nome": "Multi Serra"
+        },
+        {
+          "id": "MULTI-2",
+          "nome": "Transportador de Rolos e Alinhador"
+        },
+        {
+          "id": "MULTI-3",
+          "nome": "Empilhador Multi Serra"
+        }
+      ]
+    },
+    {
+      "id": "IMP",
+      "nome": "Impregnação",
+      "unidade": "fol",
+      "equipamentos": [
+        {
+          "id": "IMP-1",
+          "nome": "Linha de Impregnação"
+        },
+        {
+          "id": "IMP-2",
+          "nome": "Estufas de Flutuação"
+        },
+        {
+          "id": "IMP-3",
+          "nome": "Guilhotina Rotativa de Papel"
+        }
+      ]
+    },
+    {
+      "id": "MEL",
+      "nome": "Melamina",
+      "unidade": "pain",
+      "equipamentos": [
+        {
+          "id": "MEL-1",
+          "nome": "Prensa Melamina 1 (Ciclo Curto)"
+        },
+        {
+          "id": "MEL-2",
+          "nome": "Prensa Melamina 2 (Ciclo Curto)"
+        },
+        {
+          "id": "MEL-3",
+          "nome": "Carro de Ventosas e Escovadora"
+        }
+      ]
+    }
+  ],
+  "oficinas": [
+    {
+      "id": "OFI-MEC",
+      "nome": "Oficina Mecânica",
+      "esp": "mecanica",
+      "sub": "Mecânica · hidráulica · pneumática"
+    },
+    {
+      "id": "OFI-ELE",
+      "nome": "Oficina Elétrica",
+      "esp": "eletrica",
+      "sub": "Elétrica · sensores · PLC · motores"
+    }
+  ],
+  "especialidades": {
+    "mecanica": {
+      "l": "Mecânica",
+      "icon": "wrench",
+      "of": "Oficina Mecânica"
+    },
+    "eletrica": {
+      "l": "Elétrica",
+      "icon": "bolt",
+      "of": "Oficina Elétrica"
+    },
+    "nao_sei": {
+      "l": "Por classificar",
+      "icon": "help",
+      "of": "Oficinas Mecânica e Elétrica"
+    }
+  },
+  "pessoas": [
+    {
+      "id": "antonio",
+      "nome": "António Loureiro",
+      "funcao": "Operador de Estilhadora",
+      "papel": "operador",
+      "posto": "PARQ-EST",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "fernando",
+      "nome": "Fernando Carvalho",
+      "funcao": "Operador de Estilhadora",
+      "papel": "operador",
+      "posto": "PARQ-EST",
+      "turno": "T",
+      "especialidade": null
+    },
+    {
+      "id": "hugo",
+      "nome": "Hugo Marques",
+      "funcao": "Operador de Reciclado",
+      "papel": "operador",
+      "posto": "PARQ-REC",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "sergio",
+      "nome": "Ezequiel Abrantes",
+      "funcao": "Operador de Reciclado",
+      "papel": "operador",
+      "posto": "PARQ-REC",
+      "turno": "T",
+      "especialidade": null
+    },
+    {
+      "id": "luis",
+      "nome": "Luís Gomes",
+      "funcao": "Fogueiro",
+      "papel": "operador",
+      "posto": "CALD",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "paulo",
+      "nome": "Paulo Cardoso",
+      "funcao": "Fogueiro",
+      "papel": "operador",
+      "posto": "CALD",
+      "turno": "N",
+      "especialidade": null
+    },
+    {
+      "id": "nuno",
+      "nome": "Nuno Ribeiro",
+      "funcao": "Operador de Desfibrador",
+      "papel": "operador",
+      "posto": "DESF",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ricardo",
+      "nome": "Ricardo Matos",
+      "funcao": "Operador de Desfibrador",
+      "papel": "operador",
+      "posto": "DESF",
+      "turno": "T",
+      "especialidade": null
+    },
+    {
+      "id": "bruno",
+      "nome": "Bruno Costa",
+      "funcao": "Operador de Secador",
+      "papel": "operador",
+      "posto": "SEC",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "jorge",
+      "nome": "Jorge Simões",
+      "funcao": "Operador de Secador",
+      "papel": "operador",
+      "posto": "SEC",
+      "turno": "N",
+      "especialidade": null
+    },
+    {
+      "id": "rui",
+      "nome": "Rui Almeida",
+      "funcao": "Operador de Prensa MDF",
+      "papel": "operador",
+      "posto": "PREN-MDF",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "manuel",
+      "nome": "Manuel Figueiredo",
+      "funcao": "Operador de Prensa MDF",
+      "papel": "operador",
+      "posto": "PREN-MDF",
+      "turno": "T",
+      "especialidade": null
+    },
+    {
+      "id": "tiago",
+      "nome": "Tiago Lopes",
+      "funcao": "Operador de Prensa SuperPan",
+      "papel": "operador",
+      "posto": "PREN-SP",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "andre",
+      "nome": "André Fonseca",
+      "funcao": "Operador de Prensa SuperPan",
+      "papel": "operador",
+      "posto": "PREN-SP",
+      "turno": "N",
+      "especialidade": null
+    },
+    {
+      "id": "daniel",
+      "nome": "Daniel Sousa",
+      "funcao": "Operador de Lixadora MDF",
+      "papel": "operador",
+      "posto": "LIX-MDF",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "filipe",
+      "nome": "Filipe Moreira",
+      "funcao": "Operador de Lixadora MDF",
+      "papel": "operador",
+      "posto": "LIX-MDF",
+      "turno": "T",
+      "especialidade": null
+    },
+    {
+      "id": "marco",
+      "nome": "Marco Teixeira",
+      "funcao": "Operador de Lixadora SuperPan",
+      "papel": "operador",
+      "posto": "LIX-SP",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "helder",
+      "nome": "Hélder Neves",
+      "funcao": "Operador de Lixadora SuperPan",
+      "papel": "operador",
+      "posto": "LIX-SP",
+      "turno": "T",
+      "especialidade": null
+    },
+    {
+      "id": "jose",
+      "nome": "José Martins",
+      "funcao": "Operador de Schelling",
+      "papel": "operador",
+      "posto": "SCHEL",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "diogo",
+      "nome": "Diogo Pereira",
+      "funcao": "Operador de Schelling",
+      "papel": "operador",
+      "posto": "SCHEL",
+      "turno": "T",
+      "especialidade": null
+    },
+    {
+      "id": "miguel",
+      "nome": "Miguel Antunes",
+      "funcao": "Operador de Schelling",
+      "papel": "operador",
+      "posto": "SCHEL",
+      "turno": "N",
+      "especialidade": null
+    },
+    {
+      "id": "rafael",
+      "nome": "Rafael Silva",
+      "funcao": "Operador de Multi Serra",
+      "papel": "operador",
+      "posto": "MULTI",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "goncalo",
+      "nome": "Gonçalo Duarte",
+      "funcao": "Operador de Multi Serra",
+      "papel": "operador",
+      "posto": "MULTI",
+      "turno": "T",
+      "especialidade": null
+    },
+    {
+      "id": "sandra",
+      "nome": "Sandra Lopes",
+      "funcao": "Operadora de Impregnação",
+      "papel": "operador",
+      "posto": "IMP",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "claudia",
+      "nome": "Cláudia Rocha",
+      "funcao": "Operadora de Impregnação",
+      "papel": "operador",
+      "posto": "IMP",
+      "turno": "T",
+      "especialidade": null
+    },
+    {
+      "id": "vitor",
+      "nome": "Vítor Rodrigues",
+      "funcao": "Operador de Melamina",
+      "papel": "operador",
+      "posto": "MEL",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ana",
+      "nome": "Ana Batista",
+      "funcao": "Operadora de Melamina",
+      "papel": "operador",
+      "posto": "MEL",
+      "turno": "T",
+      "especialidade": null
+    },
+    {
+      "id": "carlos",
+      "nome": "Carlos Mendes",
+      "funcao": "Mecânico Sénior",
+      "papel": "tecnico",
+      "posto": "OFI-MEC",
+      "turno": "M",
+      "especialidade": "mecanica"
+    },
+    {
+      "id": "joaquim",
+      "nome": "Joaquim Santos",
+      "funcao": "Mecânico Industrial",
+      "papel": "tecnico",
+      "posto": "OFI-MEC",
+      "turno": "M",
+      "especialidade": "mecanica"
+    },
+    {
+      "id": "mario",
+      "nome": "Mário Henriques",
+      "funcao": "Mecânico de Piquete",
+      "papel": "tecnico",
+      "posto": "OFI-MEC",
+      "turno": "N",
+      "especialidade": "mecanica"
+    },
+    {
+      "id": "joao",
+      "nome": "João Ferreira",
+      "funcao": "Eletricista / PLC",
+      "papel": "tecnico",
+      "posto": "OFI-ELE",
+      "turno": "M",
+      "especialidade": "eletrica"
+    },
+    {
+      "id": "pedro",
+      "nome": "Pedro Abrantes",
+      "funcao": "Eletricista",
+      "papel": "tecnico",
+      "posto": "OFI-ELE",
+      "turno": "T",
+      "especialidade": "eletrica"
+    },
+    {
+      "id": "marta",
+      "nome": "Eng.ª Marta Ferreira",
+      "funcao": "Responsável de manutenção",
+      "papel": "engenheiro",
+      "posto": "—",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "eng_paulo",
+      "nome": "Eng. Paulo Sequeira",
+      "funcao": "Engenheiro de manutenção",
+      "papel": "engenheiro",
+      "posto": "—",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_est",
+      "nome": "Armando Teixeira",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "PARQ-EST",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_rec",
+      "nome": "Isabel Rocha",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "PARQ-REC",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_cald",
+      "nome": "Fernando Lima",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "CALD",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_desf",
+      "nome": "Paula Nogueira",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "DESF",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_sec",
+      "nome": "Ricardo Silva",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "SEC",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_pmdf",
+      "nome": "Helena Duarte",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "PREN-MDF",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_psp",
+      "nome": "Vasco Moreira",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "PREN-SP",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_lmdf",
+      "nome": "Marta Ribeiro",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "LIX-MDF",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_lsp",
+      "nome": "Nuno Carvalho",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "LIX-SP",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_schel",
+      "nome": "Rui Costa",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "SCHEL",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_schel2",
+      "nome": "Sónia Matos",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "SCHEL",
+      "turno": "T",
+      "especialidade": null
+    },
+    {
+      "id": "ch_multi",
+      "nome": "Gonçalo Pires",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "MULTI",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_imp",
+      "nome": "Teresa Lopes",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "IMP",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_mel",
+      "nome": "Bruno Faria",
+      "funcao": "Chefe de turno",
+      "papel": "chefe",
+      "posto": "MEL",
+      "turno": "M",
+      "especialidade": null
+    },
+    {
+      "id": "ch_ofmec",
+      "nome": "Hugo Batista",
+      "funcao": "Chefe de turno · Oficina Mecânica",
+      "papel": "chefe",
+      "posto": "OFI-MEC",
+      "turno": "M",
+      "especialidade": "mecanica"
+    },
+    {
+      "id": "ch_ofmec2",
+      "nome": "Luís Arruda",
+      "funcao": "Chefe de turno · Oficina Mecânica",
+      "papel": "chefe",
+      "posto": "OFI-MEC",
+      "turno": "T",
+      "especialidade": "mecanica"
+    },
+    {
+      "id": "ch_ofele",
+      "nome": "Carla Mendonça",
+      "funcao": "Chefe de turno · Oficina Elétrica",
+      "papel": "chefe",
+      "posto": "OFI-ELE",
+      "turno": "M",
+      "especialidade": "eletrica"
+    }
+  ],
+  "chefes": [
+    {
+      "id": "ch_est",
+      "nome": "Armando Teixeira",
+      "posto": "PARQ-EST",
+      "pinHash": "4592c8260855972fcc07fd00ba0d9fe57b5b624f037fdf175887f9568f744adf"
+    },
+    {
+      "id": "ch_rec",
+      "nome": "Isabel Rocha",
+      "posto": "PARQ-REC",
+      "pinHash": "cd423160b5839049173ab8f744b5482d12dac91be6345113c19c1789710359df"
+    },
+    {
+      "id": "ch_cald",
+      "nome": "Fernando Lima",
+      "posto": "CALD",
+      "pinHash": "0417c3f4d7adf96e5990f9e74c77b8e3fe581afe4bd868591facb4d7112e6f18"
+    },
+    {
+      "id": "ch_desf",
+      "nome": "Paula Nogueira",
+      "posto": "DESF",
+      "pinHash": "c91cedc64aff4629f74f9c74d50caf56afb823c83dc95428789e91eb3d41f172"
+    },
+    {
+      "id": "ch_sec",
+      "nome": "Ricardo Silva",
+      "posto": "SEC",
+      "pinHash": "51735208f4dcd320af11acda0a751e85ea806931a4b63c579e9a951a62d88122"
+    },
+    {
+      "id": "ch_pmdf",
+      "nome": "Helena Duarte",
+      "posto": "PREN-MDF",
+      "pinHash": "2920c6c76bf2559ad303a8c55d186d56ef5f10432f72295b3430ba8cbf1e515e"
+    },
+    {
+      "id": "ch_psp",
+      "nome": "Vasco Moreira",
+      "posto": "PREN-SP",
+      "pinHash": "7acba86ed07ae1627c5fc6f22f9412337b25bb86276f9f6af024d1f7b0b78ecd"
+    },
+    {
+      "id": "ch_lmdf",
+      "nome": "Marta Ribeiro",
+      "posto": "LIX-MDF",
+      "pinHash": "68c7a1b050ecd797f40acbf6ec1c4e0018fef0b717335e94747240a95582eac0"
+    },
+    {
+      "id": "ch_lsp",
+      "nome": "Nuno Carvalho",
+      "posto": "LIX-SP",
+      "pinHash": "4bfe49741049028760de549e5656158c5fcd6869bc2fc2e339bdddcb35dc87d5"
+    },
+    {
+      "id": "ch_schel",
+      "nome": "Rui Costa",
+      "posto": "SCHEL",
+      "pinHash": "a2bfd44559e00fd1780b0b11af4e66aab86e37adc78894c9a4339ecf8dd2207b"
+    },
+    {
+      "id": "ch_schel2",
+      "nome": "Sónia Matos",
+      "posto": "SCHEL",
+      "pinHash": "f2e1e11bd0eadd2a6323208e8ea22c75185f72cdc64c36621bdb8d96ccc6e7e5"
+    },
+    {
+      "id": "ch_multi",
+      "nome": "Gonçalo Pires",
+      "posto": "MULTI",
+      "pinHash": "2f1d3549083051aab7ddf2816009fe88ef95c3528fa6ed4af2a67c4cd7d96914"
+    },
+    {
+      "id": "ch_imp",
+      "nome": "Teresa Lopes",
+      "posto": "IMP",
+      "pinHash": "7cca45f5be2a6bc118558a15d5bf2023a7a9fb8919231d89e69c971a62c0c5f5"
+    },
+    {
+      "id": "ch_mel",
+      "nome": "Bruno Faria",
+      "posto": "MEL",
+      "pinHash": "039a6c94977a45ce2fb0e7ca98bdeaed2fdc0281240a0954ab400bb0a56dbddb"
+    },
+    {
+      "id": "ch_ofmec",
+      "nome": "Hugo Batista",
+      "posto": "OFI-MEC",
+      "pinHash": "2811797f6f2eabe55960190a4e4986c9cd8433cf8a7bc7f55dd3201fb89c16c7"
+    },
+    {
+      "id": "ch_ofmec2",
+      "nome": "Luís Arruda",
+      "posto": "OFI-MEC",
+      "pinHash": "881d0a40478d628b6ff35a45baaad050fe46de4eb19e388b38d43c9cca724ce3"
+    },
+    {
+      "id": "ch_ofele",
+      "nome": "Carla Mendonça",
+      "posto": "OFI-ELE",
+      "pinHash": "831408a0a0b94bf41af718dd3ea71bfdaa87737f8d6fb16f008da3821a4e7f4b"
+    }
+  ],
+  "engenheiros": [
+    {
+      "id": "marta",
+      "pinHash": "f93c4abd6e779cf0f5639365e110cb37980382a7e9c892d597c7a1b811f4e548"
+    },
+    {
+      "id": "eng_paulo",
+      "pinHash": "75a6f55db630abb4cd465bf92ae7f1bc46ee63bcb25fa04b86c3b22f6160fc86"
+    }
+  ],
+  "prioridades": {
+    "critica": {
+      "l": "Crítica",
+      "o": 0,
+      "cls": "bg-crit text-on-crit"
+    },
+    "media": {
+      "l": "Média",
+      "o": 1,
+      "cls": "bg-surface-high text-ink"
+    },
+    "baixa": {
+      "l": "Baixa",
+      "o": 2,
+      "cls": "bg-surface-high text-ink-2"
+    }
+  },
+  "estadosAvaria": {
+    "pendente": {
+      "l": "Pendente",
+      "cls": "text-ink-2"
+    },
+    "em_curso": {
+      "l": "Em curso",
+      "cls": "text-warn-ink"
+    },
+    "resolvida": {
+      "l": "Resolvida",
+      "cls": "text-ok-ink"
+    }
+  },
+  "sintomas": [
+    "Fuga hidráulica / óleo",
+    "Ruído anómalo",
+    "Vibração excessiva",
+    "Sobreaquecimento",
+    "Disparo elétrico / variador",
+    "Sensor sem leitura",
+    "Encravamento",
+    "Qualidade do produto",
+    "Parâmetro fora do limite",
+    "Inspeção não conforme"
+  ],
+  "pontosLoto": [
+    "Isolamento de energia elétrica/pneumática (LOTO) com cadeado pessoal",
+    "Verificação de pressão residual nula (hidráulica/vapor)",
+    "EPI específico validado e operador da linha informado"
+  ],
+  "mensagensRapidasTecnico": [
+    [
+      "A caminho",
+      "run"
+    ],
+    [
+      "À espera de peça",
+      "box"
+    ],
+    [
+      "Preciso da máquina parada",
+      "stop"
+    ],
+    [
+      "Demora mais de 1 hora",
+      "clock"
+    ]
+  ],
+  "motivosDeixarEmProgresso": [
+    "Fim do turno",
+    "Falta de peça",
+    "Máquina tem de produzir",
+    "Aguarda outra equipa"
+  ],
+  "quemDeuAOrdem": [
+    "Chefe de turno",
+    "Chefe da oficina",
+    "Engenharia",
+    "Decisão minha"
+  ],
+  "parametrosPorSecao": {
+    "PARQ-EST": [
+      {
+        "id": "hum",
+        "l": "Humidade da estilha",
+        "u": "%",
+        "min": 35,
+        "max": 55,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "cal",
+        "l": "Estilha fora de calibre",
+        "u": "%",
+        "min": 0,
+        "max": 8,
+        "step": 0.5,
+        "dec": 1,
+        "mode": "up"
+      },
+      {
+        "id": "met",
+        "l": "Metais detetados no tapete",
+        "u": "nº",
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "dec": 0,
+        "mode": "up"
+      }
+    ],
+    "PARQ-REC": [
+      {
+        "id": "hum",
+        "l": "Humidade do reciclado",
+        "u": "%",
+        "min": 10,
+        "max": 25,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "cont",
+        "l": "Contaminantes rejeitados",
+        "u": "kg",
+        "min": 0,
+        "max": 300,
+        "step": 10,
+        "dec": 0,
+        "mode": "up"
+      },
+      {
+        "id": "met",
+        "l": "Metais retidos no Overband",
+        "u": "nº",
+        "min": 0,
+        "max": 20,
+        "step": 1,
+        "dec": 0,
+        "mode": "up"
+      }
+    ],
+    "CALD": [
+      {
+        "id": "ida",
+        "l": "Óleo térmico · ida",
+        "u": "°C",
+        "min": 270,
+        "max": 300,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "ret",
+        "l": "Óleo térmico · retorno",
+        "u": "°C",
+        "min": 240,
+        "max": 275,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "o2",
+        "l": "O₂ nos fumos",
+        "u": "%",
+        "min": 4,
+        "max": 8,
+        "step": 0.1,
+        "dec": 1,
+        "mode": "range"
+      },
+      {
+        "id": "vap",
+        "l": "Pressão de vapor",
+        "u": "bar",
+        "min": 12,
+        "max": 18,
+        "step": 0.5,
+        "dec": 1,
+        "mode": "range"
+      }
+    ],
+    "DESF": [
+      {
+        "id": "dig",
+        "l": "Pressão do digestor",
+        "u": "bar",
+        "min": 7,
+        "max": 10,
+        "step": 0.1,
+        "dec": 1,
+        "mode": "range"
+      },
+      {
+        "id": "kw",
+        "l": "Consumo do refinador",
+        "u": "kW",
+        "min": 2500,
+        "max": 4200,
+        "step": 50,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "gap",
+        "l": "Abertura dos discos",
+        "u": "mm",
+        "min": 0.1,
+        "max": 0.4,
+        "step": 0.01,
+        "dec": 2,
+        "mode": "range"
+      }
+    ],
+    "SEC": [
+      {
+        "id": "hum",
+        "l": "Humidade da fibra à saída",
+        "u": "%",
+        "min": 8,
+        "max": 12,
+        "step": 0.1,
+        "dec": 1,
+        "mode": "range"
+      },
+      {
+        "id": "tin",
+        "l": "Temperatura de entrada",
+        "u": "°C",
+        "min": 150,
+        "max": 190,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "tout",
+        "l": "Temperatura de saída",
+        "u": "°C",
+        "min": 55,
+        "max": 75,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "dp",
+        "l": "ΔP dos ciclones",
+        "u": "mbar",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      }
+    ],
+    "PREN-MDF": [
+      {
+        "id": "t1",
+        "l": "Temperatura pratos · zona 1",
+        "u": "°C",
+        "min": 220,
+        "max": 240,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "t5",
+        "l": "Temperatura pratos · zona 5",
+        "u": "°C",
+        "min": 190,
+        "max": 215,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "pr",
+        "l": "Pressão máxima",
+        "u": "bar",
+        "min": 180,
+        "max": 220,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "vel",
+        "l": "Velocidade da prensa",
+        "u": "mm/s",
+        "min": 400,
+        "max": 900,
+        "step": 10,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "den",
+        "l": "Densidade do painel",
+        "u": "kg/m³",
+        "min": 700,
+        "max": 780,
+        "step": 5,
+        "dec": 0,
+        "mode": "range"
+      }
+    ],
+    "PREN-SP": [
+      {
+        "id": "tp",
+        "l": "Temperatura dos pratos",
+        "u": "°C",
+        "min": 200,
+        "max": 235,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "pr",
+        "l": "Pressão máxima",
+        "u": "bar",
+        "min": 170,
+        "max": 210,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "vel",
+        "l": "Velocidade da prensa",
+        "u": "mm/s",
+        "min": 500,
+        "max": 1000,
+        "step": 10,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "den",
+        "l": "Densidade do painel",
+        "u": "kg/m³",
+        "min": 600,
+        "max": 680,
+        "step": 5,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "cola",
+        "l": "Consumo de cola",
+        "u": "kg/m³",
+        "min": 60,
+        "max": 90,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      }
+    ],
+    "LIX-MDF": [
+      {
+        "id": "esp",
+        "l": "Desvio de espessura após lixagem",
+        "u": "mm",
+        "min": -0.15,
+        "max": 0.15,
+        "step": 0.01,
+        "dec": 2,
+        "mode": "range"
+      },
+      {
+        "id": "tol",
+        "l": "Painéis fora de tolerância",
+        "u": "nº",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "dec": 0,
+        "mode": "up"
+      },
+      {
+        "id": "h60",
+        "l": "Horas da cinta grão 60",
+        "u": "h",
+        "min": 0,
+        "max": 80,
+        "step": 1,
+        "dec": 0,
+        "mode": "up"
+      }
+    ],
+    "LIX-SP": [
+      {
+        "id": "esp",
+        "l": "Desvio de espessura após lixagem",
+        "u": "mm",
+        "min": -0.2,
+        "max": 0.2,
+        "step": 0.01,
+        "dec": 2,
+        "mode": "range"
+      },
+      {
+        "id": "tol",
+        "l": "Painéis fora de tolerância",
+        "u": "nº",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "dec": 0,
+        "mode": "up"
+      }
+    ],
+    "SCHEL": [
+      {
+        "id": "desp",
+        "l": "Desperdício de corte",
+        "u": "%",
+        "min": 0,
+        "max": 4,
+        "step": 0.1,
+        "dec": 1,
+        "mode": "up"
+      },
+      {
+        "id": "esq",
+        "l": "Desvio de esquadria",
+        "u": "mm",
+        "min": 0,
+        "max": 0.5,
+        "step": 0.05,
+        "dec": 2,
+        "mode": "up"
+      },
+      {
+        "id": "ar",
+        "l": "Pressão de ar das pinças",
+        "u": "bar",
+        "min": 5.5,
+        "max": 7,
+        "step": 0.1,
+        "dec": 1,
+        "mode": "range"
+      }
+    ],
+    "MULTI": [
+      {
+        "id": "desp",
+        "l": "Desperdício de corte",
+        "u": "%",
+        "min": 0,
+        "max": 5,
+        "step": 0.1,
+        "dec": 1,
+        "mode": "up"
+      },
+      {
+        "id": "larg",
+        "l": "Desvio de largura",
+        "u": "mm",
+        "min": 0,
+        "max": 0.5,
+        "step": 0.05,
+        "dec": 2,
+        "mode": "up"
+      },
+      {
+        "id": "ar",
+        "l": "Pressão de ar",
+        "u": "bar",
+        "min": 5.5,
+        "max": 7,
+        "step": 0.1,
+        "dec": 1,
+        "mode": "range"
+      }
+    ],
+    "IMP": [
+      {
+        "id": "gram",
+        "l": "Gramagem de resina",
+        "u": "g/m²",
+        "min": 110,
+        "max": 140,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "hum",
+        "l": "Humidade do papel",
+        "u": "%",
+        "min": 5,
+        "max": 8,
+        "step": 0.1,
+        "dec": 1,
+        "mode": "range"
+      },
+      {
+        "id": "vel",
+        "l": "Velocidade da linha",
+        "u": "m/min",
+        "min": 25,
+        "max": 45,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "est",
+        "l": "Temperatura das estufas",
+        "u": "°C",
+        "min": 130,
+        "max": 160,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      }
+    ],
+    "MEL": [
+      {
+        "id": "tp",
+        "l": "Temperatura dos pratos",
+        "u": "°C",
+        "min": 175,
+        "max": 200,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "ciclo",
+        "l": "Tempo de ciclo",
+        "u": "s",
+        "min": 18,
+        "max": 35,
+        "step": 1,
+        "dec": 0,
+        "mode": "range"
+      },
+      {
+        "id": "pr",
+        "l": "Pressão",
+        "u": "bar",
+        "min": 22,
+        "max": 32,
+        "step": 0.5,
+        "dec": 1,
+        "mode": "range"
+      },
+      {
+        "id": "def",
+        "l": "Painéis com defeito",
+        "u": "nº",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "dec": 0,
+        "mode": "up"
+      }
+    ]
+  },
+  "tiposAutorizacao": {
+    "quente": {
+      "l": "Trabalho a quente",
+      "s": "Corte e soldadura",
+      "icon": "local_fire_department",
+      "chk": [
+        "Zona limpa de pó e de materiais combustíveis",
+        "Extintor junto ao local de trabalho",
+        "Deteção e aspiração de pó verificadas",
+        "Vigilante de fogo nomeado"
+      ],
+      "fecho": []
+    },
+    "loto_el": {
+      "l": "Consignação elétrica",
+      "s": "Bloqueio de energia elétrica (LOTO)",
+      "icon": "bolt",
+      "chk": [
+        "Máquina parada e secção informada",
+        "Pontos de corte identificados no esquema",
+        "Eletricista habilitado para este trabalho",
+        "EPI elétrico adequado ao trabalho"
+      ],
+      "passos": [
+        {
+          "t": "Separar",
+          "d": "Abrir o seccionador de todas as fontes de energia elétrica."
+        },
+        {
+          "t": "Bloquear com cadeado",
+          "d": "Colocar o cadeado pessoal no seccionador e escrever o número.",
+          "cad": true
+        },
+        {
+          "t": "Verificar ausência de tensão",
+          "d": "Medir com o detetor em todas as fases e no neutro."
+        },
+        {
+          "t": "Ligar à terra e em curto-circuito",
+          "d": "Quando aplicável: média tensão ou risco de retorno de energia.",
+          "na": true
+        },
+        {
+          "t": "Sinalizar",
+          "d": "Colocar a etiqueta “Não ligar” com nome, data e hora."
+        }
+      ],
+      "fecho": [
+        "Trabalho terminado e ferramentas retiradas",
+        "Pessoas afastadas da máquina",
+        "Cadeados, terras e etiquetas retirados"
+      ]
+    },
+    "loto_mec": {
+      "l": "Bloqueio mecânico",
+      "s": "Energia pneumática, hidráulica e mecânica (LOTO)",
+      "icon": "lock",
+      "chk": [
+        "Máquina parada e secção informada",
+        "Fontes de energia identificadas (ar, óleo, elétrica)",
+        "Mecânico habilitado para este trabalho",
+        "EPI adequado ao trabalho"
+      ],
+      "passos": [
+        {
+          "t": "Separar",
+          "d": "Fechar as válvulas de ar e de óleo e abrir o seccionador elétrico."
+        },
+        {
+          "t": "Bloquear com cadeado",
+          "d": "Cadeado pessoal em cada ponto de corte. Escrever o número.",
+          "cad": true
+        },
+        {
+          "t": "Descarregar a pressão",
+          "d": "Purgar o ar e o óleo até o manómetro marcar zero."
+        },
+        {
+          "t": "Travar as partes móveis",
+          "d": "Calços ou pinos nas partes que podem cair, deslizar ou rodar."
+        },
+        {
+          "t": "Sinalizar",
+          "d": "Etiqueta “Não ligar” com nome, data e hora."
+        }
+      ],
+      "fecho": [
+        "Trabalho terminado, proteções recolocadas",
+        "Pessoas afastadas da máquina",
+        "Cadeados, calços e etiquetas retirados"
+      ]
+    },
+    "altura": {
+      "l": "Trabalho em altura",
+      "s": "Acima de 2 m",
+      "icon": "stairs",
+      "chk": [
+        "Arnês e linha de vida verificados",
+        "Plataforma ou escada em bom estado",
+        "Zona por baixo isolada",
+        "Segunda pessoa a acompanhar"
+      ],
+      "fecho": [
+        "Material e ferramentas retirados da zona alta",
+        "Zona por baixo libertada"
+      ]
+    },
+    "confinado": {
+      "l": "Espaço confinado",
+      "s": "Silos, tremonhas, condutas",
+      "icon": "meeting_room",
+      "chk": [
+        "Atmosfera medida (oxigénio e gases)",
+        "Ventilação ligada",
+        "Vigia no exterior durante todo o trabalho",
+        "Meios de resgate prontos"
+      ],
+      "fecho": [
+        "Todas as pessoas fora do espaço",
+        "Material e ferramentas retirados"
+      ]
+    }
+  },
+  "motivosRecusa": [
+    "Falta informação no pedido",
+    "A máquina não pode parar agora",
+    "Condições de segurança não cumpridas",
+    "Outra equipa a trabalhar no local"
+  ],
+  "avarias": [
+    {
+      "id": "AV-2026-0422",
+      "equipamento": "MEL-1",
+      "titulo": "Contactor do motor principal queimado — prensa não arranca",
+      "descricao": "A prensa de melamina não arranca. Contactor K3 do motor principal com contactos queimados.",
+      "prioridade": "media",
+      "especialidade": "eletrica",
+      "estado": "em_curso",
+      "reportadaPor": "vitor",
+      "criadaHaMin": 322,
+      "tecnico": "pedro",
+      "ajudantes": ["joao"],
+      "inicioHaMin": 292,
+      "fimHaMin": null,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0421",
+      "equipamento": "DESF-1",
+      "titulo": "Fissura na chapa de proteção do ciclone de fibra",
+      "descricao": "Fissura de 20 cm na chapa de proteção junto à saída do ciclone. Soldada e reforçada.",
+      "prioridade": "media",
+      "especialidade": "mecanica",
+      "estado": "resolvida",
+      "reportadaPor": "nuno",
+      "criadaHaMin": 150,
+      "tecnico": "carlos",
+      "inicioHaMin": 108,
+      "fimHaMin": 20,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0420",
+      "equipamento": "SEC-1",
+      "titulo": "Cheiro a queimado junto ao Trommel",
+      "descricao": "Cheiro a queimado e ruído intermitente do lado do acionamento do Trommel. O operador não consegue identificar a origem.",
+      "prioridade": "media",
+      "especialidade": "nao_sei",
+      "estado": "pendente",
+      "reportadaPor": "bruno",
+      "criadaHaMin": 40,
+      "tecnico": null,
+      "inicioHaMin": null,
+      "fimHaMin": null,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0419",
+      "equipamento": "PREN-SP-1",
+      "titulo": "Variador do acionamento principal em falha — prensa parada",
+      "descricao": "Variador do acionamento principal disparou com falha de sobretemperatura e não rearma. Prensa SuperPan parada em segurança.",
+      "prioridade": "critica",
+      "especialidade": "eletrica",
+      "estado": "pendente",
+      "reportadaPor": "tiago",
+      "criadaHaMin": 9,
+      "tecnico": null,
+      "inicioHaMin": null,
+      "fimHaMin": null,
+      "paragem": "PG-0232",
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0411",
+      "equipamento": "PREN-SP-2",
+      "titulo": "Cilindro da cabeça formadora com fuga",
+      "descricao": "Fuga de óleo no cilindro de elevação da cabeça formadora. Vedantes substituídos.",
+      "prioridade": "media",
+      "especialidade": "mecanica",
+      "estado": "resolvida",
+      "reportadaPor": "tiago",
+      "criadaHaMin": 360,
+      "tecnico": "joaquim",
+      "inicioHaMin": 336,
+      "fimHaMin": 192,
+      "paragem": null,
+      "pecas": [
+        {
+          "ref": "PREN-SP-K1",
+          "nome": "Bico de pulverização de cola",
+          "preco": 64,
+          "qtd": 2
+        }
+      ],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0409",
+      "equipamento": "MULTI-1",
+      "titulo": "Encoder do avanço com leitura errada",
+      "descricao": "Comprimento de corte a variar 3 mm. Encoder limpo e cabo refeito.",
+      "prioridade": "media",
+      "especialidade": "eletrica",
+      "estado": "resolvida",
+      "reportadaPor": "rafael",
+      "criadaHaMin": 540,
+      "tecnico": "joao",
+      "inicioHaMin": 510,
+      "fimHaMin": 444,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0407",
+      "equipamento": "LIX-SP-2",
+      "titulo": "Empilhador para de forma intermitente",
+      "descricao": "O empilhador para sem alarme a meio do ciclo. O operador não sabe se é mecânico ou elétrico.",
+      "prioridade": "media",
+      "especialidade": "nao_sei",
+      "estado": "pendente",
+      "reportadaPor": "marco",
+      "criadaHaMin": 150,
+      "tecnico": null,
+      "inicioHaMin": null,
+      "fimHaMin": null,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0418",
+      "equipamento": "SCHEL-1",
+      "titulo": "Disco de serra principal com dentes partidos — vibração e corte irregular",
+      "descricao": "Vibração forte no carro da serra e lascas no corte longitudinal. Disco Ø450 com 3 dentes partidos. Linha parada em segurança pelo operador.",
+      "prioridade": "critica",
+      "especialidade": "mecanica",
+      "estado": "pendente",
+      "reportadaPor": "jose",
+      "criadaHaMin": 14,
+      "tecnico": null,
+      "inicioHaMin": null,
+      "fimHaMin": null,
+      "paragem": "PG-0231",
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0417",
+      "equipamento": "PREN-MDF-1",
+      "titulo": "Oscilação de pressão na válvula proporcional Bosch Rexroth",
+      "descricao": "Pressão de fecho a oscilar entre 185 e 205 bar na zona 3. Prensa a trabalhar com velocidade reduzida.",
+      "prioridade": "media",
+      "especialidade": "mecanica",
+      "estado": "em_curso",
+      "reportadaPor": "rui",
+      "criadaHaMin": 126,
+      "tecnico": "joaquim",
+      "inicioHaMin": 52,
+      "fimHaMin": null,
+      "paragem": null,
+      "pecas": [
+        {
+          "ref": "PREN-MDF-K2",
+          "nome": "Junta hidráulica alta pressão",
+          "preco": 148,
+          "qtd": 1
+        }
+      ],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0416",
+      "equipamento": "IMP-1",
+      "titulo": "Variador do rolo espalhador com falha intermitente",
+      "descricao": "O variador dispara por sobrecorrente a cada 20–30 min. Gramagem de resina fora de tolerância nesses períodos.",
+      "prioridade": "media",
+      "especialidade": "eletrica",
+      "estado": "pendente",
+      "reportadaPor": "sandra",
+      "criadaHaMin": 78,
+      "tecnico": null,
+      "inicioHaMin": null,
+      "fimHaMin": null,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0415",
+      "equipamento": "MULTI-2",
+      "titulo": "Fotocélula SICK do alinhador com leitura intermitente",
+      "descricao": "Tabuleiros chegam desalinhados à Multi Serra. Fotocélula do alinhador perde o sinal de forma intermitente.",
+      "prioridade": "media",
+      "especialidade": "eletrica",
+      "estado": "pendente",
+      "reportadaPor": "rafael",
+      "criadaHaMin": 180,
+      "tecnico": null,
+      "inicioHaMin": null,
+      "fimHaMin": null,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0414",
+      "equipamento": "SEC-2",
+      "titulo": "Palhetas da eclusa 3 com desgaste — fuga de fibra",
+      "descricao": "Fuga de fibra na válvula rotativa do ciclone 3. Sem impacto imediato na produção.",
+      "prioridade": "baixa",
+      "especialidade": "mecanica",
+      "estado": "pendente",
+      "reportadaPor": "bruno",
+      "criadaHaMin": 300,
+      "tecnico": null,
+      "inicioHaMin": 270,
+      "fimHaMin": null,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": {
+        "nome": "Joaquim Santos",
+        "ordem": "Chefe da oficina",
+        "ate": "turno",
+        "motivo": "Falta de peça",
+        "nota": "Eclusa desmontada e protegida. Palhetas novas pedidas ao armazém (chegam no próximo turno). Falta montar, apertar e testar.",
+        "haMin": 180
+      }
+    },
+    {
+      "id": "AV-2026-0413",
+      "equipamento": "CALD-3",
+      "titulo": "Termopar do retorno de óleo térmico com leitura errática",
+      "descricao": "Leitura a saltar ±40 °C no retorno do circuito. Valores de ida estáveis.",
+      "prioridade": "baixa",
+      "especialidade": "eletrica",
+      "estado": "pendente",
+      "reportadaPor": "luis",
+      "criadaHaMin": 420,
+      "tecnico": null,
+      "inicioHaMin": null,
+      "fimHaMin": null,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0412",
+      "equipamento": "PARQ-EST-1",
+      "titulo": "Facas da estilhadora gastas — estilha fora de calibre",
+      "descricao": "Estilha com granulometria fora de especificação. Substituído o jogo de facas e as contra-facas.",
+      "prioridade": "critica",
+      "especialidade": "mecanica",
+      "estado": "resolvida",
+      "reportadaPor": "antonio",
+      "criadaHaMin": 1320,
+      "tecnico": "carlos",
+      "inicioHaMin": 1290,
+      "fimHaMin": 1200,
+      "paragem": "PG-0229",
+      "pecas": [
+        {
+          "ref": "PARQ-EST-K1",
+          "nome": "Jogo de facas da estilhadora",
+          "preco": 145,
+          "qtd": 8
+        },
+        {
+          "ref": "PARQ-EST-K2",
+          "nome": "Contra-faca",
+          "preco": 210,
+          "qtd": 2
+        }
+      ],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0410",
+      "equipamento": "DESF-2",
+      "titulo": "Fuga de vapor no empanque da Rosca Plug Screw",
+      "descricao": "Fuga de vapor visível no empanque. Empanque mecânico substituído e testado a quente.",
+      "prioridade": "media",
+      "especialidade": "mecanica",
+      "estado": "resolvida",
+      "reportadaPor": "nuno",
+      "criadaHaMin": 1800,
+      "tecnico": "joaquim",
+      "inicioHaMin": 1740,
+      "fimHaMin": 1608,
+      "paragem": null,
+      "pecas": [
+        {
+          "ref": "DESF-K2",
+          "nome": "Empanque mecânico de vapor",
+          "preco": 2450,
+          "qtd": 1
+        }
+      ],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0408",
+      "equipamento": "MEL-2",
+      "titulo": "Sensor de temperatura do prato superior sem leitura",
+      "descricao": "PT100 do prato superior em circuito aberto. Ficha do sensor refeita.",
+      "prioridade": "media",
+      "especialidade": "eletrica",
+      "estado": "resolvida",
+      "reportadaPor": "vitor",
+      "criadaHaMin": 3000,
+      "tecnico": "joao",
+      "inicioHaMin": 2970,
+      "fimHaMin": 2922,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0386",
+      "equipamento": "LIX-MDF-1",
+      "titulo": "Fotocélula desalinhada",
+      "descricao": "Fotocélula desalinhada. Intervenção registada.",
+      "prioridade": "critica",
+      "especialidade": "eletrica",
+      "estado": "resolvida",
+      "reportadaPor": "daniel",
+      "criadaHaMin": 3568,
+      "tecnico": "pedro",
+      "inicioHaMin": 3546,
+      "fimHaMin": 3410,
+      "paragem": "PG-0164",
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0387",
+      "equipamento": "LIX-MDF-1",
+      "titulo": "Fotocélula desalinhada",
+      "descricao": "Fotocélula desalinhada. Intervenção registada.",
+      "prioridade": "baixa",
+      "especialidade": "eletrica",
+      "estado": "resolvida",
+      "reportadaPor": "daniel",
+      "criadaHaMin": 2541,
+      "tecnico": "pedro",
+      "inicioHaMin": 2484,
+      "fimHaMin": 2460,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0388",
+      "equipamento": "SEC-2",
+      "titulo": "Fotocélula desalinhada",
+      "descricao": "Fotocélula desalinhada. Intervenção registada.",
+      "prioridade": "baixa",
+      "especialidade": "eletrica",
+      "estado": "resolvida",
+      "reportadaPor": "bruno",
+      "criadaHaMin": 2364,
+      "tecnico": "pedro",
+      "inicioHaMin": 2287,
+      "fimHaMin": 2183,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0389",
+      "equipamento": "LIX-MDF-1",
+      "titulo": "Rolamento com ruído",
+      "descricao": "Rolamento com ruído. Intervenção registada.",
+      "prioridade": "media",
+      "especialidade": "mecanica",
+      "estado": "resolvida",
+      "reportadaPor": "daniel",
+      "criadaHaMin": 1379,
+      "tecnico": "carlos",
+      "inicioHaMin": 1347,
+      "fimHaMin": 1236,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": null
+    },
+    {
+      "id": "AV-2026-0390",
+      "equipamento": "PARQ-REC-1",
+      "titulo": "Falha de comunicação do PLC",
+      "descricao": "Falha de comunicação do PLC. Intervenção registada.",
+      "prioridade": "media",
+      "especialidade": "eletrica",
+      "estado": "resolvida",
+      "reportadaPor": "hugo",
+      "criadaHaMin": 1045,
+      "tecnico": "pedro",
+      "inicioHaMin": 1031,
+      "fimHaMin": 915,
+      "paragem": null,
+      "pecas": [],
+      "emProgresso": null
+    }
+  ],
+  "paragens": [
+    {
+      "id": "PG-0164",
+      "equipamento": "LIX-MDF-1",
+      "causa": "Avaria",
+      "inicioHaMin": 3568,
+      "fimHaMin": 3405,
+      "avaria": "AV-2026-0386"
+    },
+    {
+      "id": "PG-0232",
+      "equipamento": "PREN-SP-1",
+      "causa": "Avaria",
+      "inicioHaMin": 9,
+      "fimHaMin": null,
+      "avaria": "AV-2026-0419"
+    },
+    {
+      "id": "PG-0231",
+      "equipamento": "SCHEL-1",
+      "causa": "Avaria",
+      "inicioHaMin": 14,
+      "fimHaMin": null,
+      "avaria": "AV-2026-0418"
+    },
+    {
+      "id": "PG-0229",
+      "equipamento": "PARQ-EST-1",
+      "causa": "Avaria",
+      "inicioHaMin": 1320,
+      "fimHaMin": 1200,
+      "avaria": "AV-2026-0412"
+    },
+    {
+      "id": "PG-0228",
+      "equipamento": "PREN-MDF-1",
+      "causa": "Mudança de formato / espessura",
+      "inicioHaMin": 1620,
+      "fimHaMin": 1590,
+      "avaria": null
+    }
+  ],
+  "leituras": [
+    {
+      "id": 1,
+      "secao": "PREN-MDF",
+      "turno": "N",
+      "porId": "rui",
+      "haMin": 96,
+      "valores": {
+        "t1": 232,
+        "t5": 204,
+        "pr": 176,
+        "vel": 640,
+        "den": 742
+      }
+    },
+    {
+      "id": 2,
+      "secao": "SCHEL",
+      "turno": "N",
+      "porId": "jose",
+      "haMin": 132,
+      "valores": {
+        "desp": 3.8,
+        "esq": 0.2,
+        "ar": 6.4
+      }
+    },
+    {
+      "id": 3,
+      "secao": "CALD",
+      "turno": "N",
+      "porId": "luis",
+      "haMin": 180,
+      "valores": {
+        "ida": 288,
+        "ret": 272,
+        "o2": 5.6,
+        "vap": 15
+      }
+    },
+    {
+      "id": 4,
+      "secao": "IMP",
+      "turno": "N",
+      "porId": "sandra",
+      "haMin": 60,
+      "valores": {
+        "gram": 146,
+        "hum": 6.2,
+        "vel": 38,
+        "est": 163
+      }
+    },
+    {
+      "id": 5,
+      "secao": "PREN-MDF",
+      "turno": "T",
+      "porId": "manuel",
+      "haMin": 570,
+      "valores": {
+        "t1": 231,
+        "t5": 203,
+        "pr": 192,
+        "vel": 660,
+        "den": 745
+      }
+    }
+  ],
+  "autorizacoes": [
+    {
+      "id": "AT-0107",
+      "tipo": "quente",
+      "avaria": "AV-2026-0417",
+      "equipamento": "PREN-MDF-1",
+      "secao": "PREN-MDF",
+      "descricao": "Soldar o suporte da válvula proporcional (fissura na base)",
+      "duracaoMin": 60,
+      "pedidaPor": "Joaquim Santos",
+      "estado": "pedida",
+      "fase": null,
+      "haMin": 12,
+      "cadeado": null,
+      "vigilante": null
+    },
+    {
+      "id": "AT-0106",
+      "tipo": "loto_el",
+      "avaria": "AV-2026-0422",
+      "equipamento": "MEL-1",
+      "secao": "MEL",
+      "descricao": "Substituir o contactor K3 do motor principal",
+      "duracaoMin": 120,
+      "pedidaPor": "Pedro Abrantes",
+      "estado": "em_curso",
+      "fase": "consignado",
+      "haMin": 307,
+      "cadeado": "E-09",
+      "vigilante": null
+    },
+    {
+      "id": "AT-0105",
+      "tipo": "quente",
+      "avaria": "AV-2026-0421",
+      "equipamento": "DESF-1",
+      "secao": "DESF",
+      "descricao": "Soldar reforço na chapa do ciclone",
+      "duracaoMin": 60,
+      "pedidaPor": "Carlos Mendes",
+      "estado": "em_curso",
+      "fase": "vigilancia",
+      "haMin": 114,
+      "cadeado": null,
+      "vigilante": "Nuno Ribeiro"
+    },
+    {
+      "id": "AT-0104",
+      "tipo": "loto_mec",
+      "avaria": "AV-2026-0411",
+      "equipamento": "PREN-SP-2",
+      "secao": "PREN-SP",
+      "descricao": "Substituir os vedantes do cilindro da cabeça formadora",
+      "duracaoMin": 240,
+      "pedidaPor": "Joaquim Santos",
+      "estado": "encerrada",
+      "fase": null,
+      "haMin": 348,
+      "cadeado": "M-07",
+      "vigilante": null
+    },
+    {
+      "id": "AT-0103",
+      "tipo": "loto_el",
+      "avaria": "AV-2026-0409",
+      "equipamento": "MULTI-1",
+      "secao": "MULTI",
+      "descricao": "Refazer o cabo do encoder do avanço",
+      "duracaoMin": 60,
+      "pedidaPor": "João Ferreira",
+      "estado": "encerrada",
+      "fase": null,
+      "haMin": 522,
+      "cadeado": "E-14",
+      "vigilante": null
+    },
+    {
+      "id": "AT-0102",
+      "tipo": "quente",
+      "avaria": "AV-2026-0410",
+      "equipamento": "DESF-2",
+      "secao": "DESF",
+      "descricao": "Soldar a flange do empanque",
+      "duracaoMin": 60,
+      "pedidaPor": "Joaquim Santos",
+      "estado": "encerrada",
+      "fase": null,
+      "haMin": 1758,
+      "cadeado": null,
+      "vigilante": "Ricardo Matos"
+    },
+    {
+      "id": "AT-0101",
+      "tipo": "altura",
+      "avaria": "AV-2026-0412",
+      "equipamento": "PARQ-EST-1",
+      "secao": "PARQ-EST",
+      "descricao": "Trocar as facas pela plataforma superior",
+      "duracaoMin": 120,
+      "pedidaPor": "Carlos Mendes",
+      "estado": "encerrada",
+      "fase": null,
+      "haMin": 1296,
+      "cadeado": null,
+      "vigilante": null
+    },
+    {
+      "id": "AT-0100",
+      "tipo": "quente",
+      "avaria": "AV-2026-0412",
+      "equipamento": "PARQ-EST-1",
+      "secao": "PARQ-EST",
+      "descricao": "Cortar os parafusos gripados das contra-facas",
+      "duracaoMin": 30,
+      "pedidaPor": "Carlos Mendes",
+      "estado": "recusada",
+      "fase": null,
+      "haMin": 1302,
+      "cadeado": null,
+      "vigilante": null
+    }
+  ]
+}

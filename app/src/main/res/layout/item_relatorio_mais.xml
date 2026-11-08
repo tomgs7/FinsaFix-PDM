@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "… e mais N registos no ficheiro exportado" por baixo de uma tabela curta. -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/if_item_gap"
+    android:textAppearance="@style/TextAppearance.FinsaFix.Secondary"
+    android:textColor="@color/if_on_surface_variant" />

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FinsaFix · medidas. Tablet de parede 1180×820 dp; telemóvel 400×820 dp. -->
+<resources>
+    <dimen name="if_touch_min">48dp</dimen>          <!-- alvo mínimo de toque -->
+    <dimen name="if_btn_height">56dp</dimen>
+    <dimen name="if_btn_main_height">72dp</dimen>    <!-- Reportar avaria, Concluir, Máquina parada -->
+    <dimen name="if_checklist_row_min">72dp</dimen>
+    <dimen name="if_keypad_key">72dp</dimen>         <!-- 60 dp no telemóvel -->
+    <dimen name="if_numfield_height">72dp</dimen>
+    <dimen name="if_topbar_height">64dp</dimen>
+    <dimen name="if_rail_width">96dp</dimen>
+    <dimen name="if_card_padding">20dp</dimen>
+    <dimen name="if_section_gap">32dp</dimen>
+    <dimen name="if_item_gap">12dp</dimen>
+    <dimen name="if_icon">24dp</dimen>
+    <dimen name="relatorio_coluna_data">88dp</dimen>   <!-- cabe "07/11/2026" a 14 sp -->
+    <dimen name="if_icon_grande">48dp</dimen>        <!-- ícone dos estados vazios -->
+    <dimen name="paragem_chip_max">1000dp</dimen>
+    <dimen name="largura_janela">360dp</dimen>
+</resources>

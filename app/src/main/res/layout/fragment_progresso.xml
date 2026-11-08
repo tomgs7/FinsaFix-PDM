@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Deixar em progresso. Mesmo layout no telemóvel e no tablet (no tablet a margem lateral é maior). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/margem_formulario"
+            android:paddingVertical="@dimen/margem_ecra">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/progresso_quem_ordem"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+                android:textColor="@color/if_on_surface" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/grupoOrdem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:singleSelection="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/if_section_gap"
+                android:text="@string/progresso_quando"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+                android:textColor="@color/if_on_surface" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/grupoRetoma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoProximoTurno"
+                    style="@style/Widget.FinsaFix.Button.Escolha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/retoma_turno" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoAmanha"
+                    style="@style/Widget.FinsaFix.Button.Escolha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/retoma_dia" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/if_section_gap"
+                android:text="@string/progresso_motivo"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+                android:textColor="@color/if_on_surface" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/grupoMotivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:singleSelection="true" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoNota"
+                style="@style/Widget.Material3.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/if_section_gap"
+                android:hint="@string/progresso_nota_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editNota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="3"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textoAjuda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/if_item_gap"
+                android:drawableStart="@drawable/ic_info"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/if_error_text"
+                android:gravity="center_vertical"
+                android:text="@string/progresso_ajuda"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_error_text"
+                android:visibility="gone" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botaoGuardar"
+        style="@style/Widget.FinsaFix.Button.Main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margem_formulario"
+        android:layout_marginVertical="@dimen/if_item_gap"
+        android:text="@string/deixar_em_progresso"
+        app:icon="@drawable/ic_pause"
+        app:iconGravity="textStart" />
+</LinearLayout>

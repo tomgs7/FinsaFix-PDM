@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- O mesmo layout serve telemóvel e tablet: só muda o número de colunas dos equipamentos (integers.xml). -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_ecra">
+
+        <!-- Banner de máquina parada: só aparece quando há uma paragem ativa na secção (ver BannerParagem). -->
+        <include
+            android:id="@+id/bannerParagem"
+            layout="@layout/parte_banner_paragem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/if_section_gap"
+            android:visibility="gone" />
+
+        <!-- Primeiro arranque: os dados de demonstração ainda estão a carregar -->
+        <TextView
+            android:id="@+id/textoACarregar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/if_section_gap"
+            android:text="@string/entrada_a_carregar"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface_variant"
+            android:visibility="gone" />
+
+        <!-- Operador: “Por fazer” enquanto a checklist de arranque do turno não foi feita -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cartaoPorFazer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/if_section_gap"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_alert"
+                android:drawableEnd="@drawable/ic_chev"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/if_warn_text"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/if_touch_min"
+                android:padding="@dimen/if_card_padding"
+                android:text="@string/por_fazer_checklist"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_on_surface" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <include
+            android:id="@+id/chefia"
+            layout="@layout/parte_chefe_equipas" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inicio_meus_equipamentos"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+            android:textColor="@color/if_on_surface" />
+
+        <!-- Um só cartão com todos os equipamentos da secção -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listaEquipamentos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- As duas ações principais lado a lado: Reportar avaria (filled, vermelho) e Registar produção (tonal). -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/if_item_gap"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botaoReportar"
+                style="@style/Widget.FinsaFix.Button.Main"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/if_item_gap"
+                android:layout_weight="1"
+                android:text="@string/reportar_avaria"
+                app:icon="@drawable/ic_alert"
+                app:iconGravity="textStart" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botaoProducao"
+                style="@style/Widget.FinsaFix.Button.Tonal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="@dimen/if_btn_main_height"
+                android:text="@string/producao_registar"
+                android:textSize="18sp"
+                app:icon="@drawable/ic_chart"
+                app:iconGravity="textStart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botaoRegistarParagem"
+                style="@style/Widget.FinsaFix.Button.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paragens_registar"
+                android:textColor="@color/if_primary_text"
+                app:icon="@drawable/ic_pause"
+                app:iconTint="@color/if_primary_text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botaoPedirAjuda"
+                style="@style/Widget.FinsaFix.Button.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inicio_pedir_ajuda"
+                android:textColor="@color/if_primary_text"
+                app:icon="@drawable/ic_help"
+                app:iconTint="@color/if_primary_text" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/if_section_gap"
+            android:text="@string/inicio_avarias_secao"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+            android:textColor="@color/if_on_surface" />
+
+        <TextView
+            android:id="@+id/textoResumoAvarias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface_variant" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/campoPesquisa"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/inicio_pesquisar"
+            app:startIconDrawable="@drawable/ic_search">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textoPesquisa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLength="60"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipsFiltro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:checkedChip="@id/chipTodas"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTodas"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filtro_todas"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPendentes"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filtro_pendentes"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipEmCurso"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filtro_em_curso"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMecanica"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filtro_mecanica"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipEletrica"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filtro_eletrica"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaAvarias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:id="@+id/textoSemAvarias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/if_card_padding"
+                    android:text="@string/inicio_sem_avarias"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <include
+            android:id="@+id/avisos"
+            layout="@layout/parte_avisos_recentes" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

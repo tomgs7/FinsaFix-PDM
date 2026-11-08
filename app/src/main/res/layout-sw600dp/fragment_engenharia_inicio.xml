@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Início da engenharia no tablet: os 4 números da consulta numa só fila. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_ecra">
+
+        <include
+            android:id="@+id/bannerParagem"
+            layout="@layout/parte_banner_paragem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/if_section_gap"
+            android:visibility="gone" />
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:text="@string/eng_precisa_decisao" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/if_section_gap">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listaDecisoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:text="@string/eng_consulta_titulo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/kpiAbertas"
+                layout="@layout/parte_kpi" />
+
+            <include
+                android:id="@+id/kpiAvarias30"
+                layout="@layout/parte_kpi" />
+
+            <include
+                android:id="@+id/kpiMtbf"
+                layout="@layout/parte_kpi" />
+
+            <include
+                android:id="@+id/kpiMttr"
+                layout="@layout/parte_kpi" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoPins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/if_on_surface_variant"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface_variant" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

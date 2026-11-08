@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Registar produção, numa janela (tablet) ou folha (telemóvel): equipamento, turno, quantidade e confirmar. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/producao_registar"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Headline"
+        android:textColor="@color/if_on_surface" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:text="@string/producao_equipamento" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoOutraSecao"
+            style="@style/Widget.FinsaFix.Button.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/producao_noutra_secao"
+            app:icon="@drawable/ic_swap" />
+
+        <RadioGroup
+            android:id="@+id/grupoEquipamentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:layout_marginTop="@dimen/if_section_gap"
+            android:text="@string/producao_turno" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/grupoTurno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botaoManha"
+                style="@style/Widget.FinsaFix.Button.Escolha"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/turno_manha" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botaoTarde"
+                style="@style/Widget.FinsaFix.Button.Escolha"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/turno_tarde" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botaoNoite"
+                style="@style/Widget.FinsaFix.Button.Escolha"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/turno_noite" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:layout_marginTop="@dimen/if_section_gap"
+            android:text="@string/producao_quantidade" />
+
+        <!-- Tocar abre o teclado numérico. -->
+        <LinearLayout
+            android:id="@+id/campoQuantidade"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/if_numfield_height"
+            android:background="@drawable/fundo_campo_valor"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:id="@+id/textoQuantidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Value"
+                android:textColor="@color/if_on_surface" />
+
+            <TextView
+                android:id="@+id/textoUnidade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_on_surface_variant" />
+
+            <ImageView
+                android:layout_width="@dimen/if_icon"
+                android:layout_height="@dimen/if_icon"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_edit"
+                app:tint="@color/if_on_surface_variant" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoErro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_error_text"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoRegistar"
+            style="@style/Widget.FinsaFix.Button.Main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/if_item_gap"
+            android:text="@string/producao_registar"
+            app:icon="@drawable/ic_chart"
+            app:iconGravity="textStart" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

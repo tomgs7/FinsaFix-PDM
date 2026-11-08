@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Relatórios da engenharia no telemóvel: uma coluna (configurar, exportar e, por baixo, a pré-visualização). -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_ecra">
+
+        <include
+            android:id="@+id/configurar"
+            layout="@layout/parte_relatorio_configurar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/previsualizacao"
+            layout="@layout/parte_relatorio_previsualizacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/if_section_gap" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

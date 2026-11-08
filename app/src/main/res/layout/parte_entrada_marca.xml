@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Logótipo (texto) com o lema e o cadeado “Acesso chefia” (o “Configurar posto” está em “Mais”). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/entrada_lema"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Secondary"
+            android:textColor="@color/if_on_surface_variant" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botaoChefia"
+        style="@style/Widget.FinsaFix.Button.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/entrada_acesso_chefia"
+        android:textColor="@color/if_on_surface_variant"
+        app:icon="@drawable/ic_lock"
+        app:iconTint="@color/if_on_surface_variant" />
+</LinearLayout>

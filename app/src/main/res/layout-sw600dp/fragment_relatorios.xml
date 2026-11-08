@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Relatórios da engenharia no tablet: duas colunas, configurar à esquerda e pré-visualização à direita. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="@dimen/margem_ecra">
+
+        <include
+            android:id="@+id/configurar"
+            layout="@layout/parte_relatorio_configurar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/if_section_gap"
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/previsualizacao"
+            layout="@layout/parte_relatorio_previsualizacao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.6" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

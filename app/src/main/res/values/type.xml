@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FinsaFix · tipografia (Roboto). Operador e técnico: nenhum texto de conteúdo abaixo de 16 sp. -->
+<resources>
+    <style name="TextAppearance.FinsaFix.Logo" parent="TextAppearance.Material3.HeadlineMedium"><item name="android:textSize">28sp</item><item name="android:textStyle">bold</item><item name="android:textColor">?attr/colorPrimary</item></style>  <!-- logótipo “FinsaFix”: só texto, a vermelho -->
+    <style name="TextAppearance.FinsaFix.Logo.Pequeno"><item name="android:textSize">22sp</item></style>  <!-- barras de topo -->
+    <style name="TextAppearance.FinsaFix.Display" parent="TextAppearance.Material3.DisplaySmall"><item name="android:textSize">44sp</item><item name="lineHeight">56sp</item></style>  <!-- valor no teclado numérico, tempo parado -->
+    <style name="TextAppearance.FinsaFix.Value" parent="TextAppearance.Material3.HeadlineLarge"><item name="android:textSize">32sp</item><item name="lineHeight">40sp</item></style>  <!-- KPI, campo de valor -->
+    <style name="TextAppearance.FinsaFix.Headline" parent="TextAppearance.Material3.HeadlineMedium"><item name="android:textSize">28sp</item><item name="lineHeight">36sp</item></style> <!-- título da avaria, aviso urgente -->
+    <style name="TextAppearance.FinsaFix.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall"><item name="android:textSize">24sp</item><item name="lineHeight">32sp</item></style>
+    <style name="TextAppearance.FinsaFix.TopBar" parent="TextAppearance.Material3.TitleLarge"><item name="android:textSize">22sp</item><item name="lineHeight">28sp</item></style>   <!-- título do ecrã (18 sp no telemóvel) -->
+    <style name="TextAppearance.FinsaFix.Title" parent="TextAppearance.Material3.TitleMedium"><item name="android:textSize">18sp</item><item name="lineHeight">24sp</item></style>    <!-- linha de lista, cartão, passo de checklist -->
+    <style name="TextAppearance.FinsaFix.Body" parent="TextAppearance.Material3.BodyLarge"><item name="android:textSize">16sp</item><item name="lineHeight">24sp</item></style>
+    <style name="TextAppearance.FinsaFix.Label" parent="TextAppearance.Material3.LabelLarge"><item name="android:textSize">16sp</item><item name="android:textStyle">normal</item><item name="fontWeight">500</item></style>
+    <style name="TextAppearance.FinsaFix.Secondary" parent="TextAppearance.Material3.BodyMedium"><item name="android:textSize">14sp</item><item name="lineHeight">20sp</item></style> <!-- só chefia/engenharia; operador e técnico usam Body -->
+    <style name="TextAppearance.FinsaFix.Badge" parent="TextAppearance.Material3.LabelSmall"><item name="android:textSize">12sp</item></style>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Equipa (chefe de oficina): "Técnicos" da oficina, os que estão em turno primeiro. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/FinsaFix.TituloSeccao"
+        android:text="@string/equipa_tecnicos_titulo" />
+
+    <LinearLayout
+        android:id="@+id/listaTecnicos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+</LinearLayout>

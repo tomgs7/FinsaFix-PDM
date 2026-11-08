@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Item "Mais" da barra de baixo do telemóvel: abre a janela, não é um ecrã do nav_graph. -->
+    <item name="mais" type="id" />
+</resources>

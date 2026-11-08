@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="96dp"
+    android:orientation="vertical"
+    android:padding="@dimen/if_card_padding">
+
+    <TextView
+        android:id="@+id/textoNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+        android:textColor="@color/if_on_surface" />
+
+    <TextView
+        android:id="@+id/textoEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Body" />
+</LinearLayout>

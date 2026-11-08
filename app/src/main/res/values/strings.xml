@@ -1,0 +1,1174 @@
+<resources>
+    <string name="app_name">FinsaFix</string>
+
+    <!-- Botões gerais -->
+    <string name="botao_cancelar">Cancelar</string>
+
+    <!-- Barra de topo e menus -->
+    <string name="barra_contexto_secao">Secção · %1$s</string>
+    <string name="barra_modo_chefia">Modo chefia · %1$s</string>
+    <string name="barra_modo_engenharia">Modo engenharia</string>
+    <string name="barra_guardado">Guardado neste tablet</string>
+    <string name="barra_paragem">%1$s parada</string>
+    <string name="sair_chefia">Sair da chefia</string>
+    <string name="sair_engenharia">Sair</string>
+    <string name="entrada_lema">soluções em madeira · manutenção</string>
+    <string name="terminar_sessao">Terminar sessão</string>
+    <string name="titulo_inicio">Início</string>
+
+    <!-- Ecrã de entrada -->
+    <string name="entrada_posto_fixo">Posto fixo</string>
+    <string name="entrada_turno_atual">Turno atual: %1$s · %2$s</string>
+    <string name="entrada_quem_esta">Quem está ao serviço?</string>
+    <string name="entrada_toque_no_nome">Toque no seu nome para registar a entrada no turno.</string>
+    <string name="entrada_sem_pessoas">Ainda não há pessoas registadas neste posto.</string>
+    <string name="entrada_funcao_turno">%1$s · Turno %2$s</string>
+    <string name="entrada_turno_atual_etiqueta">Turno atual</string>
+    <string name="entrada_boas_vindas">Bom turno, %1$s! Entrada registada às %2$s · Turno %3$s.</string>
+    <string name="configurar_posto_etiqueta">Modo administrador</string>
+    <string name="configurar_posto_titulo">Secção deste tablet</string>
+    <string name="configurar_posto_chip">Reinicia o posto</string>
+    <string name="configurar_posto_atual">Atual: %1$s. A sessão de %2$s termina ao guardar.</string>
+    <string name="configurar_posto_atual_sem_sessao">Atual: %1$s.</string>
+    <string name="configurar_posto_ultima">Última alteração: %1$s → %2$s · %3$s</string>
+    <string name="posto_sub_ofi_mec">Mecânica · hidráulica · pneumática</string>
+    <string name="posto_sub_ofi_ele">Elétrica · sensores · PLC · motores</string>
+    <string name="posto_grupo_secoes">Secções · perfil operador</string>
+    <string name="posto_grupo_oficinas">Oficinas · perfil técnico</string>
+    <plurals name="posto_equipamentos">
+        <item quantity="one">%1$d equipamento</item>
+        <item quantity="other">%1$d equipamentos</item>
+    </plurals>
+    <string name="posto_reconfigurado">Tablet reconfigurado: %1$s</string>
+    <string name="botao_guardar">Guardar</string>
+    <string name="entrada_acesso_chefia">Acesso chefia</string>
+    <string name="entrada_quiosque">Modo quiosque sem rede</string>
+    <string name="entrada_cracha_texto">Ou aproxime o crachá Luso Finsa do leitor NFC.</string>
+    <string name="entrada_cracha_botao">Simular crachá</string>
+    <string name="entrada_a_carregar">A carregar…</string>
+    <string name="entrada_oficina_mecanica">Mecânica · hidráulica · pneumática · avarias de toda a fábrica</string>
+    <string name="entrada_oficina_eletrica">Elétrica · sensores · PLC · motores · avarias de toda a fábrica</string>
+    <string name="pin_administrador_titulo">PIN de administrador</string>
+    <string name="pin_instrucao">Introduza o PIN de 4 dígitos.</string>
+    <string name="tecla_ok">OK</string>
+
+    <!-- Turnos -->
+    <string name="turno_manha">Manhã</string>
+    <string name="turno_tarde">Tarde</string>
+    <string name="turno_noite">Noite</string>
+    <string name="turno_manha_horario">08h–16h</string>
+    <string name="turno_tarde_horario">16h–00h</string>
+    <string name="turno_noite_horario">00h–08h</string>
+
+    <!-- Início do operador -->
+    <string name="inicio_meus_equipamentos">Os meus equipamentos</string>
+    <string name="inicio_avarias_secao">Avarias da secção</string>
+    <string name="inicio_pedir_ajuda">Pedir ajuda</string>
+    <string name="inicio_pesquisar">Pesquisar avarias da secção</string>
+    <string name="inicio_resumo">%1$s · %2$d em curso · %3$s · produção do turno %4$s %5$s</string>
+    <plurals name="resumo_abertas">
+        <item quantity="one">%d aberta</item>
+        <item quantity="other">%d abertas</item>
+    </plurals>
+    <plurals name="resumo_paragens">
+        <item quantity="one">%d paragem</item>
+        <item quantity="other">%d paragens</item>
+    </plurals>
+    <string name="avisos_tambem_historico">Também no Histórico</string>
+    <string name="filtro_com_contagem">%1$s %2$d</string>
+    <string name="filtro_mecanica">Mecânica</string>
+    <string name="filtro_eletrica">Elétrica</string>
+    <string name="equipamento_parada_tempo">Parada · %1$s</string>
+    <string name="inicio_sem_avarias">Não há avarias com este filtro.</string>
+    <string name="reportar_avaria">Reportar avaria</string>
+    <string name="filtro_todas">Todas</string>
+    <string name="filtro_pendentes">Pendentes</string>
+    <string name="filtro_em_curso">Em curso</string>
+    <string name="equipamento_operacional">Operacional</string>
+    <string name="equipamento_avaria_menor">Avaria menor</string>
+    <string name="equipamento_parada">Parada</string>
+
+    <!-- Reportar / editar avaria -->
+    <string name="tipo_mecanica_cartao">Mecânica\nFugas, ruído, peças partidas</string>
+    <string name="tipo_eletrica_cartao">Elétrica\nMotores, sensores, quadros</string>
+    <string name="tipo_nao_sei_cartao">Não sei\nA manutenção classifica</string>
+    <string name="urgencia_baixa_cartao">Baixa\nPode aguardar planeamento</string>
+    <string name="urgencia_media_cartao">Média\nFunciona com limitações</string>
+    <string name="urgencia_critica_cartao">Crítica\nParada ou com risco</string>
+    <string name="parou_pergunta">A máquina parou?</string>
+    <string name="parou_sim">Sim\nO cronómetro de paragem inicia ao enviar</string>
+    <string name="parou_nao">Não\nA máquina continua a trabalhar</string>
+    <string name="formulario_alterar">Alterar</string>
+    <string name="equipamento_ja_parada">Já parada</string>
+    <string name="equipamento_a_trabalhar">A trabalhar</string>
+    <string name="equipamento_outra_secao">%1$s · Outra secção</string>
+    <string name="parametros_titulo">Leituras do turno · %1$s</string>
+    <string name="parametros_outra_secao">Outra secção</string>
+    <string name="parametros_resumo">%1$d dentro do limite · %2$d perto · %3$d fora</string>
+    <string name="parametros_ultimas">Últimas leituras</string>
+    <string name="parametros_sem_ultimas">Ainda não há leituras.</string>
+    <string name="parametros_leitura">%1$s · %2$s %3$s</string>
+    <string name="outra_secao_titulo">Em que secção está a avaria?</string>
+    <string name="formulario_passo">Passo %1$d de %2$d</string>
+    <string name="pergunta_equipamento">Que equipamento?</string>
+    <string name="pergunta_tipo">Que tipo de avaria?</string>
+    <string name="pergunta_sintoma">O que está a acontecer?</string>
+    <string name="pergunta_urgencia">Qual a urgência?</string>
+    <string name="pergunta_confirmar">Confirmar e enviar</string>
+    <string name="tipo_nao_sei">Não sei</string>
+    <string name="descricao_hint">Descrição (opcional)</string>
+    <string name="sem_descricao">—</string>
+    <string name="formulario_resumo">Equipamento: %1$s\nTipo: %2$s\nO que acontece: %3$s\nDescrição: %4$s\nUrgência: %5$s</string>
+    <string name="botao_anterior">Anterior</string>
+    <string name="botao_seguinte">Seguinte</string>
+    <string name="botao_assumir">Assumir</string>
+    <string name="escolha_oficina_mecanica">Oficina Mecânica</string>
+    <string name="escolha_oficina_eletrica">Oficina Elétrica</string>
+    <string name="classificar_aviso">Fica atribuída a si e começa a contar o tempo.</string>
+    <string name="eliminar_aviso">A avaria deixa de aparecer às oficinas.</string>
+    <string name="prioridade_sub_baixa">Pode aguardar planeamento</string>
+    <string name="prioridade_sub_media">Funciona com limitações</string>
+    <string name="prioridade_sub_critica">Parada ou com risco</string>
+    <plurals name="distribuir_carga">
+        <item quantity="one">Turno %1$s · %2$d intervenção</item>
+        <item quantity="other">Turno %1$s · %2$d intervenções</item>
+    </plurals>
+    <string name="botao_enviar">Enviar</string>
+    <string name="botao_guardar_alteracoes">Guardar alterações</string>
+    <string name="avaria_reportada">Avaria reportada.</string>
+    <string name="alteracoes_guardadas">Alterações guardadas.</string>
+    <string-array name="sintomas">
+        <item>Fuga hidráulica / óleo</item>
+        <item>Ruído anómalo</item>
+        <item>Vibração excessiva</item>
+        <item>Sobreaquecimento</item>
+        <item>Disparo elétrico / variador</item>
+        <item>Sensor sem leitura</item>
+        <item>Encravamento</item>
+        <item>Qualidade do produto</item>
+        <item>Parâmetro fora do limite</item>
+        <item>Inspeção não conforme</item>
+    </string-array>
+
+    <!-- Validação do formulário (secção 7 da especificação) -->
+    <string name="erro_equipamento">Escolha o equipamento</string>
+    <string name="erro_tipo">Escolha Mecânica, Elétrica ou Não sei</string>
+    <string name="erro_sintoma">Escolha o que está a acontecer</string>
+    <string name="erro_descricao">A descrição tem no máximo 300 caracteres</string>
+    <string name="erro_prioridade">Escolha a urgência</string>
+
+    <!-- Detalhe da avaria -->
+    <string name="detalhe_local">%1$s · %2$s</string>
+    <string name="detalhe_editar">Corrigir equipamento</string>
+    <string name="detalhe_eliminar">Anular</string>
+    <string name="detalhe_parada_ha">Máquina parada há %1$s · ≈ %2$s %3$s perdidos</string>
+    <string name="detalhe_loto_leitura">Segurança LOTO · Validada pelo técnico. Só leitura.</string>
+    <string name="detalhe_so_quem_reportou">Só quem reportou pode editar ou eliminar, enquanto ninguém começou a tratar da avaria.</string>
+    <string name="detalhe_ordem_motivo">Ordem: %1$s · Motivo: %2$s</string>
+    <string name="detalhe_detalhes">Detalhes</string>
+    <string name="detalhe_cronologia">Cronologia</string>
+    <string name="detalhe_sem_descricao">Sem descrição.</string>
+    <string name="campo_equipamento">Equipamento</string>
+    <string name="campo_secao">Secção</string>
+    <string name="campo_especialidade">Especialidade</string>
+    <string name="campo_reportada_por">Reportada por</string>
+    <string name="campo_abertura">Abertura</string>
+    <string name="campo_tecnico">Técnico</string>
+    <string name="campo_inicio">Início da intervenção</string>
+    <string name="campo_duracao">Duração</string>
+    <string name="valor_por_atribuir">Por atribuir</string>
+    <string name="valor_vazio">—</string>
+
+    <!-- Eliminar -->
+    <string name="eliminar_titulo">Porque quer anular esta avaria?</string>
+    <string-array name="motivos_eliminar">
+        <item>Reportada por engano</item>
+        <item>Avaria repetida</item>
+        <item>Já estava resolvida</item>
+    </string-array>
+    <string name="avaria_eliminada">Avaria anulada (%1$s).</string>
+    <string name="desfazer">Desfazer</string>
+    <string name="erro_eliminar">Não foi possível eliminar. Tente outra vez.</string>
+
+    <!-- Técnico: listas -->
+    <string name="titulo_avarias_oficina">Avarias da oficina</string>
+    <string name="titulo_minhas">Minhas</string>
+    <string name="titulo_historico">Histórico</string>
+    <string name="menu_avarias">Avarias</string>
+    <string name="tecnico_em_progresso">Em progresso · para retomar</string>
+    <string name="tecnico_por_prioridade">Avarias por prioridade</string>
+    <string name="tecnico_em_curso">Em curso</string>
+    <string name="tecnico_concluidas">Concluídas por mim</string>
+    <string name="tecnico_sem_concluidas">Ainda não concluiu nenhuma avaria.</string>
+    <string name="tecnico_ver_pendentes">Ver avarias pendentes</string>
+    <string name="tecnico_sem_intervencao">Sem intervenção em curso · Escolha uma avaria para assumir.</string>
+    <string name="grupo_critica">Crítica · Intervir de imediato</string>
+    <string name="grupo_media">Média · Planear nas próximas horas</string>
+    <string name="grupo_baixa">Baixa · Pode aguardar</string>
+    <string name="grupo_vazio">Sem avarias nesta prioridade.</string>
+    <string name="filtro_minha_oficina">Minha oficina</string>
+    <string name="filtro_todas_oficinas">Todas as oficinas</string>
+    <string name="filtro_todas_abertas">Todas abertas</string>
+
+    <!-- Técnico: intervenção (detalhe) -->
+    <string name="loto_titulo">Segurança LOTO</string>
+    <string name="loto_por_validar">Por validar · %1$d de 3 · Obrigatória para assumir e para concluir.</string>
+    <string name="assumir_dica">Valide primeiro os 3 pontos de segurança.</string>
+    <string name="bloco_pendente">Pendente · Enviada à oficina (%1$s). À espera de técnico.</string>
+    <string name="bloco_em_curso">Em curso · Intervenção iniciada por %1$s.</string>
+    <string name="loto_feito">Verificada pelo técnico ao assumir.</string>
+    <string name="loto_ponto_1">Isolamento de energia elétrica/pneumática (LOTO) com cadeado pessoal</string>
+    <string name="loto_ponto_2">Verificação de pressão residual nula (hidráulica/vapor)</string>
+    <string name="loto_ponto_3">EPI específico validado e operador da linha informado</string>
+    <string name="assumir_intervencao">Assumir intervenção</string>
+    <string name="concluir_avaria">Concluir avaria</string>
+    <string name="deixar_em_progresso">Deixar em progresso</string>
+    <string name="classificar_titulo">É mecânica ou elétrica?</string>
+    <string name="concluir_titulo">Concluir esta avaria?</string>
+    <string name="concluir_mensagem">A máquina fica operacional e a avaria passa para o histórico.</string>
+    <string name="intervencao_assumida">Intervenção assumida.</string>
+    <string name="avaria_concluida">Avaria concluída.</string>
+    <string name="erro_ja_tem_intervencao">Já tem uma intervenção em curso. Conclua-a ou deixe-a em progresso primeiro.</string>
+    <string name="erro_ja_assumida">Esta avaria já foi assumida por outro técnico.</string>
+
+    <!-- Deixar em progresso -->
+    <string name="progresso_quem_ordem">Quem deu a ordem?</string>
+    <string name="progresso_quando">Quando se retoma?</string>
+    <string name="progresso_motivo">Motivo</string>
+    <string name="progresso_nota_hint">Nota para quem vem a seguir</string>
+    <string name="retoma_turno">No próximo turno</string>
+    <string name="retoma_dia">Amanhã</string>
+    <string name="progresso_ajuda">Escolha quem deu a ordem, quando se retoma e o motivo.</string>
+    <string name="erro_nota">Escreva uma nota para quem vem a seguir</string>
+    <string name="intervencao_em_progresso">Intervenção deixada em progresso.</string>
+    <string-array name="quem_deu_ordem">
+        <item>Chefe de turno</item>
+        <item>Chefe da oficina</item>
+        <item>Engenharia</item>
+        <item>Decisão minha</item>
+    </string-array>
+    <string-array name="motivos_progresso">
+        <item>Fim do turno</item>
+        <item>Falta de peça</item>
+        <item>Máquina tem de produzir</item>
+        <item>Aguarda outra equipa</item>
+    </string-array>
+
+    <!-- Paragens -->
+    <string name="titulo_paragens">Paragens</string>
+    <string name="paragens_subtitulo">Paragens ativas e dos últimos 7 dias</string>
+    <string name="paragens_vazio">Não há paragens nos últimos 7 dias.</string>
+    <string name="paragens_registar">Registar paragem</string>
+    <string name="paragens_escolher_equipamento">Que equipamento parou?</string>
+    <string name="paragens_escolher_causa">Qual a causa?</string>
+    <string name="paragem_porque">Porque parou?</string>
+    <string name="paragem_aviso_avaria">Uma avaria tem de ser reportada para a oficina saber.</string>
+    <string name="paragem_iniciar">Iniciar paragem</string>
+    <string name="paragens_kpis">%1$d nas últimas 24 h · tempo parado %2$s · %3$d nos últimos 7 dias</string>
+    <string name="paragem_perdida"> · produção perdida ≈ %1$s unid.</string>
+    <string name="paragem_registada">Paragem registada.</string>
+    <string name="erro_ja_parado">Este equipamento já está parado.</string>
+    <string name="retomar_producao">Retomar produção</string>
+    <string name="producao_retomada">Produção retomada.</string>
+    <string name="paragem_ativa">Parada</string>
+    <string name="paragem_terminada">Retomada</string>
+    <string name="paragem_desde">Desde as %1$s · há %2$s</string>
+    <string name="paragem_entre">%1$s – %2$s · %3$s</string>
+    <string name="paragem_causa_avaria">%1$s · %2$s</string>
+    <string name="causa_avaria">Avaria</string>
+    <string name="causa_pedido_tecnico">Pedido do técnico</string>
+    <string-array name="causas_paragem">
+        <item>@string/causa_avaria</item>
+        <item>Mudança de formato / espessura</item>
+        <item>Falta de matéria-prima</item>
+        <item>Limpeza programada</item>
+        <item>Manutenção preventiva</item>
+        <item>Falha de utilidades</item>
+    </string-array>
+
+    <!-- Banner de paragem no Início -->
+    <string name="banner_paragem_titulo">Paragem crítica · %1$s</string>
+    <string name="banner_tempo_parado">Tempo parado</string>
+    <string name="tempo_hms">%1$02d:%2$02d:%3$02d</string>
+    <string name="banner_desde">%1$s · desde as %2$s · produção perdida ≈ %3$s %4$s</string>
+    <string name="banner_abrir_ordem">Abrir ordem de trabalho</string>
+    <string name="banner_ver_paragens">Ver paragens</string>
+    <string name="detalhe_titulo_ot">OT · %1$s</string>
+
+    <!-- Concluir com paragem ativa -->
+    <string name="concluir_mensagem_paragem">A máquina continua parada. Quer retomar a produção?</string>
+    <string name="concluir_e_retomar">Concluir e retomar</string>
+    <string name="so_concluir">Só concluir</string>
+
+    <!-- Controlo do turno: parâmetros -->
+    <string name="titulo_controlo">Controlo do turno</string>
+    <string name="menu_controlo">Controlo</string>
+    <string name="parametros_info">Registe os valores que vê no painel da máquina. O FinsaFix só guarda o registo e não altera nada na máquina.</string>
+    <string name="parametros_vazio">Esta secção não tem parâmetros para registar.</string>
+    <string name="limite_maximo">Limite máx. %1$s %2$s</string>
+    <string name="limite_intervalo">Limite %1$s – %2$s %3$s</string>
+    <string name="limite_e_estado">%1$s · %2$s</string>
+    <string name="estado_dentro">Dentro do limite</string>
+    <string name="estado_perto">Perto do limite</string>
+    <string name="estado_fora">Fora do limite</string>
+    <string name="aviso_fora_limite">Fora do limite. Avise o chefe de turno.</string>
+    <string name="registado_por">Registado por %1$s · %2$s</string>
+    <string name="sem_leitura">Ainda sem leitura.</string>
+    <string name="leitura_registada">Valor registado.</string>
+    <string name="improvavel_titulo">Valor muito diferente do habitual</string>
+    <string name="improvavel_mensagem">Confirme no painel. O valor %1$s %2$s está correto?</string>
+    <string name="botao_esta_correto">Está correto</string>
+    <string name="botao_corrigir">Corrigir</string>
+
+    <!-- Teclado numérico -->
+    <string name="teclado_registar">Registar valor</string>
+    <string name="tecla_apagar">Apagar</string>
+    <string name="erro_valor_vazio">Escreva um valor.</string>
+
+    <!-- Produção -->
+    <string name="titulo_producao">Produção</string>
+    <string name="producao_registar">Registar produção</string>
+    <string name="producao_equipamento">Em que equipamento?</string>
+    <string name="producao_turno">Turno</string>
+    <string name="producao_quantidade">Quantidade</string>
+    <string name="producao_turno_atual">Turno atual</string>
+    <string name="producao_total">Total: %1$s %2$s</string>
+    <string name="producao_sem_registos">Ainda não há produção registada neste turno.</string>
+    <string name="producao_linha">%1$s %2$s · %3$s</string>
+    <string name="producao_confirmar_titulo">Confirmar registo</string>
+    <string name="producao_confirmar_mensagem">Registar %1$s %2$s em %3$s, turno %4$s?</string>
+    <string name="producao_registada">Produção registada.</string>
+    <string name="erro_quantidade">Escreva a quantidade produzida</string>
+    <string name="unidade_t">t</string>
+    <string name="unidade_tf">t de fibra</string>
+    <string name="unidade_mwh">MWh</string>
+    <string name="unidade_m3">m³</string>
+    <string name="unidade_tab">tabuleiros</string>
+    <string name="unidade_tabc">tabuleiros cortados</string>
+    <string name="unidade_fol">folhas</string>
+    <string name="unidade_pain">painéis</string>
+
+    <!-- Avisos à secção -->
+    <string name="aviso_a_caminho">A caminho</string>
+    <string name="aviso_espera_peca">À espera de peça</string>
+    <string name="aviso_demora">Demora mais de 1 hora</string>
+    <string name="aut_cartao">%1$s\n%2$s</string>
+    <string name="aut_legenda_quente">Corte e soldadura · habitual na Oficina Mecânica</string>
+    <string name="aut_legenda_consignacao">Quadros e motores · habitual na Oficina Elétrica</string>
+    <string name="aut_legenda_bloqueio">Bloqueio mecânico de peças em movimento</string>
+    <string name="aut_legenda_altura">Trabalho acima de 2 m</string>
+    <string name="aut_legenda_confinado">Entrada em espaços fechados</string>
+    <string name="erro_aut_tipo">Escolha pelo menos um tipo de trabalho.</string>
+    <string name="aut_duracao">Duração prevista</string>
+    <string name="aut_duracao_30">30 min</string>
+    <string name="aut_duracao_60">1 h</string>
+    <string name="aut_duracao_120">2 h</string>
+    <string name="aut_duracao_turno">Até ao fim do turno</string>
+    <string name="aut_duracao_n">%1$d min previstos</string>
+    <string name="aut_passos_titulo">%1$s · confirme os 5 passos</string>
+    <string-array name="aut_passos_consignacao">
+        <item>1. Parar a máquina e avisar o operador da linha</item>
+        <item>2. Cortar e isolar a energia na origem</item>
+        <item>3. Colocar o cadeado pessoal e a etiqueta</item>
+        <item>4. Libertar a energia residual (ar, pressão, mola)</item>
+        <item>5. Verificar que não há tensão nem movimento</item>
+    </string-array>
+    <string name="aviso_parar">Preciso da máquina parada</string>
+    <string name="aviso_arrancar">Máquina pode voltar a arrancar</string>
+    <string name="aviso_chefe_fora_limite">Fora do limite: %1$s</string>
+    <string name="aviso_detalhe">%1$s · %2$s · %3$s</string>
+    <string name="botao_maquina_parada">Máquina parada</string>
+    <string name="botao_percebido">Percebido</string>
+    <string name="avisos_recentes">Avisos recentes</string>
+    <string name="avisos_vazio">Ainda não há avisos.</string>
+    <string name="aviso_respondido">Respondido por %1$s às %2$s</string>
+    <string name="aviso_por_responder">Por responder</string>
+
+    <!-- Enviar avisos -->
+    <string name="avisar_secao">Avisar a secção</string>
+    <string name="aviso_confirmar_titulo">Enviar aviso à secção?</string>
+    <string name="aviso_confirmar_mensagem">O aviso aparece no ecrã de %1$s até alguém responder: “%2$s”.</string>
+    <string name="aviso_enviar">Enviar</string>
+    <string name="aviso_enviado">Aviso enviado.</string>
+    <string name="aviso_ja_enviado">Já enviou este aviso e ainda não tem resposta.</string>
+    <string name="avisar_chefe">Avisar o chefe</string>
+    <string name="avisar_chefe_titulo">Avisar o chefe de turno?</string>
+    <string name="avisar_chefe_mensagem">Vai ficar registado: “%1$s”.</string>
+    <string name="aviso_texto_parametro">%1$s: %2$s %3$s</string>
+    <string name="chefe_avisado">Chefe avisado.</string>
+
+    <!-- Autorizações de trabalho: bloqueios -->
+    <string name="erro_autorizacao_ativa">Há uma autorização de trabalho aberta. Espere a decisão do chefe ou termine o trabalho e espere que ele a encerre.</string>
+
+    <!-- "Mais", emergência e como usar -->
+    <string name="menu_mais">Mais</string>
+    <string name="mais_modo_escuro">Modo escuro</string>
+    <string name="mais_modo_escuro_sub">Liga sozinho no turno da noite</string>
+    <string name="mais_como_usar">Como usar o FinsaFix</string>
+    <string name="mais_como_usar_sub">4 passos rápidos</string>
+    <string name="mais_emergencia">Em caso de emergência</string>
+    <string name="mais_emergencia_sub">Contactos e o que fazer</string>
+    <string name="mais_entrada">Entrada registada às %1$s · turno %2$s</string>
+    <string name="mais_configurar_posto">Configurar posto</string>
+    <string name="mais_configurar_posto_sub">Só administrador · pede PIN</string>
+    <string name="mais_terminar_turno">Terminar turno</string>
+    <string name="mais_sair_chefia">Sair da chefia</string>
+    <string name="mais_sair_engenharia">Sair da engenharia</string>
+    <string name="mais_sessao_chefia">A sessão termina sozinha após %1$d min sem uso.</string>
+    <string name="mais_quiosque">Modo quiosque sem rede · Nelas v3.0</string>
+    <string name="mais_funcao_ambito">%1$s · %2$s</string>
+    <string name="mais_toda_fabrica">Toda a fábrica</string>
+    <string name="mais_turno_nome">Turno %1$s</string>
+    <string name="emergencia_titulo">Em caso de emergência</string>
+    <string name="emergencia_texto">Segurança interna · Ext. —\nPonto de encontro · A definir\n\nExemplo. Os contactos e o ponto de encontro de cada posto devem ser preenchidos pela Segurança da Luso Finsa.</string>
+    <string name="botao_fechar">Fechar</string>
+    <string name="como_usar_titulo">Como usar o FinsaFix</string>
+    <string name="como_usar_operador">1. Se uma máquina falhar, toque em “Reportar avaria” e responda às perguntas.\n2. Se parar por outra razão, toque em “Registar paragem”; no fim do turno registe a produção.\n3. No início do turno faça o Controlo: registe os valores que vê no painel da máquina.\n4. Precisa de alguém? Toque em Pedidos. Deixe notas para o turno seguinte em Turno.</string>
+    <string name="como_usar_tecnico">1. Em Avarias estão as da sua oficina, por prioridade. Abra uma para ver os detalhes.\n2. Só assume uma avaria depois de validar os 3 pontos de segurança LOTO.\n3. Peça autorização de trabalho ao chefe quando o trabalho a exigir, e avise a secção.\n4. Ao terminar, conclua a avaria; se ficar a meio, deixe uma nota para quem vem a seguir.
+5. Em Preventiva, Rondas e Stock fica o trabalho de rotina da oficina.</string>
+    <string name="como_usar_comecar">Começar</string>
+    <string name="primeira_vez_titulo">Primeira vez no FinsaFix?</string>
+    <string name="primeira_vez_texto">Veja em 4 passos como reportar e acompanhar uma avaria.</string>
+    <string name="primeira_vez_ver">Ver como usar</string>
+    <string name="primeira_vez_ja_sei">Já sei usar</string>
+
+    <!-- Pedidos do operador (ajuda e material) e respostas do chefe -->
+    <string name="titulo_instrucoes">Instruções</string>
+    <string name="titulo_turno">Turno</string>
+    <string name="destino_chefe">Chefe de turno</string>
+    <string name="destino_chefe_sub">Dúvida na produção ou na equipa</string>
+    <string name="destino_qualidade">Qualidade</string>
+    <string name="destino_qualidade_sub">Painel com defeito ou dúvida de especificação</string>
+    <string name="destino_logistica">Logística / Empilhador</string>
+    <string name="destino_logistica_sub">Retirar paletes ou abastecer a linha</string>
+    <string name="destino_seguranca">Segurança</string>
+    <string name="destino_seguranca_sub">Situação perigosa no posto</string>
+    <string name="pedido_material">Material</string>
+    <string name="pedido_pedir_ajuda">Pedir ajuda</string>
+    <string name="pedido_pedir_material">Pedir material</string>
+    <string name="pedidos_em_aberto">Pedidos em aberto</string>
+    <string name="pedidos_anteriores">Pedidos anteriores</string>
+    <string name="pedidos_sem_abertos">Não tem pedidos em aberto.</string>
+    <string name="pedidos_sem_anteriores">Ainda não há pedidos anteriores.</string>
+    <string name="pedido_ajuda_titulo">Quem precisa de chamar?</string>
+    <string name="pedido_material_titulo">Pedir material</string>
+    <string name="pedido_observacao">Observação (opcional)</string>
+    <string name="pedido_material_dica">Material (ex.: Paletes vazias)</string>
+    <string name="pedido_quantidade_dica">Quantidade</string>
+    <string name="pedido_urgente_opcao">Urgente · a linha pode parar se ninguém vier</string>
+    <string name="pedido_material_texto">%1$d × %2$s</string>
+    <string name="erro_quantidade_pedido">Escreva a quantidade</string>
+    <string name="erro_material_pedido">Escreva o material</string>
+    <string name="erro_resposta_pedido">Escreva a resposta</string>
+    <string name="pedido_enviado">Pedido enviado.</string>
+    <string name="erro_pedido_mudou">O pedido mudou entretanto. Veja o estado atual.</string>
+    <string name="pedido_ja_atendido">Já fui atendido</string>
+    <string name="pedido_ja_recebido">Recebido</string>
+    <string name="pedido_a_caminho">A caminho</string>
+    <string name="pedido_atendido">Atendido</string>
+    <string name="pedido_recebido">Recebido</string>
+    <string name="pedido_fechado">Fechado</string>
+    <string name="pedido_enviado_estado">Pedido enviado</string>
+    <string name="pedido_urgente">Urgente</string>
+    <string name="tempo_ha">há %1$s</string>
+    <string name="pedido_resposta">“%1$s” · Respondido por %2$s · %3$s</string>
+    <string name="pedido_fechado_por">Fechado por %1$s · %2$s</string>
+    <string name="pedidos_chefe_titulo">Pedidos ao chefe de turno</string>
+    <string name="pedidos_chefe_vazio">Não há pedidos de ajuda por responder.</string>
+    <string name="pedidos_avisos_titulo">Avisos da secção</string>
+    <string name="pedido_resp_ja">Vou já aí</string>
+    <string name="pedido_resp_10">Vou daqui a 10 min</string>
+    <string name="pedido_resp_qualidade">Fale com a Qualidade</string>
+    <string name="pedido_resp_avancar">Pode avançar</string>
+    <string name="pedido_resp_outra">Outra resposta…</string>
+    <string name="pedido_fechar">Fechar pedido</string>
+    <string name="pedido_resposta_titulo">Responder ao pedido</string>
+    <string name="pedido_resposta_dica">Resposta</string>
+
+    <!-- Instruções -->
+    <string name="instrucoes_intro">Instruções validadas pela engenharia. Só a engenharia as pode alterar.</string>
+    <string name="instrucoes_vazio">Ainda não há instruções para esta secção.</string>
+    <string name="instrucao_validada">Validado</string>
+    <string name="instrucao_por_validar">Por validar</string>
+    <string name="instrucao_validada_por">Validado por %1$s · %2$s</string>
+    <plurals name="instrucao_resumo">
+        <item quantity="one">%1$d passo · cerca de %2$d min</item>
+        <item quantity="other">%1$d passos · cerca de %2$d min</item>
+    </plurals>
+
+    <!-- Turno: notas e receção -->
+    <string name="nota_atencao">Atenção</string>
+    <string name="nota_pendente">Pendente</string>
+    <string name="nota_informacao">Informação</string>
+    <string name="nota_nota">Nota</string>
+    <string name="nota_categoria_nome">%1$s</string>
+    <string name="nota_tipo_titulo">Tipo de nota</string>
+    <string name="nota_titulo">Deixar nota para o próximo turno</string>
+    <string name="nota_dica">Escreva a nota</string>
+    <string name="nota_registar">Registar nota</string>
+    <string name="nota_registada">Nota registada.</string>
+    <string name="turno_notas_titulo">Notas para este turno</string>
+    <plurals name="turno_notas">
+        <item quantity="one">%d nota</item>
+        <item quantity="other">%d notas</item>
+    </plurals>
+    <string name="turno_sem_notas">Não há notas para este turno.</string>
+    <string name="turno_li_notas">Li as notas · confirmar receção do turno</string>
+    <string name="turno_deixar_nota">Deixar nota para o próximo turno</string>
+    <string name="turno_em_curso_titulo">Turno em curso</string>
+    <string name="turno_em_curso">%1$s · %2$s</string>
+    <string name="turno_decorrido">Decorrido %1$s · Faltam %2$s</string>
+    <string name="turno_horario_titulo">Horário do posto</string>
+    <string name="turno_horario_linha">%1$s · %2$s\n%3$s</string>
+    <string name="turno_sem_escala">Sem escala atribuída</string>
+    <string name="turno_agora">Agora</string>
+    <!-- Turno do chefe de oficina: “Passa para o próximo turno” -->
+    <string name="passa_titulo">Passa para o próximo turno</string>
+    <string name="passa_vazio">Nada a passar: não há intervenções em curso nem pendentes.</string>
+    <string name="passa_estado_em_curso">Em curso</string>
+    <string name="passa_estado_em_progresso">Em progresso</string>
+    <string name="passa_estado_pendente">Pendente há mais de 1 h</string>
+    <string name="passa_estado_autorizacao">Autorização a expirar</string>
+    <string name="passa_titulo_avaria">%1$s · %2$s</string>
+    <string name="passa_equipa">Equipa: %1$s</string>
+    <string name="passa_equipa_responsavel">%1$s (responsável)</string>
+    <string name="passa_nota_de">“%1$s” · %2$s</string>
+    <string name="passa_aberta_ha">Aberta há %1$s · %2$s</string>
+    <string name="passa_autorizacao">%1$s · expira às %2$s · pedida por %3$s</string>
+    <string name="turno_confirmar_passagem">Confirmar</string>
+    <string name="turno_rececoes_titulo">Receções confirmadas</string>
+    <string name="turno_sem_rececoes">Ainda não há receções.</string>
+    <string name="rececao_confirmada">Receção confirmada.</string>
+    <string name="rececao_ja_confirmada">Já confirmou a receção neste turno.</string>
+    <string name="rececao_estado_confirmada">Confirmada</string>
+    <string name="rececao_estado_por_confirmar">Por confirmar</string>
+    <string name="rececao_titulo">Turno %1$s · %2$s</string>
+
+    <!-- Sessão por inatividade -->
+    <string name="sessao_titulo">Ainda é %1$s?</string>
+    <string name="sessao_motivo_turno">Começou um novo turno.</string>
+    <string name="sessao_motivo_inatividade">O tablet está sem uso há %1$d min.</string>
+    <string name="sessao_mensagem">%1$s Se ninguém responder, a sessão termina dentro de %2$d s.</string>
+    <string name="sessao_continuar">Sou eu, continuar</string>
+    <string name="sessao_terminar">Não sou eu · terminar sessão</string>
+    <string name="sessao_terminada">Sessão terminada por inatividade.</string>
+
+    <!-- Chefe de secção -->
+    <string name="titulo_seccao">Secção</string>
+    <string name="titulo_estado_seccao">Estado da secção</string>
+    <string name="titulo_pedidos">Pedidos</string>
+    <string name="titulo_validar">Validar</string>
+    <string name="titulo_checklist">Checklist de arranque</string>
+    <string name="checklist_ajuda">Verifique todos os pontos antes de arrancar.</string>
+    <string name="checklist_contador">%1$d de %2$d</string>
+    <string name="checklist_tudo_ok">Marcar tudo OK</string>
+    <string name="checklist_ok">OK</string>
+    <string name="checklist_nao_ok">Não OK</string>
+    <string name="checklist_registar">Registar checklist</string>
+    <string name="checklist_registada">Checklist registada: tudo OK.</string>
+    <string name="checklist_registada_nao_ok">Checklist registada. O chefe vai ver os pontos Não OK.</string>
+    <string name="checklist_ja_feita">A checklist deste turno já foi feita.</string>
+    <plurals name="checklist_com_nao_ok">
+        <item quantity="one">Checklist com %1$d ponto Não OK</item>
+        <item quantity="other">Checklist com %1$d pontos Não OK</item>
+    </plurals>
+    <string name="checklist_visto">Visto</string>
+    <string name="checklist_validada">Checklist vista.</string>
+    <string name="por_fazer_checklist">Por fazer · Checklist de arranque do turno por fazer</string>
+    <string name="chefia_checklist_feita">Checklist de arranque deste turno · Feita</string>
+    <string name="chefia_checklist_por_fazer">Checklist de arranque deste turno · Por fazer</string>
+    <plurals name="por_tratar_checklists">
+        <item quantity="one">%d checklist com “Não OK” por validar</item>
+        <item quantity="other">%d checklists com “Não OK” por validar</item>
+    </plurals>
+    <plurals name="por_tratar_passagens">
+        <item quantity="one">%d passagem de turno por confirmar</item>
+        <item quantity="other">%d passagens de turno por confirmar</item>
+    </plurals>
+    <string name="validar_checklists">Checklists com Não OK</string>
+    <string name="validar_sem_checklists">Nada para validar.</string>
+    <string name="validar_rondas">Rondas não conformes</string>
+    <string name="validar_sem_rondas">Nenhuma ronda por validar.</string>
+    <string name="validar_passagens">Passagens de turno</string>
+    <string name="validar_sem_passagens">Nenhuma passagem por confirmar.</string>
+    <string name="ronda_titulo_anomalia">%1$s · %2$s</string>
+    <string name="ronda_validar">Validar</string>
+    <string name="ronda_validada">Ronda validada.</string>
+    <string name="passagem_confirmar">Confirmar</string>
+    <string name="passagem_confirmada">Passagem confirmada.</string>
+    <string name="erro_validar">Não foi possível: o registo mudou entretanto.</string>
+    <string-array name="checklist_pontos">
+        <item>Proteções e dispositivos de segurança no lugar</item>
+        <item>Paragem de emergência a funcionar</item>
+        <item>Zona de trabalho limpa e livre</item>
+        <item>Lubrificação e níveis verificados</item>
+        <item>Ar comprimido e utilidades sem fugas</item>
+        <item>Sensores e fotocélulas limpos</item>
+    </string-array>
+    <string name="validar_explicacao">Autorizações de trabalho da secção. Toque numa para a aprovar, recusar ou encerrar.</string>
+    <string name="validar_vazio">Não há autorizações abertas.</string>
+    <string name="aut_pedido_detalhe">%1$s\n\n%2$s · pedida por %3$s às %4$s</string>
+    <string name="aut_aprovar">Aprovar</string>
+    <string name="aut_aprovar_titulo">Confirme e aprove com o seu PIN</string>
+    <string name="aut_recusar">Recusar</string>
+    <string name="aut_recusar_titulo">Porque recusa?</string>
+    <string name="aut_encerrar_titulo">Confirme e encerre com o seu PIN</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="aut_aviso_maquina">Máquina: sem confirmação de máquina parada.</string>
+    <string name="aut_vigilante_dica">Nome do vigilante de fogo</string>
+    <string name="aut_vigilante_n">Vigilante: %1$s</string>
+    <string name="erro_aut_vigilante">Escreva o nome do vigilante de fogo.</string>
+    <string name="por_tratar">Por tratar</string>
+    <string name="por_tratar_nada">Nada por tratar.</string>
+    <plurals name="por_tratar_autorizacoes">
+        <item quantity="one">%d autorização de trabalho por tratar</item>
+        <item quantity="other">%d autorizações de trabalho por tratar</item>
+    </plurals>
+    <plurals name="por_tratar_pedidos">
+        <item quantity="one">%d pedido ou aviso por responder</item>
+        <item quantity="other">%d pedidos ou avisos por responder</item>
+    </plurals>
+    <string name="chefia_operadores_titulo">Operadores · turno %1$s</string>
+    <string name="chefia_operadores_linha">%1$s · %2$s</string>
+    <string name="chefia_em_turno">Em turno</string>
+    <string name="resumo_chefe_kpis">Produzido %1$s %2$s · %3$d paragens no turno · tempo parado %4$s</string>
+    <string name="resumo_chefe_intro">Paragens por causa\n%1$s\n\nRegistos de produção do turno</string>
+    <string name="pecas_titulo">Peças substituídas</string>
+    <string name="pecas_nenhuma">Ainda sem peças registadas.</string>
+    <string name="pecas_resumo">%1$d unid. · %2$d ref.</string>
+    <string name="pecas_linha">%1$d × %2$s</string>
+    <string name="pecas_registar">Registar peça</string>
+    <string name="pecas_quantidade">Quantas?</string>
+    <string name="pecas_unidade">unid.</string>
+    <string name="pecas_em_stock">Em stock: %1$d</string>
+    <string name="pecas_registada">Peça registada e stock atualizado.</string>
+    <string name="erro_peca">Não foi possível: a peça é de outra especialidade ou não há stock suficiente.</string>
+    <string name="por_fazer">Por fazer</string>
+    <string name="por_fazer_estado">Por fazer</string>
+    <plurals name="por_fazer_preventivas">
+        <item quantity="one">%d preventiva vencida</item>
+        <item quantity="other">%d preventivas vencidas</item>
+    </plurals>
+    <plurals name="por_fazer_pecas">
+        <item quantity="one">%d peça abaixo do stock mínimo</item>
+        <item quantity="other">%d peças abaixo do stock mínimo</item>
+    </plurals>
+    <string name="por_fazer_parametros">Parâmetros fora do limite: %1$s</string>
+    <string name="relatorio_configurar">Configurar relatório</string>
+    <string name="relatorio_incluir_avarias">Avarias</string>
+    <string name="relatorio_incluir_paragens">Paragens</string>
+    <string name="relatorio_incluir_indicadores">Indicadores</string>
+    <string name="relatorio_incluir_preventivas">Preventivas</string>
+    <string name="relatorio_periodo_titulo">Período</string>
+    <string name="relatorio_secao_titulo">Secção</string>
+    <string name="relatorio_incluir_titulo">Incluir</string>
+    <string name="relatorio_titulo">Relatório de manutenção</string>
+    <string name="relatorio_periodo">%1$s a %2$s</string>
+    <string name="relatorio_gerado">Gerado por %1$s · %2$s</string>
+    <string name="relatorio_pagina">Página %1$s</string>
+    <string name="relatorio_sem_registos">Sem registos neste período.</string>
+    <string name="relatorio_coluna_tipo">Tipo</string>
+    <string name="relatorio_coluna_data">Data</string>
+    <string name="relatorio_coluna_id">ID</string>
+    <string name="relatorio_coluna_equipamento">Equipamento</string>
+    <string name="relatorio_coluna_detalhe">Detalhe</string>
+    <string name="relatorio_coluna_duracao">Duração</string>
+    <string name="relatorio_tipo_avaria">Avaria</string>
+    <string name="relatorio_tipo_paragem">Paragem</string>
+    <string name="relatorio_tipo_preventiva">Preventiva</string>
+    <string name="relatorio_titulo_tabela">%1$s (%2$d)</string>
+    <string name="relatorio_numero_avarias">Avarias</string>
+    <string name="relatorio_numero_mtbf">MTBF</string>
+    <string name="relatorio_numero_mttr">MTTR</string>
+    <string name="relatorio_numero_parado">Parado por avaria</string>
+    <string name="relatorio_aberta">Aberta</string>
+    <string name="relatorio_ativa">%1$s (ativa)</string>
+    <string name="relatorio_preventiva_estado">%1$s (%2$s)</string>
+    <string name="relatorio_horas">%1$d / %2$d h</string>
+    <plurals name="relatorio_e_mais">
+        <item quantity="one">… e mais %d registo no ficheiro exportado</item>
+        <item quantity="other">… e mais %d registos no ficheiro exportado</item>
+    </plurals>
+    <string name="relatorio_previsualizacao">Pré-visualização</string>
+    <string name="relatorio_exportar_pdf">Exportar PDF</string>
+    <string name="relatorio_exportar_csv">Exportar CSV</string>
+    <string name="relatorio_exportado">Relatório guardado.</string>
+    <string name="erro_relatorio">Não foi possível guardar. Tente outra vez.</string>
+    <string name="hist_intro">Tudo o que aconteceu nesta secção, do mais recente para o mais antigo.</string>
+    <string name="hist_intro_tecnico">Avarias resolvidas da sua oficina.</string>
+    <string name="hist_vazio">Ainda não há registos.</string>
+    <string name="hist_tudo">Tudo</string>
+    <string name="hist_aviso_chefe">Aviso ao chefe</string>
+    <string name="hist_avarias">Avarias</string>
+    <string name="hist_paragens">Paragens</string>
+    <string name="hist_producao">Produção</string>
+    <string name="hist_parametros">Parâmetros</string>
+    <string name="hist_checklists">Checklists</string>
+    <string name="hist_material">Material</string>
+    <string name="hist_ajuda">Ajuda</string>
+    <string name="hist_avisos">Avisos</string>
+    <string name="hist_checklist_ok">Checklist de arranque · tudo OK</string>
+    <string name="hist_checklist_nao_ok">Checklist de arranque · com pontos Não OK</string>
+    <string name="titulo_distribuir">Distribuir</string>
+    <string name="distribuir_intro">Avarias pendentes da oficina. Atribua cada uma a um responsável e, se quiser, a ajudantes: só eles a veem.</string>
+    <string name="distribuir_vazio">Não há avarias por distribuir.</string>
+    <string name="distribuir_atribuir">Atribuir</string>
+    <string name="distribuir_escolher">A que técnico?</string>
+    <string name="distribuir_para_todos">Sem atribuição (todos veem)</string>
+    <string name="distribuir_atribuida_a">Atribuída a %1$s</string>
+    <!-- Equipa da intervenção -->
+    <!-- Equipa da oficina (chefe de oficina) -->
+    <string name="titulo_equipa">Equipa</string>
+    <plurals name="equipa_n_em_turno">
+        <item quantity="one">%d em turno</item>
+        <item quantity="other">%d em turno</item>
+    </plurals>
+    <plurals name="equipa_n_em_intervencao">
+        <item quantity="one">%d em intervenção</item>
+        <item quantity="other">%d em intervenção</item>
+    </plurals>
+    <plurals name="equipa_n_disponiveis">
+        <item quantity="one">%d disponível</item>
+        <item quantity="other">%d disponíveis</item>
+    </plurals>
+    <string name="equipa_intervencoes_titulo">Intervenções em curso</string>
+    <string name="equipa_tecnicos_titulo">Técnicos</string>
+    <string name="equipa_sem_intervencoes">Não há intervenções em curso.</string>
+    <string name="equipa_em_curso_ha">Em curso há %1$s</string>
+    <string name="equipa_ultimas_atualizacoes">Últimas atualizações</string>
+    <string name="equipa_atualizacao">%1$s · %2$s · %3$s</string>
+    <string name="equipa_estado_intervencao">Em intervenção</string>
+    <string name="equipa_estado_disponivel">Disponível</string>
+    <string name="equipa_estado_fora_de_turno">Fora de turno</string>
+    <string name="equipa_tecnico_turno">%1$s · Turno %2$s</string>
+    <string name="equipa_na_avaria_responsavel">Em %1$s · Responsável</string>
+    <string name="equipa_na_avaria_ajudante">Em %1$s · Ajudante</string>
+    <plurals name="equipa_atribuidas">
+        <item quantity="one">%d avaria atribuída</item>
+        <item quantity="other">%d avarias atribuídas</item>
+    </plurals>
+    <string name="equipa_deixou_em_progresso">Deixou em progresso: %1$s · “%2$s”</string>
+    <plurals name="equipa_titulo">
+        <item quantity="one">Equipa · %d técnico</item>
+        <item quantity="other">Equipa · %d técnicos</item>
+    </plurals>
+    <plurals name="ajudantes_mais">
+        <item quantity="one">+%d técnico</item>
+        <item quantity="other">+%d técnicos</item>
+    </plurals>
+    <string name="equipa_responsavel">Responsável · desde as %1$s</string>
+    <string name="equipa_ajudante">Ajudante · desde as %1$s</string>
+    <string name="equipa_juntar">Juntar-me à intervenção</string>
+    <string name="equipa_sair">Sair da intervenção</string>
+    <string name="equipa_juntar_titulo">Antes de se juntar</string>
+    <string name="equipa_juntar_aviso">Confirme os 3 pontos do LOTO.</string>
+    <string name="equipa_juntou">Juntou-se à intervenção.</string>
+    <string name="equipa_saiu">Saiu da intervenção.</string>
+    <string name="erro_juntar_nao_em_curso">Esta avaria já não está em curso.</string>
+    <string name="erro_juntar_outra_oficina">Esta avaria é de outra oficina.</string>
+    <string name="erro_juntar_loto">Marque os 3 pontos do LOTO.</string>
+    <string name="erro_sair_equipa">Não foi possível sair da intervenção.</string>
+    <string name="tecnico_com_equipa">%1$s +%2$d</string>
+    <string name="na_equipa">Na equipa</string>
+    <string name="distribuir_ajudantes">Ajudantes (opcional)</string>
+    <string name="erro_equipa">Não foi possível atribuir a equipa. Um técnico pode já estar noutra intervenção.</string>
+    <string name="distribuir_atribuida">Avaria atribuída.</string>
+    <string name="erro_atribuida_a_outro">Esta avaria foi atribuída a outro técnico.</string>
+    <string name="evento_atribuida">Atribuída por %1$s a %2$s</string>
+    <string name="evento_atribuida_ajudantes">Ajudantes atribuídos por %1$s: %2$s</string>
+    <string name="evento_aut_renovada">Autorização renovada por %1$s</string>
+    <string name="validar_renovar">Passagem de turno · autorizações a renovar</string>
+    <string name="validar_sem_renovar">Nenhuma autorização a renovar.</string>
+    <string name="aut_renovar">Renovar</string>
+    <string name="aut_renovada">Autorização renovada até ao fim do turno.</string>
+    <string name="aut_valida_ate">Válida até às %1$s</string>
+    <string name="aut_expirada_as">Expirou às %1$s</string>
+    <string name="erro_aut_expirada">A autorização expirou: peça ao chefe para a renovar.</string>
+    <string name="titulo_planos">Planos</string>
+    <string name="titulo_relatorios">Relatórios</string>
+    <string name="planos_intro">Planos preventivos da fábrica e stock mínimo das peças.</string>
+    <string name="planos_preventivos">Planos preventivos</string>
+    <string name="planos_stock">Mínimos de stock</string>
+    <string name="planos_novo">Novo plano</string>
+    <string name="planos_cada">Cada %1$d h · %2$d h desde a última</string>
+    <string name="planos_minimo">Mínimo %1$d · stock %2$d · %3$s</string>
+    <string name="planos_vazio">Não há nada nesta lista.</string>
+    <string name="planos_oficina">Que oficina faz este plano?</string>
+    <string name="planos_titulo_plano">Título do plano</string>
+    <string name="planos_titulo_dica">Ex.: Troca das cintas (pelo menos 5 caracteres)</string>
+    <string name="planos_seguinte">Seguinte</string>
+    <string name="planos_intervalo">Intervalo</string>
+    <string name="planos_horas">h</string>
+    <string name="planos_intervalo_dica">Horas de funcionamento entre duas execuções.</string>
+    <string name="planos_criado">Plano criado.</string>
+    <string name="instrucoes_pesquisar">Pesquisar instrução…</string>
+    <string name="instrucoes_eng_intro">Instruções de trabalho de toda a fábrica: toque numa para a rever.</string>
+    <string name="instrucoes_eng_vazio">Não há instruções neste estado.</string>
+    <string name="instrucao_correcao">Correção pedida</string>
+    <string name="instrucao_aprovadas">Aprovadas</string>
+    <string name="instrucao_aprovar">Aprovar</string>
+    <string name="instrucao_pedir_correcao">Pedir correção</string>
+    <string name="instrucao_aprovada">Instrução aprovada.</string>
+    <string name="instrucao_correcao_pedida">Correção pedida.</string>
+    <string name="titulo_plano">Plano</string>
+    <string name="plano_titulo">Plano do turno</string>
+    <string name="plano_kpis">Planeado %1$s · Produzido %2$s · %3$d %% · Falta %4$s · Ritmo necessário %5$s %6$s/h\nA produzir agora: %7$s\n%8$s</string>
+    <string name="plano_nada_agora">nada (plano cumprido)</string>
+    <string name="plano_ordem">%1$s · %2$s %3$s</string>
+    <string name="plano_intro">Ordens do turno da %1$s. Ajuste o planeado e guarde.</string>
+    <string name="plano_total">Total planeado %1$s %2$s</string>
+    <string name="plano_guardar">Guardar ajustes</string>
+    <string name="plano_guardado">Ajustes guardados.</string>
+    <string name="plano_sem_ajustes">Não há ajustes para guardar.</string>
+    <string name="plano_vazio">Este turno não tem ordens.</string>
+    <string name="plano_ajustes_registados">Ajustes registados: %1$s · %2$s</string>
+    <string name="resumo_contra_plano"> · planeado %1$s (%2$d %%)</string>
+    <string name="producao_noutra_secao">Registar noutra secção</string>
+    <string name="producao_cortes">Cortes</string>
+    <string name="producao_cortes_unidade">cortes</string>
+    <string name="producao_cortes_opcional">Opcional: toque em Cancelar para não registar cortes.</string>
+    <plurals name="producao_cortes_n">
+        <item quantity="one"> · %1$d corte</item>
+        <item quantity="other"> · %1$d cortes</item>
+    </plurals>
+    <string name="producao_toque_anular"> · toque para anular</string>
+    <string name="resumo_sem_paragens">Sem paragens neste turno.</string>
+    <string name="resumo_sem_registos">Ainda não há registos de produção neste turno.</string>
+    <string name="resumo_registo">%1$s · %2$s %3$s</string>
+    <string name="resumo_anular">Anular</string>
+    <string name="resumo_anular_titulo">Anular este registo?</string>
+    <string name="resumo_anular_mensagem">O registo de produção deixa de contar. Isto não se desfaz.</string>
+    <string name="producao_anulada">Registo anulado.</string>
+    <string name="erro_anular_producao">Não foi possível anular o registo.</string>
+    <string name="aut_aprovada">Autorização aprovada.</string>
+    <string name="aut_recusada">Autorização recusada.</string>
+    <string name="aut_encerrada">Autorização encerrada.</string>
+    <string name="aut_aguarda_tecnico">O próximo passo é do técnico.</string>
+    <string name="pedidos_explicacao">Avisos da secção à espera de resposta. Sem resposta ao fim de 3 minutos, ficam em destaque.</string>
+    <string name="pedidos_vazio">Não há pedidos por responder.</string>
+    <string name="botao_visto">Visto</string>
+    <plurals name="aviso_sem_resposta">
+        <item quantity="one">Sem resposta há %d minuto</item>
+        <item quantity="other">Sem resposta há %d minutos</item>
+    </plurals>
+
+    <!-- Engenharia e chefe de oficina (só consulta) -->
+    <string name="titulo_engenharia_inicio">Início</string>
+    <string name="titulo_avarias_fabrica">Avarias</string>
+    <string name="titulo_indicadores">Indicadores</string>
+    <string name="titulo_oficina">Oficina</string>
+    <string name="titulo_estado_oficina">Estado da oficina</string>
+    <string name="oficina_avarias_titulo">Avarias da oficina</string>
+    <string name="oficina_tecnicos_titulo">Técnicos</string>
+    <string name="oficina_sem_avarias">Nenhuma avaria %1$s por resolver.</string>
+    <plurals name="oficina_n_abertas">
+        <item quantity="one">%d aberta</item>
+        <item quantity="other">%d abertas</item>
+    </plurals>
+    <plurals name="oficina_passagens">
+        <item quantity="one">%d passagem de turno por confirmar</item>
+        <item quantity="other">%d passagens de turno por confirmar</item>
+    </plurals>
+    <string name="tecnico_em_turno">Em turno</string>
+    <string name="tecnico_turno">Turno %1$s</string>
+    <string name="tecnico_a_intervir">A intervir: %1$s · %2$s</string>
+    <string name="oficina_tecnico_livre">Sem intervenção em curso</string>
+    <plurals name="tecnico_atribuidas">
+        <item quantity="one">%d atribuída</item>
+        <item quantity="other">%d atribuídas</item>
+    </plurals>
+    <string name="avaria_maquina_parada">Máquina parada %1$s</string>
+    <string name="entrada_modo_chefia">Modo chefia · %1$s · %2$s</string>
+    <string name="entrada_modo_engenharia">Modo engenharia · %1$s</string>
+    <string name="titulo_resumo">Resumo</string>
+    <string name="resumo_oficina_kpis">Concluídas neste turno %1$d · reparação média %2$s · preventivas feitas %3$d · avarias em aberto %4$d</string>
+    <string name="resumo_oficina_listas">Concluídas neste turno e preventivas vencidas</string>
+    <string name="resumo_oficina_vazio">Nada concluído neste turno e nenhuma preventiva vencida.</string>
+    <plurals name="oficina_nao_sei">
+        <item quantity="one">%d avaria “Não sei” sem técnico há mais de 15 min</item>
+        <item quantity="other">%d avarias “Não sei” sem técnico há mais de 15 min</item>
+    </plurals>
+    <plurals name="oficina_por_atribuir">
+        <item quantity="one">%d avaria por atribuir</item>
+        <item quantity="other">%d avarias por atribuir</item>
+    </plurals>
+    <plurals name="oficina_rondas">
+        <item quantity="one">%d ronda não conforme por validar</item>
+        <item quantity="other">%d rondas não conformes por validar</item>
+    </plurals>
+    <string name="filtro_autorizacoes">Autorizações</string>
+    <string name="aut_ativas">Ativas · %1$d</string>
+    <string name="aut_historico">Histórico · %1$d</string>
+    <string name="consulta_sem_autorizacoes">Não há autorizações neste separador.</string>
+    <string name="decisao_oficina">Reclassificar oficina</string>
+    <string name="decisao_atribuir">Atribuir a técnico</string>
+    <string name="decisao_oficina_alterada">Oficina alterada.</string>
+    <string name="evento_oficina_reclassificada">Oficina alterada para %2$s por %1$s</string>
+    <string name="decisao_titulo">Decisão de engenharia</string>
+    <string name="decisao_aprovar_fecho">Aprovar fecho</string>
+    <string name="decisao_aprovar_mensagem">A avaria fica fechada e aprovada pela engenharia.</string>
+    <string name="decisao_devolver">Devolver ao técnico</string>
+    <string name="decisao_motivo_dica">Motivo (pelo menos 5 caracteres)</string>
+    <string name="decisao_reclassificar">Reclassificar prioridade</string>
+    <string name="decisao_fecho_aprovado">Fecho aprovado.</string>
+    <string name="decisao_devolvida">Avaria devolvida ao técnico.</string>
+    <string name="decisao_reclassificada">Prioridade alterada.</string>
+    <string name="erro_decisao">Não foi possível: a avaria mudou entretanto.</string>
+    <string name="filtro_por_aprovar">Por aprovar</string>
+    <string name="consulta_decisoes">Por classificar %1$d · Por aprovar %2$d</string>
+    <string name="evento_fecho_aprovado">Fecho aprovado pela engenharia (%1$s)</string>
+    <string name="evento_devolvida">Devolvida ao técnico por %1$s: %2$s</string>
+    <string name="evento_reclassificada">Prioridade alterada para %2$s por %1$s</string>
+    <string name="eng_precisa_decisao">Precisa da sua decisão</string>
+    <string name="eng_decisao_paragens">Paragens críticas</string>
+    <string name="eng_decisao_paragens_sub">Linhas paradas por avaria</string>
+    <string name="eng_decisao_classificar">Avarias por classificar</string>
+    <string name="eng_decisao_classificar_sub">O operador escolheu “Não sei”</string>
+    <plurals name="eng_decisao_classificar_sem_tecnico">
+        <item quantity="one">%d sem técnico há mais de 15 min</item>
+        <item quantity="other">%d sem técnico há mais de 15 min</item>
+    </plurals>
+    <string name="eng_decisao_aprovar">Intervenções por aprovar</string>
+    <string name="eng_decisao_aprovar_sub">Concluídas pelos técnicos, à espera do fecho</string>
+    <string name="eng_decisao_preventivas">Preventivas vencidas</string>
+    <string name="eng_decisao_preventivas_sub">Planos com a data ultrapassada</string>
+    <string name="eng_decisao_pecas">Peças abaixo do mínimo</string>
+    <string name="eng_decisao_pecas_sub">Stock abaixo do mínimo definido</string>
+    <string name="eng_decisao_instrucoes">Instruções por validar</string>
+    <string name="eng_decisao_instrucoes_sub">À espera da validação da engenharia</string>
+    <string name="eng_consulta_titulo">Consulta · toda a fábrica</string>
+    <string name="eng_kpi_abertas">Avarias abertas</string>
+    <string name="eng_kpi_abertas_sub">%1$d em curso</string>
+    <string name="eng_kpi_30">Avarias · 30 dias</string>
+    <string name="eng_kpi_30_sub">reportadas</string>
+    <string name="eng_kpi_mtbf">MTBF · 30 dias</string>
+    <string name="eng_kpi_mtbf_sub">entre avarias, por máquina</string>
+    <string name="eng_kpi_mttr">MTTR · 30 dias</string>
+    <string name="eng_kpi_mttr_sub">para reparar</string>
+    <string name="eng_pins_nenhum">Nenhum PIN errado nas últimas 24 h.</string>
+    <plurals name="eng_pins_errados">
+        <item quantity="one">%1$d PIN errado nas últimas 24 h · último às %2$s</item>
+        <item quantity="other">%1$d PINs errados nas últimas 24 h · último às %2$s</item>
+    </plurals>
+    <string name="consulta_ambito_fabrica">Toda a fábrica · só consulta</string>
+    <string name="consulta_todas_secoes">Todas as secções</string>
+    <string name="consulta_escolher_secao">Escolha a secção</string>
+    <string name="filtro_resolvidas">Resolvidas</string>
+    <string name="indicadores_explicacao">MTBF: tempo médio entre avarias seguidas do mesmo equipamento (precisa de 2 avarias). MTTR: tempo médio de reparação das avarias resolvidas, sem contar o tempo em espera.</string>
+    <string name="periodo_7">7 dias</string>
+    <string name="periodo_30">30 dias</string>
+    <string name="indicadores_kpis">Avarias %1$d (período anterior %2$d)\nParado por avaria %3$s\nMTBF %4$s · MTTR %5$s</string>
+    <string name="indicadores_grafico">Avarias por dia</string>
+    <string name="indicadores_por_secao">Por secção</string>
+    <string name="indicadores_maquinas">Máquinas que mais avariam</string>
+    <string name="indicadores_vazio">Ainda não há avarias.</string>
+    <string name="indicador_mtbf">MTBF: %1$s</string>
+    <string name="indicador_mttr">MTTR: %1$s</string>
+    <string name="indicador_sem_dados">sem dados</string>
+    <plurals name="indicador_avarias">
+        <item quantity="one">%d avaria registada</item>
+        <item quantity="other">%d avarias registadas</item>
+    </plurals>
+
+    <!-- Entrada do chefe -->
+    <string name="pin_chefe_titulo">PIN pessoal</string>
+
+    <!-- Autorização de trabalho -->
+    <string name="aut_titulo">Autorização de trabalho</string>
+    <string name="aut_tipo_quente">Trabalho a quente</string>
+    <string name="aut_tipo_consignacao">Consignação elétrica</string>
+    <string name="aut_tipo_bloqueio">Bloqueio mecânico</string>
+    <string name="aut_tipo_altura">Trabalho em altura</string>
+    <string name="aut_tipo_confinado">Espaço confinado</string>
+    <string name="aut_estado_pedida">Pedida · a aguardar o chefe</string>
+    <string name="aut_estado_aprovada">Aprovada · pode começar</string>
+    <string name="aut_estado_recusada">Recusada</string>
+    <string name="aut_estado_encerrada">Encerrada</string>
+    <string name="aut_estado_em_curso">Trabalho em curso</string>
+    <string name="aut_estado_vigilancia">Vigilância de fogo até às %1$s</string>
+    <string name="aut_estado_por_encerrar">Trabalho terminado · falta o chefe encerrar</string>
+    <string name="aut_sem_pedido">Trabalho a quente, em altura, em espaço confinado ou com consignação? Peça autorização ao chefe antes de começar.</string>
+    <string name="aut_cadeado_n">Cadeado %1$s</string>
+    <string name="aut_motivo">Motivo: %1$s</string>
+    <string name="aut_pedir">Pedir autorização</string>
+    <string name="aut_comecar">Começar o trabalho</string>
+    <string name="aut_terminar">Trabalho terminado</string>
+    <string name="aut_escolher_tipo">Que trabalho vai fazer?</string>
+    <string name="aut_descricao_dica">Descrição do trabalho</string>
+    <string name="aut_cadeado_titulo">Número do cadeado</string>
+    <string name="aut_cadeado_dica">Por exemplo, E-09</string>
+    <string name="aut_comecar_titulo">Começar o trabalho?</string>
+    <string name="aut_comecar_mensagem">Confirme que as condições da autorização estão cumpridas no local.</string>
+    <string name="aut_terminar_titulo">O trabalho terminou?</string>
+    <string name="aut_terminar_mensagem">No trabalho a quente seguem-se 60 minutos de vigilância de fogo. Depois, o chefe encerra a autorização.</string>
+    <string name="aut_guardada">Autorização atualizada.</string>
+    <string name="aut_pedida">Pedido enviado ao chefe de secção.</string>
+    <string name="aut_iniciada">Trabalho começado.</string>
+    <string name="aut_terminada">Trabalho terminado. Falta o chefe encerrar a autorização.</string>
+    <string name="erro_aut_sem_permissao">Não tem permissão para esta autorização.</string>
+    <string name="erro_aut_estado">A autorização mudou entretanto. Veja o estado atual.</string>
+    <string name="erro_aut_checklist">Confirme todos os pontos da lista.</string>
+    <string name="erro_aut_pin">PIN incorreto.</string>
+    <string name="erro_aut_cadeado">Escreva o número do cadeado.</string>
+    <string name="erro_aut_vigilancia">A vigilância de fogo ainda não terminou.</string>
+    <string name="erro_aut_ja_existe">Já há uma autorização aberta para esta avaria.</string>
+    <string name="erro_aut_descricao">Descreva o trabalho (5 a 300 caracteres).</string>
+    <!-- Autorizações de trabalho: checklists (do protótipo) -->
+    <string-array name="aut_chk_quente">
+        <item>Zona limpa de pó e de materiais combustíveis</item>
+        <item>Extintor junto ao local de trabalho</item>
+        <item>Deteção e aspiração de pó verificadas</item>
+        <item>Vigilante de fogo nomeado</item>
+    </string-array>
+    <string-array name="aut_fecho_quente">
+    </string-array>
+    <string-array name="aut_chk_consignacao">
+        <item>Máquina parada e secção informada</item>
+        <item>Pontos de corte identificados no esquema</item>
+        <item>Eletricista habilitado para este trabalho</item>
+        <item>EPI elétrico adequado ao trabalho</item>
+    </string-array>
+    <string-array name="aut_fecho_consignacao">
+        <item>Trabalho terminado e ferramentas retiradas</item>
+        <item>Pessoas afastadas da máquina</item>
+        <item>Cadeados, terras e etiquetas retirados</item>
+    </string-array>
+    <string-array name="aut_chk_bloqueio">
+        <item>Máquina parada e secção informada</item>
+        <item>Fontes de energia identificadas (ar, óleo, elétrica)</item>
+        <item>Mecânico habilitado para este trabalho</item>
+        <item>EPI adequado ao trabalho</item>
+    </string-array>
+    <string-array name="aut_fecho_bloqueio">
+        <item>Trabalho terminado, proteções recolocadas</item>
+        <item>Pessoas afastadas da máquina</item>
+        <item>Cadeados, calços e etiquetas retirados</item>
+    </string-array>
+    <string-array name="aut_chk_altura">
+        <item>Arnês e linha de vida verificados</item>
+        <item>Plataforma ou escada em bom estado</item>
+        <item>Zona por baixo isolada</item>
+        <item>Segunda pessoa a acompanhar</item>
+    </string-array>
+    <string-array name="aut_fecho_altura">
+        <item>Material e ferramentas retirados da zona alta</item>
+        <item>Zona por baixo libertada</item>
+    </string-array>
+    <string-array name="aut_chk_confinado">
+        <item>Atmosfera medida (oxigénio e gases)</item>
+        <item>Ventilação ligada</item>
+        <item>Vigia no exterior durante todo o trabalho</item>
+        <item>Meios de resgate prontos</item>
+    </string-array>
+    <string-array name="aut_fecho_confinado">
+        <item>Todas as pessoas fora do espaço</item>
+        <item>Material e ferramentas retirados</item>
+    </string-array>
+    <string-array name="aut_motivos_recusa">
+        <item>Falta informação no pedido</item>
+        <item>A máquina não pode parar agora</item>
+        <item>Condições de segurança não cumpridas</item>
+        <item>Outra equipa a trabalhar no local</item>
+    </string-array>
+
+    <!-- Avaria: estados, prioridades e especialidades -->
+    <string name="estado_pendente">Pendente</string>
+    <string name="estado_em_curso">Em curso</string>
+    <string name="estado_resolvida">Resolvida</string>
+    <string name="prioridade_critica">Crítica</string>
+    <string name="prioridade_media">Prioridade média</string>
+    <string name="prioridade_baixa">Prioridade baixa</string>
+    <string name="especialidade_mecanica">Mecânica</string>
+    <string name="especialidade_eletrica">Elétrica</string>
+    <string name="especialidade_nao_sei">Por classificar</string>
+
+    <!-- Linha de avaria nas listas -->
+    <string name="avaria_local">%1$s · %2$s · %3$s</string>
+    <string name="avaria_aberta_ha">Aberta há %1$s</string>
+    <string name="avaria_resolvida_em">Resolvida a %1$s</string>
+    <string name="avaria_tecnico">Técnico: %1$s</string>
+    <string name="avaria_sem_tecnico">Sem técnico atribuído</string>
+    <string name="avaria_nota_progresso">“%1$s” · %2$s</string>
+    <string name="em_progresso_retoma_turno">Em progresso · retoma no próximo turno</string>
+    <string name="em_progresso_retoma_dia">Em progresso · retoma amanhã</string>
+
+    <!-- Durações -->
+    <string name="duracao_horas">%1$d h %2$02d min</string>
+    <string name="duracao_minutos">%1$d min</string>
+
+    <!-- Cronologia da avaria (%1$s = nome da pessoa) -->
+    <string name="evento_reportada">Reportada por %1$s</string>
+    <string name="evento_editada">Editada por %1$s</string>
+    <string name="evento_assumida">Intervenção assumida por %1$s</string>
+    <string name="evento_juntou">%1$s juntou-se à intervenção</string>
+    <string name="evento_saiu">%1$s saiu da intervenção</string>
+    <string name="evento_em_progresso">Deixada em progresso por %1$s</string>
+    <string name="evento_concluida">Concluída por %1$s</string>
+    <string name="evento_aut_pedida">Autorização de trabalho pedida por %1$s</string>
+    <string name="evento_aut_aprovada">Autorização aprovada por %1$s</string>
+    <string name="evento_aut_recusada">Autorização recusada por %1$s</string>
+    <string name="evento_aut_iniciada">Trabalho autorizado começado por %1$s</string>
+    <string name="evento_aut_terminada">Trabalho autorizado terminado por %1$s</string>
+    <string name="evento_aut_encerrada">Autorização encerrada por %1$s</string>
+
+    <!-- PIN -->
+    <string name="erro_pin_formato">O PIN tem 4 dígitos.</string>
+    <plurals name="erro_pin_incorreto">
+        <item quantity="one">PIN incorreto. %d tentativa restante.</item>
+        <item quantity="other">PIN incorreto. %d tentativas restantes.</item>
+    </plurals>
+    <plurals name="erro_pin_bloqueado">
+        <item quantity="one">Demasiadas tentativas. Aguarde %1$d segundo.</item>
+        <item quantity="other">Demasiadas tentativas. Aguarde %1$d segundos.</item>
+    </plurals>
+
+    <!-- Mensagens de erro gerais -->
+    <string name="erro_guardar">Não foi possível guardar. Tente outra vez.</string>
+    <string name="erro_abrir_dados">Não foi possível abrir os dados. Tente outra vez.</string>
+    <string name="erro_ler_ficheiro">Não foi possível ler o ficheiro de dados.</string>
+
+    <!-- Técnico: Preventiva, Rondas e Stock -->
+    <string name="titulo_preventiva">Preventiva</string>
+    <string name="titulo_rondas">Rondas</string>
+    <string name="titulo_stock">Stock</string>
+    <string name="preventiva_intro">Planos de manutenção preventiva da fábrica. Só regista a execução dos da sua especialidade.</string>
+    <string name="preventiva_resumo">%1$d vencidas · %2$d a vencer · %3$d em dia</string>
+    <string name="preventiva_vazia">Não há planos de preventiva.</string>
+    <string name="preventiva_vencida">Vencida</string>
+    <string name="preventiva_a_vencer">A vencer</string>
+    <string name="preventiva_em_dia">Em dia</string>
+    <string name="preventiva_ultima">Última: %1$s · há %2$d h de %3$d h</string>
+    <string name="preventiva_registar">Registar execução</string>
+    <string name="preventiva_registada">Execução registada.</string>
+    <string name="erro_preventiva">Não foi possível registar: este plano é de outra especialidade.</string>
+
+    <string name="rondas_intro">Ronda às secções: escolha a secção e marque o que não está conforme.</string>
+    <string name="rondas_vazio">Ainda não há rondas.</string>
+    <string name="ronda_fazer">Fazer ronda</string>
+    <string name="ronda_titulo">Ronda · %1$s</string>
+    <string name="ronda_conforme">Conforme</string>
+    <string name="ronda_nao_conforme">Com anomalias</string>
+    <string name="ronda_secao_titulo">Que secção visitou?</string>
+    <string name="ronda_pontos_titulo">%1$s · o que não está conforme?</string>
+    <string name="ronda_observacao_titulo">Descreva a anomalia</string>
+    <string name="ronda_observacao_dica">O que viu (pelo menos 5 caracteres)</string>
+    <string name="ronda_registar">Registar ronda</string>
+    <string name="ronda_registada">Ronda registada.</string>
+
+    <string name="stock_intro">Peças da oficina. Ajuste o stock depois de usar ou receber peças.</string>
+    <plurals name="stock_resumo">
+        <item quantity="one">%1$d peça abaixo do mínimo · %2$d no total</item>
+        <item quantity="other">%1$d peças abaixo do mínimo · %2$d no total</item>
+    </plurals>
+    <string name="stock_vazio">Não há peças registadas.</string>
+    <string name="stock_rutura">Em rutura</string>
+    <string name="stock_abaixo">Abaixo do mínimo</string>
+    <string name="stock_no_limite">No mínimo</string>
+    <string name="stock_ok">Em stock</string>
+    <string name="stock_linha">Stock %1$d · mínimo %2$d · %3$s</string>
+    <string name="stock_pedir">Pedir reposição</string>
+    <string name="stock_pedida_por">Reposição pedida por %1$s · %2$s</string>
+    <string name="reposicao_pedida">Reposição pedida.</string>
+    <string name="erro_stock">Não foi possível alterar: a peça é de outra especialidade ou já foi pedida.</string>
+</resources>

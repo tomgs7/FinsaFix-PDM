@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Um membro da equipa: iniciais, nome e "Responsável · desde as 10:35" (ou "Ajudante · …"). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/if_touch_min"
+    android:orientation="horizontal"
+    android:paddingVertical="@dimen/if_item_gap">
+
+    <TextView
+        android:id="@+id/textoIniciais"
+        android:layout_width="@dimen/if_touch_min"
+        android:layout_height="@dimen/if_touch_min"
+        android:background="@drawable/fundo_avatar"
+        android:gravity="center"
+        android:importantForAccessibility="no"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+        android:textColor="@color/if_on_secondary_container" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/if_item_gap"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textoNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+            android:textColor="@color/if_on_surface" />
+
+        <TextView
+            android:id="@+id/textoPapel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface_variant" />
+    </LinearLayout>
+</LinearLayout>

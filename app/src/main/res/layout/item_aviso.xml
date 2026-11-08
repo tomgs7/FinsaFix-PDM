@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/if_card_padding">
+
+    <TextView
+        android:id="@+id/textoTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Title" />
+
+    <TextView
+        android:id="@+id/textoQuem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+        android:textColor="@color/if_on_surface_variant" />
+
+    <TextView
+        android:id="@+id/textoResposta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Body" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botaoResponder"
+        style="@style/Widget.FinsaFix.Button.Tonal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/if_item_gap"
+        android:visibility="gone"
+        app:icon="@drawable/ic_check" />
+</LinearLayout>

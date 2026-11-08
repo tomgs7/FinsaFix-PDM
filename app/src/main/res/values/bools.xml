@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="entrada_botao_mais">true</bool>
+    <!-- Assistentes: folha inferior no telemóvel, janela no tablet -->
+    <bool name="janela_em_folha">true</bool>
+</resources>

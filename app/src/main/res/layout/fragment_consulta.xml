@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Engenharia (Avarias) e chefe de oficina (Oficina): só consulta. Telemóvel e tablet usam o mesmo layout. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_ecra">
+
+        <TextView
+            android:id="@+id/textoAmbito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface_variant" />
+
+        <!-- Só a engenharia escolhe a secção -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoSecao"
+            style="@style/Widget.FinsaFix.Button.Tonal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:icon="@drawable/ic_factory" />
+
+        <!-- Resumo das decisões e filtro por oficina (só a engenharia) -->
+        <TextView
+            android:id="@+id/textoDecisoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Label"
+            android:textColor="@color/if_on_surface"
+            android:visibility="gone" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipsOficina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:checkedChip="@id/chipOfTodas"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipOfTodas"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filtro_todas_oficinas"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipOfMecanica"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/especialidade_mecanica"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipOfEletrica"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/especialidade_eletrica"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipOfNaoSei"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tipo_nao_sei"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipsEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:checkedChip="@id/chipTodas"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipTodas"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filtro_todas"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPendentes"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filtro_pendentes"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipEmCurso"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filtro_em_curso"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPorAprovar"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filtro_por_aprovar"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipAutorizacoes"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filtro_autorizacoes"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Label"
+                    android:visibility="gone" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipResolvidas"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filtro_resolvidas"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Separador Autorizações: Ativas e Histórico -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipsAutorizacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:checkedChip="@id/chipAtivas"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAtivas"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHistoricoAut"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaAvarias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:id="@+id/textoSemAvarias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/if_card_padding"
+                    android:text="@string/inicio_sem_avarias"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

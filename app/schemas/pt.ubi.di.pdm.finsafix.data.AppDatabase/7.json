@@ -1,0 +1,1920 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 7,
+    "identityHash": "a42893d4ec7784f1920f4c021844d05c",
+    "entities": [
+      {
+        "tableName": "secoes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `nome` TEXT NOT NULL, `unidade` TEXT NOT NULL, `tipo` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nome",
+            "columnName": "nome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unidade",
+            "columnName": "unidade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipo",
+            "columnName": "tipo",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "equipamentos",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `nome` TEXT NOT NULL, `secaoId` TEXT NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`secaoId`) REFERENCES `secoes`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nome",
+            "columnName": "nome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "secaoId",
+            "columnName": "secaoId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_equipamentos_secaoId",
+            "unique": false,
+            "columnNames": [
+              "secaoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_equipamentos_secaoId` ON `${TABLE_NAME}` (`secaoId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "secoes",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "secaoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "pessoas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `nome` TEXT NOT NULL, `funcao` TEXT NOT NULL, `papel` TEXT NOT NULL, `postoId` TEXT, `turno` TEXT NOT NULL, `especialidade` TEXT, `pinHash` TEXT, PRIMARY KEY(`id`), FOREIGN KEY(`postoId`) REFERENCES `secoes`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nome",
+            "columnName": "nome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "funcao",
+            "columnName": "funcao",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "papel",
+            "columnName": "papel",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "postoId",
+            "columnName": "postoId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "turno",
+            "columnName": "turno",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "especialidade",
+            "columnName": "especialidade",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "pinHash",
+            "columnName": "pinHash",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_pessoas_postoId",
+            "unique": false,
+            "columnNames": [
+              "postoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_pessoas_postoId` ON `${TABLE_NAME}` (`postoId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "secoes",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "postoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "avarias",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `codigo` TEXT NOT NULL, `equipamentoId` TEXT NOT NULL, `titulo` TEXT NOT NULL, `descricao` TEXT NOT NULL, `prioridade` TEXT NOT NULL, `especialidade` TEXT NOT NULL, `estado` TEXT NOT NULL, `reportadaPorId` TEXT NOT NULL, `dataCriacao` INTEGER NOT NULL, `tecnicoId` TEXT, `dataInicio` INTEGER, `dataFim` INTEGER, `tempoParadoMs` INTEGER NOT NULL, `progressoOrdem` TEXT, `progressoRetoma` TEXT, `progressoMotivo` TEXT, `progressoNota` TEXT, `progressoPorId` TEXT, `progressoData` INTEGER, `aprovadaPorId` TEXT, `dataAprovacao` INTEGER, FOREIGN KEY(`equipamentoId`) REFERENCES `equipamentos`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`reportadaPorId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`tecnicoId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`progressoPorId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codigo",
+            "columnName": "codigo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "equipamentoId",
+            "columnName": "equipamentoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "titulo",
+            "columnName": "titulo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descricao",
+            "columnName": "descricao",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "prioridade",
+            "columnName": "prioridade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "especialidade",
+            "columnName": "especialidade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reportadaPorId",
+            "columnName": "reportadaPorId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataCriacao",
+            "columnName": "dataCriacao",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tecnicoId",
+            "columnName": "tecnicoId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "dataInicio",
+            "columnName": "dataInicio",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "dataFim",
+            "columnName": "dataFim",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "tempoParadoMs",
+            "columnName": "tempoParadoMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "progressoOrdem",
+            "columnName": "progressoOrdem",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "progressoRetoma",
+            "columnName": "progressoRetoma",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "progressoMotivo",
+            "columnName": "progressoMotivo",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "progressoNota",
+            "columnName": "progressoNota",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "progressoPorId",
+            "columnName": "progressoPorId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "progressoData",
+            "columnName": "progressoData",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "aprovadaPorId",
+            "columnName": "aprovadaPorId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "dataAprovacao",
+            "columnName": "dataAprovacao",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_avarias_codigo",
+            "unique": true,
+            "columnNames": [
+              "codigo"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_avarias_codigo` ON `${TABLE_NAME}` (`codigo`)"
+          },
+          {
+            "name": "index_avarias_equipamentoId",
+            "unique": false,
+            "columnNames": [
+              "equipamentoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_avarias_equipamentoId` ON `${TABLE_NAME}` (`equipamentoId`)"
+          },
+          {
+            "name": "index_avarias_reportadaPorId",
+            "unique": false,
+            "columnNames": [
+              "reportadaPorId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_avarias_reportadaPorId` ON `${TABLE_NAME}` (`reportadaPorId`)"
+          },
+          {
+            "name": "index_avarias_tecnicoId",
+            "unique": false,
+            "columnNames": [
+              "tecnicoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_avarias_tecnicoId` ON `${TABLE_NAME}` (`tecnicoId`)"
+          },
+          {
+            "name": "index_avarias_progressoPorId",
+            "unique": false,
+            "columnNames": [
+              "progressoPorId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_avarias_progressoPorId` ON `${TABLE_NAME}` (`progressoPorId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "equipamentos",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "equipamentoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "reportadaPorId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "tecnicoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "progressoPorId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "eventos_avaria",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `avariaId` INTEGER NOT NULL, `texto` TEXT NOT NULL, `pessoaId` TEXT, `data` INTEGER NOT NULL, FOREIGN KEY(`avariaId`) REFERENCES `avarias`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`pessoaId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avariaId",
+            "columnName": "avariaId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "texto",
+            "columnName": "texto",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pessoaId",
+            "columnName": "pessoaId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "data",
+            "columnName": "data",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_eventos_avaria_avariaId",
+            "unique": false,
+            "columnNames": [
+              "avariaId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_eventos_avaria_avariaId` ON `${TABLE_NAME}` (`avariaId`)"
+          },
+          {
+            "name": "index_eventos_avaria_pessoaId",
+            "unique": false,
+            "columnNames": [
+              "pessoaId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_eventos_avaria_pessoaId` ON `${TABLE_NAME}` (`pessoaId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "avarias",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "avariaId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "pessoaId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "paragens",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `equipamentoId` TEXT NOT NULL, `causa` TEXT NOT NULL, `inicio` INTEGER NOT NULL, `fim` INTEGER, `avariaId` INTEGER, FOREIGN KEY(`equipamentoId`) REFERENCES `equipamentos`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`avariaId`) REFERENCES `avarias`(`id`) ON UPDATE NO ACTION ON DELETE SET NULL )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "equipamentoId",
+            "columnName": "equipamentoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "causa",
+            "columnName": "causa",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "inicio",
+            "columnName": "inicio",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fim",
+            "columnName": "fim",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "avariaId",
+            "columnName": "avariaId",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_paragens_equipamentoId",
+            "unique": false,
+            "columnNames": [
+              "equipamentoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_paragens_equipamentoId` ON `${TABLE_NAME}` (`equipamentoId`)"
+          },
+          {
+            "name": "index_paragens_avariaId",
+            "unique": false,
+            "columnNames": [
+              "avariaId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_paragens_avariaId` ON `${TABLE_NAME}` (`avariaId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "equipamentos",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "equipamentoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "avarias",
+            "onDelete": "SET NULL",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "avariaId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "parametros",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `secaoId` TEXT NOT NULL, `nome` TEXT NOT NULL, `unidade` TEXT NOT NULL, `minimo` REAL NOT NULL, `maximo` REAL NOT NULL, `decimais` INTEGER NOT NULL, `tipoLimite` TEXT NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`secaoId`) REFERENCES `secoes`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "secaoId",
+            "columnName": "secaoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nome",
+            "columnName": "nome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unidade",
+            "columnName": "unidade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "minimo",
+            "columnName": "minimo",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "maximo",
+            "columnName": "maximo",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "decimais",
+            "columnName": "decimais",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipoLimite",
+            "columnName": "tipoLimite",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_parametros_secaoId",
+            "unique": false,
+            "columnNames": [
+              "secaoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_parametros_secaoId` ON `${TABLE_NAME}` (`secaoId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "secoes",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "secaoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "leituras",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `parametroId` TEXT NOT NULL, `valor` REAL NOT NULL, `pessoaId` TEXT NOT NULL, `data` INTEGER NOT NULL, FOREIGN KEY(`parametroId`) REFERENCES `parametros`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`pessoaId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "parametroId",
+            "columnName": "parametroId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valor",
+            "columnName": "valor",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pessoaId",
+            "columnName": "pessoaId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "data",
+            "columnName": "data",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_leituras_parametroId",
+            "unique": false,
+            "columnNames": [
+              "parametroId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_leituras_parametroId` ON `${TABLE_NAME}` (`parametroId`)"
+          },
+          {
+            "name": "index_leituras_pessoaId",
+            "unique": false,
+            "columnNames": [
+              "pessoaId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_leituras_pessoaId` ON `${TABLE_NAME}` (`pessoaId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "parametros",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "parametroId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "pessoaId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "producoes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `equipamentoId` TEXT NOT NULL, `turno` TEXT NOT NULL, `quantidade` REAL NOT NULL, `pessoaId` TEXT NOT NULL, `data` INTEGER NOT NULL, `cortes` INTEGER, FOREIGN KEY(`equipamentoId`) REFERENCES `equipamentos`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`pessoaId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "equipamentoId",
+            "columnName": "equipamentoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "turno",
+            "columnName": "turno",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "quantidade",
+            "columnName": "quantidade",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pessoaId",
+            "columnName": "pessoaId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "data",
+            "columnName": "data",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cortes",
+            "columnName": "cortes",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_producoes_equipamentoId",
+            "unique": false,
+            "columnNames": [
+              "equipamentoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_producoes_equipamentoId` ON `${TABLE_NAME}` (`equipamentoId`)"
+          },
+          {
+            "name": "index_producoes_pessoaId",
+            "unique": false,
+            "columnNames": [
+              "pessoaId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_producoes_pessoaId` ON `${TABLE_NAME}` (`pessoaId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "equipamentos",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "equipamentoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "pessoaId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "ordens_producao",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `secaoId` TEXT NOT NULL, `equipamentoId` TEXT NOT NULL, `turno` TEXT NOT NULL, `planeado` REAL NOT NULL, `ajustadaPorId` TEXT, `dataAjuste` INTEGER, FOREIGN KEY(`secaoId`) REFERENCES `secoes`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`equipamentoId`) REFERENCES `equipamentos`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`ajustadaPorId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "secaoId",
+            "columnName": "secaoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "equipamentoId",
+            "columnName": "equipamentoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "turno",
+            "columnName": "turno",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "planeado",
+            "columnName": "planeado",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ajustadaPorId",
+            "columnName": "ajustadaPorId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "dataAjuste",
+            "columnName": "dataAjuste",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_ordens_producao_secaoId",
+            "unique": false,
+            "columnNames": [
+              "secaoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_ordens_producao_secaoId` ON `${TABLE_NAME}` (`secaoId`)"
+          },
+          {
+            "name": "index_ordens_producao_equipamentoId",
+            "unique": false,
+            "columnNames": [
+              "equipamentoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_ordens_producao_equipamentoId` ON `${TABLE_NAME}` (`equipamentoId`)"
+          },
+          {
+            "name": "index_ordens_producao_ajustadaPorId",
+            "unique": false,
+            "columnNames": [
+              "ajustadaPorId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_ordens_producao_ajustadaPorId` ON `${TABLE_NAME}` (`ajustadaPorId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "secoes",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "secaoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "equipamentos",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "equipamentoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "ajustadaPorId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "pecas_usadas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `avariaId` INTEGER NOT NULL, `pecaId` TEXT NOT NULL, `quantidade` INTEGER NOT NULL, `tecnicoId` TEXT NOT NULL, `data` INTEGER NOT NULL, FOREIGN KEY(`avariaId`) REFERENCES `avarias`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`pecaId`) REFERENCES `pecas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`tecnicoId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avariaId",
+            "columnName": "avariaId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pecaId",
+            "columnName": "pecaId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "quantidade",
+            "columnName": "quantidade",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tecnicoId",
+            "columnName": "tecnicoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "data",
+            "columnName": "data",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_pecas_usadas_avariaId",
+            "unique": false,
+            "columnNames": [
+              "avariaId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_pecas_usadas_avariaId` ON `${TABLE_NAME}` (`avariaId`)"
+          },
+          {
+            "name": "index_pecas_usadas_pecaId",
+            "unique": false,
+            "columnNames": [
+              "pecaId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_pecas_usadas_pecaId` ON `${TABLE_NAME}` (`pecaId`)"
+          },
+          {
+            "name": "index_pecas_usadas_tecnicoId",
+            "unique": false,
+            "columnNames": [
+              "tecnicoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_pecas_usadas_tecnicoId` ON `${TABLE_NAME}` (`tecnicoId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "avarias",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "avariaId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pecas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "pecaId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "tecnicoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "avisos",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `secaoId` TEXT NOT NULL, `tipo` TEXT NOT NULL, `equipamentoId` TEXT, `avariaId` INTEGER, `texto` TEXT, `criadoPorId` TEXT NOT NULL, `dataCriacao` INTEGER NOT NULL, `respondidoPorId` TEXT, `dataResposta` INTEGER, FOREIGN KEY(`secaoId`) REFERENCES `secoes`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`equipamentoId`) REFERENCES `equipamentos`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`avariaId`) REFERENCES `avarias`(`id`) ON UPDATE NO ACTION ON DELETE SET NULL , FOREIGN KEY(`criadoPorId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`respondidoPorId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "secaoId",
+            "columnName": "secaoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipo",
+            "columnName": "tipo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "equipamentoId",
+            "columnName": "equipamentoId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "avariaId",
+            "columnName": "avariaId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "texto",
+            "columnName": "texto",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "criadoPorId",
+            "columnName": "criadoPorId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataCriacao",
+            "columnName": "dataCriacao",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "respondidoPorId",
+            "columnName": "respondidoPorId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "dataResposta",
+            "columnName": "dataResposta",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_avisos_secaoId",
+            "unique": false,
+            "columnNames": [
+              "secaoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_avisos_secaoId` ON `${TABLE_NAME}` (`secaoId`)"
+          },
+          {
+            "name": "index_avisos_equipamentoId",
+            "unique": false,
+            "columnNames": [
+              "equipamentoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_avisos_equipamentoId` ON `${TABLE_NAME}` (`equipamentoId`)"
+          },
+          {
+            "name": "index_avisos_avariaId",
+            "unique": false,
+            "columnNames": [
+              "avariaId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_avisos_avariaId` ON `${TABLE_NAME}` (`avariaId`)"
+          },
+          {
+            "name": "index_avisos_criadoPorId",
+            "unique": false,
+            "columnNames": [
+              "criadoPorId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_avisos_criadoPorId` ON `${TABLE_NAME}` (`criadoPorId`)"
+          },
+          {
+            "name": "index_avisos_respondidoPorId",
+            "unique": false,
+            "columnNames": [
+              "respondidoPorId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_avisos_respondidoPorId` ON `${TABLE_NAME}` (`respondidoPorId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "secoes",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "secaoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "equipamentos",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "equipamentoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "avarias",
+            "onDelete": "SET NULL",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "avariaId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "criadoPorId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "respondidoPorId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "autorizacoes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `secaoId` TEXT NOT NULL, `avariaId` INTEGER NOT NULL, `tipo` TEXT NOT NULL, `descricao` TEXT NOT NULL, `estado` TEXT NOT NULL, `pedidaPorId` TEXT NOT NULL, `dataPedido` INTEGER NOT NULL, `decididaPorId` TEXT, `dataDecisao` INTEGER, `motivoRecusa` TEXT, `cadeado` TEXT, `dataInicio` INTEGER, `dataTrabalhoTerminado` INTEGER, `encerradaPorId` TEXT, `dataFim` INTEGER, `duracaoMin` INTEGER NOT NULL, `vigilante` TEXT, FOREIGN KEY(`secaoId`) REFERENCES `secoes`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`avariaId`) REFERENCES `avarias`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`pedidaPorId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`decididaPorId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`encerradaPorId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "secaoId",
+            "columnName": "secaoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avariaId",
+            "columnName": "avariaId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipo",
+            "columnName": "tipo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descricao",
+            "columnName": "descricao",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pedidaPorId",
+            "columnName": "pedidaPorId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataPedido",
+            "columnName": "dataPedido",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "decididaPorId",
+            "columnName": "decididaPorId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "dataDecisao",
+            "columnName": "dataDecisao",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "motivoRecusa",
+            "columnName": "motivoRecusa",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "cadeado",
+            "columnName": "cadeado",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "dataInicio",
+            "columnName": "dataInicio",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "dataTrabalhoTerminado",
+            "columnName": "dataTrabalhoTerminado",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "encerradaPorId",
+            "columnName": "encerradaPorId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "dataFim",
+            "columnName": "dataFim",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "duracaoMin",
+            "columnName": "duracaoMin",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vigilante",
+            "columnName": "vigilante",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_autorizacoes_secaoId",
+            "unique": false,
+            "columnNames": [
+              "secaoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_autorizacoes_secaoId` ON `${TABLE_NAME}` (`secaoId`)"
+          },
+          {
+            "name": "index_autorizacoes_avariaId",
+            "unique": false,
+            "columnNames": [
+              "avariaId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_autorizacoes_avariaId` ON `${TABLE_NAME}` (`avariaId`)"
+          },
+          {
+            "name": "index_autorizacoes_pedidaPorId",
+            "unique": false,
+            "columnNames": [
+              "pedidaPorId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_autorizacoes_pedidaPorId` ON `${TABLE_NAME}` (`pedidaPorId`)"
+          },
+          {
+            "name": "index_autorizacoes_decididaPorId",
+            "unique": false,
+            "columnNames": [
+              "decididaPorId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_autorizacoes_decididaPorId` ON `${TABLE_NAME}` (`decididaPorId`)"
+          },
+          {
+            "name": "index_autorizacoes_encerradaPorId",
+            "unique": false,
+            "columnNames": [
+              "encerradaPorId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_autorizacoes_encerradaPorId` ON `${TABLE_NAME}` (`encerradaPorId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "secoes",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "secaoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "avarias",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "avariaId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "pedidaPorId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "decididaPorId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "encerradaPorId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "registos",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `tipo` TEXT NOT NULL, `secaoId` TEXT NOT NULL, `pessoaId` TEXT NOT NULL, `texto` TEXT NOT NULL, `extra` TEXT, `urgente` INTEGER NOT NULL, `estado` TEXT NOT NULL, `dataCriacao` INTEGER NOT NULL, `tratadoPorId` TEXT, `resposta` TEXT, `dataTratamento` INTEGER, FOREIGN KEY(`secaoId`) REFERENCES `secoes`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`pessoaId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`tratadoPorId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipo",
+            "columnName": "tipo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "secaoId",
+            "columnName": "secaoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pessoaId",
+            "columnName": "pessoaId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "texto",
+            "columnName": "texto",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "extra",
+            "columnName": "extra",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "urgente",
+            "columnName": "urgente",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataCriacao",
+            "columnName": "dataCriacao",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tratadoPorId",
+            "columnName": "tratadoPorId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "resposta",
+            "columnName": "resposta",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "dataTratamento",
+            "columnName": "dataTratamento",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_registos_secaoId",
+            "unique": false,
+            "columnNames": [
+              "secaoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_registos_secaoId` ON `${TABLE_NAME}` (`secaoId`)"
+          },
+          {
+            "name": "index_registos_pessoaId",
+            "unique": false,
+            "columnNames": [
+              "pessoaId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_registos_pessoaId` ON `${TABLE_NAME}` (`pessoaId`)"
+          },
+          {
+            "name": "index_registos_tratadoPorId",
+            "unique": false,
+            "columnNames": [
+              "tratadoPorId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_registos_tratadoPorId` ON `${TABLE_NAME}` (`tratadoPorId`)"
+          },
+          {
+            "name": "index_registos_tipo",
+            "unique": false,
+            "columnNames": [
+              "tipo"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_registos_tipo` ON `${TABLE_NAME}` (`tipo`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "secoes",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "secaoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "pessoaId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "tratadoPorId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "instrucoes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `secaoId` TEXT NOT NULL, `titulo` TEXT NOT NULL, `duracaoMin` INTEGER NOT NULL, `passos` TEXT NOT NULL, `estado` TEXT NOT NULL, `validadaPorId` TEXT, `dataValidacao` INTEGER, PRIMARY KEY(`id`), FOREIGN KEY(`secaoId`) REFERENCES `secoes`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`validadaPorId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "secaoId",
+            "columnName": "secaoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "titulo",
+            "columnName": "titulo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "duracaoMin",
+            "columnName": "duracaoMin",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "passos",
+            "columnName": "passos",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "validadaPorId",
+            "columnName": "validadaPorId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "dataValidacao",
+            "columnName": "dataValidacao",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_instrucoes_secaoId",
+            "unique": false,
+            "columnNames": [
+              "secaoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_instrucoes_secaoId` ON `${TABLE_NAME}` (`secaoId`)"
+          },
+          {
+            "name": "index_instrucoes_validadaPorId",
+            "unique": false,
+            "columnNames": [
+              "validadaPorId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_instrucoes_validadaPorId` ON `${TABLE_NAME}` (`validadaPorId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "secoes",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "secaoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "validadaPorId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "preventivas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `equipamentoId` TEXT NOT NULL, `titulo` TEXT NOT NULL, `especialidade` TEXT NOT NULL, `intervaloH` INTEGER NOT NULL, `ultimaData` INTEGER NOT NULL, `ultimaPorId` TEXT, FOREIGN KEY(`equipamentoId`) REFERENCES `equipamentos`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`ultimaPorId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "equipamentoId",
+            "columnName": "equipamentoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "titulo",
+            "columnName": "titulo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "especialidade",
+            "columnName": "especialidade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "intervaloH",
+            "columnName": "intervaloH",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ultimaData",
+            "columnName": "ultimaData",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ultimaPorId",
+            "columnName": "ultimaPorId",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_preventivas_equipamentoId",
+            "unique": false,
+            "columnNames": [
+              "equipamentoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_preventivas_equipamentoId` ON `${TABLE_NAME}` (`equipamentoId`)"
+          },
+          {
+            "name": "index_preventivas_ultimaPorId",
+            "unique": false,
+            "columnNames": [
+              "ultimaPorId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_preventivas_ultimaPorId` ON `${TABLE_NAME}` (`ultimaPorId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "equipamentos",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "equipamentoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "ultimaPorId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "pecas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `nome` TEXT NOT NULL, `equipamentoId` TEXT NOT NULL, `especialidade` TEXT NOT NULL, `minimo` INTEGER NOT NULL, `stock` INTEGER NOT NULL, `pedidaPorId` TEXT, `dataPedido` INTEGER, PRIMARY KEY(`id`), FOREIGN KEY(`equipamentoId`) REFERENCES `equipamentos`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`pedidaPorId`) REFERENCES `pessoas`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nome",
+            "columnName": "nome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "equipamentoId",
+            "columnName": "equipamentoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "especialidade",
+            "columnName": "especialidade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "minimo",
+            "columnName": "minimo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stock",
+            "columnName": "stock",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pedidaPorId",
+            "columnName": "pedidaPorId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "dataPedido",
+            "columnName": "dataPedido",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_pecas_equipamentoId",
+            "unique": false,
+            "columnNames": [
+              "equipamentoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_pecas_equipamentoId` ON `${TABLE_NAME}` (`equipamentoId`)"
+          },
+          {
+            "name": "index_pecas_pedidaPorId",
+            "unique": false,
+            "columnNames": [
+              "pedidaPorId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_pecas_pedidaPorId` ON `${TABLE_NAME}` (`pedidaPorId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "equipamentos",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "equipamentoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "pessoas",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "pedidaPorId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a42893d4ec7784f1920f4c021844d05c')"
+    ]
+  }
+}

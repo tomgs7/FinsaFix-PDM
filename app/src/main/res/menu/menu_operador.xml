@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Os ids são os dos destinos do nav_graph: assim o setupWithNavController liga cada item ao seu ecrã. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/inicioFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/titulo_inicio" />
+    <item
+        android:id="@+id/producaoFragment"
+        android:icon="@drawable/ic_chart"
+        android:title="@string/titulo_producao" />
+    <item
+        android:id="@+id/parametrosFragment"
+        android:icon="@drawable/ic_assignment_turned_in"
+        android:title="@string/menu_controlo" />
+    <item
+        android:id="@+id/pedidosOperadorFragment"
+        android:icon="@drawable/ic_truck"
+        android:title="@string/titulo_pedidos" />
+    <item
+        android:id="@+id/instrucoesFragment"
+        android:icon="@drawable/ic_book"
+        android:title="@string/titulo_instrucoes" />
+    <item
+        android:id="@+id/turnoFragment"
+        android:icon="@drawable/ic_swap"
+        android:title="@string/titulo_turno" />
+    <item
+        android:id="@+id/historicoFragment"
+        android:icon="@drawable/ic_history"
+        android:title="@string/titulo_historico" />
+</menu>

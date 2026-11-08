@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colunas dos cartões "Os meus equipamentos": 1 no telemóvel -->
+    <integer name="colunas_equipamentos">1</integer>
+    <integer name="colunas_parametros">1</integer>
+    <!-- Itens do menu que cabem na barra antes do "Mais": 4 no telemóvel, 7 no tablet -->
+    <integer name="itens_no_menu">4</integer>
+</resources>

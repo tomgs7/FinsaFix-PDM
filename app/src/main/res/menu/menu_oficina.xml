@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Menu do chefe de oficina (6 itens): Oficina, Distribuir, Equipa, Validar, Turno, Resumo. Os ids são os dos destinos do nav_graph. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/oficinaFragment"
+        android:icon="@drawable/ic_wrench"
+        android:title="@string/titulo_oficina" />
+    <item
+        android:id="@+id/distribuirFragment"
+        android:icon="@drawable/ic_groups"
+        android:title="@string/titulo_distribuir" />
+    <item
+        android:id="@+id/equipaFragment"
+        android:icon="@drawable/ic_run"
+        android:title="@string/titulo_equipa" />
+    <item
+        android:id="@+id/validarFragment"
+        android:icon="@drawable/ic_assignment_turned_in"
+        android:title="@string/titulo_validar" />
+    <item
+        android:id="@+id/turnoFragment"
+        android:icon="@drawable/ic_swap"
+        android:title="@string/titulo_turno" />
+    <item
+        android:id="@+id/oficinaResumoFragment"
+        android:icon="@drawable/ic_chart"
+        android:title="@string/titulo_resumo" />
+</menu>

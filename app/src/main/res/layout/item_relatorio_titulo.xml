@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Título de uma tabela da pré-visualização ("Avarias (3)"). -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/if_section_gap"
+    android:layout_marginBottom="@dimen/if_item_gap"
+    android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+    android:textColor="@color/if_on_surface" />

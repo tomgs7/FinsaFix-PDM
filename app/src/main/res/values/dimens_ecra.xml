@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Margem lateral dos ecrãs: 16 dp no telemóvel, 24 dp no tablet (values-sw600dp) -->
+    <dimen name="margem_ecra">16dp</dimen>
+    <!-- Margem lateral do formulário: no tablet o conteúdo fica centrado e mais estreito -->
+    <dimen name="margem_formulario">16dp</dimen>
+    <!-- Margem lateral do ecrã de entrada no tablet na horizontal (como o protótipo) -->
+    <dimen name="margem_entrada">48dp</dimen>
+</resources>

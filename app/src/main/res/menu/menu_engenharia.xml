@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Menu da engenharia (6 itens). Os ids são os dos destinos do nav_graph. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/engenhariaInicioFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/titulo_engenharia_inicio" />
+    <item
+        android:id="@+id/avariasFabricaFragment"
+        android:icon="@drawable/ic_layers"
+        android:title="@string/titulo_avarias_fabrica" />
+    <item
+        android:id="@+id/indicadoresFragment"
+        android:icon="@drawable/ic_chart"
+        android:title="@string/titulo_indicadores" />
+    <item
+        android:id="@+id/planosFragment"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/titulo_planos" />
+    <item
+        android:id="@+id/instrucoesEngFragment"
+        android:icon="@drawable/ic_book"
+        android:title="@string/titulo_instrucoes" />
+    <item
+        android:id="@+id/relatoriosFragment"
+        android:icon="@drawable/ic_description2"
+        android:title="@string/titulo_relatorios" />
+</menu>

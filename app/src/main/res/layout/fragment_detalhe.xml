@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Telemóvel: cabeçalho, detalhes e cronologia numa coluna. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_ecra">
+
+        <include
+            android:id="@+id/cabecalho"
+            layout="@layout/parte_detalhe_cabecalho" />
+
+        <include
+            android:id="@+id/tecnico"
+            layout="@layout/parte_detalhe_tecnico" />
+
+        <include
+            android:id="@+id/equipa"
+            layout="@layout/parte_detalhe_equipa" />
+
+        <include
+            android:id="@+id/dados"
+            layout="@layout/parte_detalhe_dados" />
+
+        <include
+            android:id="@+id/cronologia"
+            layout="@layout/parte_detalhe_cronologia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/if_section_gap" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Só para o técnico: segurança LOTO e ações da intervenção (Assumir, Concluir, Deixar em progresso). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/if_section_gap"
+    android:orientation="vertical">
+
+    <!-- Bloco de estado: “Pendente · Enviada à oficina. À espera de técnico.” -->
+    <TextView
+        android:id="@+id/textoBlocoEstado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/if_item_gap"
+        android:background="@drawable/fundo_etiqueta_tonal"
+        android:padding="@dimen/if_card_padding"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+        android:textColor="@color/if_on_surface" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/loto_titulo"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+        android:textColor="@color/if_on_surface" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/if_card_padding"
+            android:paddingVertical="8dp">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkLoto1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/if_checklist_row_min"
+                android:text="@string/loto_ponto_1"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Title" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkLoto2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/if_checklist_row_min"
+                android:text="@string/loto_ponto_2"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Title" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkLoto3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/if_checklist_row_min"
+                android:text="@string/loto_ponto_3"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Title" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textoLoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="6dp"
+        android:drawableTint="@color/if_on_surface_variant"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+        android:textColor="@color/if_on_surface_variant" />
+
+    <!-- Pendente: Assumir (ativo só com os 3 pontos marcados) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botaoAssumir"
+        style="@style/Widget.FinsaFix.Button.Main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/if_item_gap"
+        android:text="@string/assumir_intervencao"
+        app:icon="@drawable/ic_construction"
+        app:iconGravity="textStart" />
+
+    <TextView
+        android:id="@+id/textoDicaAssumir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/assumir_dica"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+        android:textColor="@color/if_on_surface_variant" />
+
+    <!-- Em curso (do próprio técnico): avisar a secção -->
+    <LinearLayout
+        android:id="@+id/blocoAvisos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/if_item_gap"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:text="@string/avisar_secao" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoAvisoCaminho"
+            style="@style/Widget.FinsaFix.Button.Tonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/aviso_a_caminho"
+            app:icon="@drawable/ic_run" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoAvisoPeca"
+            style="@style/Widget.FinsaFix.Button.Tonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/aviso_espera_peca"
+            app:icon="@drawable/ic_clock" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoAvisoParar"
+            style="@style/Widget.FinsaFix.Button.Tonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/aviso_parar"
+            app:icon="@drawable/ic_stop_x" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoAvisoDemora"
+            style="@style/Widget.FinsaFix.Button.Tonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/aviso_demora"
+            app:icon="@drawable/ic_timer" />
+    </LinearLayout>
+
+    <!-- Em curso (do próprio técnico): autorização de trabalho (um só botão, que muda com o estado) -->
+    <LinearLayout
+        android:id="@+id/blocoAutorizacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/if_item_gap"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/FinsaFix.TituloSeccao"
+            android:text="@string/aut_titulo" />
+
+        <TextView
+            android:id="@+id/textoAutorizacaoEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Title" />
+
+        <TextView
+            android:id="@+id/textoAutorizacaoDetalhe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface_variant" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoAutorizacao"
+            style="@style/Widget.FinsaFix.Button.Tonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:icon="@drawable/ic_shield" />
+    </LinearLayout>
+
+    <!-- Em curso (do próprio técnico): Concluir e Deixar em progresso -->
+    <LinearLayout
+        android:id="@+id/acoesEmCurso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/if_item_gap"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoConcluir"
+            style="@style/Widget.FinsaFix.Button.Main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/if_item_gap"
+            android:layout_weight="1"
+            android:text="@string/concluir_avaria"
+            app:icon="@drawable/ic_check_circle"
+            app:iconGravity="textStart" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoDeixarProgresso"
+            style="@style/Widget.FinsaFix.Button.Tonal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="@dimen/if_btn_main_height"
+            android:text="@string/deixar_em_progresso"
+            app:icon="@drawable/ic_pause"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+</LinearLayout>

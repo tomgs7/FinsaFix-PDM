@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FinsaFix · tema Material 3 (XML + Material Components 1.12+). O modo escuro vem de values-night/colors.xml. -->
+<resources>
+    <style name="Theme.FinsaFix" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/if_primary</item>
+        <item name="colorOnPrimary">@color/if_on_primary</item>
+        <item name="colorPrimaryContainer">@color/if_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/if_on_primary_container</item>
+        <item name="colorPrimaryInverse">@color/if_inverse_primary</item>
+        <item name="colorSecondaryContainer">@color/if_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/if_on_secondary_container</item>
+        <item name="android:colorBackground">@color/if_background</item>
+        <item name="colorOnBackground">@color/if_on_surface</item>
+        <item name="colorSurface">@color/if_surface_lowest</item>
+        <item name="colorOnSurface">@color/if_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/if_on_surface_variant</item>
+        <item name="colorSurfaceContainerLowest">@color/if_surface_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/if_surface_low</item>
+        <item name="colorSurfaceContainer">@color/if_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/if_surface_high</item>
+        <item name="colorSurfaceContainerHighest">@color/if_surface_highest</item>
+        <item name="colorSurfaceInverse">@color/if_inverse_surface</item>
+        <item name="colorOnSurfaceInverse">@color/if_inverse_on_surface</item>
+        <item name="colorOutline">@color/if_outline</item>
+        <item name="colorOutlineVariant">@color/if_outline_variant</item>
+        <item name="colorError">@color/if_error</item>
+        <item name="colorOnError">@color/if_on_error</item>
+        <item name="colorErrorContainer">@color/if_error_container</item>
+        <item name="colorOnErrorContainer">@color/if_on_error_container</item>
+        <!-- formas -->
+        <item name="shapeAppearanceSmallComponent">@style/Shape.FinsaFix.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/Shape.FinsaFix.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/Shape.FinsaFix.Large</item>
+        <!-- componentes -->
+        <item name="materialButtonStyle">@style/Widget.FinsaFix.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.FinsaFix.Card</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Formas: 8 dp botões e campos · 12 dp cartões · 16 dp diálogos e bottom sheets. Pílula só nos badges. -->
+    <style name="Shape.FinsaFix.Small" parent=""><item name="cornerFamily">rounded</item><item name="cornerSize">8dp</item></style>
+    <style name="Shape.FinsaFix.Medium" parent=""><item name="cornerFamily">rounded</item><item name="cornerSize">12dp</item></style>
+    <style name="Shape.FinsaFix.Large" parent=""><item name="cornerFamily">rounded</item><item name="cornerSize">16dp</item></style>
+
+    <!-- Botões: altura mínima 56 dp; ação principal 72 dp (Widget.FinsaFix.Button.Main) -->
+    <style name="Widget.FinsaFix.Button" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/if_btn_height</item>
+        <item name="android:textAppearance">@style/TextAppearance.FinsaFix.Label</item>
+        <item name="shapeAppearance">@style/Shape.FinsaFix.Small</item>
+    </style>
+    <style name="Widget.FinsaFix.Button.Main"><item name="android:minHeight">@dimen/if_btn_main_height</item><item name="android:textSize">18sp</item></style>
+    <style name="Widget.FinsaFix.Button.Tonal" parent="Widget.Material3.Button.TonalButton"><item name="android:minHeight">@dimen/if_btn_height</item><item name="shapeAppearance">@style/Shape.FinsaFix.Small</item></style>
+    <style name="Widget.FinsaFix.Button.Text" parent="Widget.Material3.Button.TextButton"><item name="android:minHeight">@dimen/if_touch_min</item></style>
+    <style name="Widget.FinsaFix.Card" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/if_surface_lowest</item>
+        <item name="shapeAppearance">@style/Shape.FinsaFix.Medium</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+</resources>

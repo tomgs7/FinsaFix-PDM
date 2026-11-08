@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Nome do posto, equipamentos, turno atual, hora grande e data. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/if_section_gap"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/entrada_posto_fixo"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Secondary"
+        android:textColor="@color/if_on_surface_variant" />
+
+    <TextView
+        android:id="@+id/textoPosto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Display"
+        android:textColor="@color/if_on_surface" />
+
+    <TextView
+        android:id="@+id/textoEquipamentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+        android:textColor="@color/if_on_surface_variant" />
+
+    <!-- Duas etiquetas lado a lado: modo quiosque e turno atual -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/if_item_gap"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/fundo_etiqueta"
+            android:drawableStart="@drawable/ic_cloud_off"
+            android:drawablePadding="6dp"
+            android:drawableTint="@color/if_ok_text"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="@string/entrada_quiosque"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface" />
+
+        <TextView
+            android:id="@+id/textoTurno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fundo_etiqueta"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+            android:textColor="@color/if_on_surface" />
+    </LinearLayout>
+</LinearLayout>

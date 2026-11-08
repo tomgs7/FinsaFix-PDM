@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cabeçalho do detalhe: prioridade, estado, título, local, ações e nota de "em progresso". -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/if_card_padding">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textoPrioridade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body" />
+
+                <TextView
+                    android:id="@+id/textoEstado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body" />
+
+                <TextView
+                    android:id="@+id/textoCodigo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="monospace"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface_variant" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textoTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Headline"
+                android:textColor="@color/if_on_surface" />
+
+            <TextView
+                android:id="@+id/textoLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_on_surface_variant" />
+
+            <!-- Peças substituídas (o técnico da intervenção regista-as) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/if_item_gap"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FinsaFix.TituloSeccao"
+                    android:text="@string/pecas_titulo" />
+
+                <TextView
+                    android:id="@+id/textoPecas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                    android:textColor="@color/if_on_surface" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoRegistarPeca"
+                    style="@style/Widget.FinsaFix.Button.Tonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/pecas_registar"
+                    android:visibility="gone"
+                    app:icon="@drawable/ic_box" />
+            </LinearLayout>
+
+            <!-- Máquina parada há … (se a avaria parou a máquina) e LOTO só de leitura (operador, com a avaria em curso) -->
+            <TextView
+                android:id="@+id/textoParadaHa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:drawableStart="@drawable/ic_stop_x"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/if_error_text"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Label"
+                android:textColor="@color/if_error_text"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textoLotoLeitura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:drawableStart="@drawable/ic_verified"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/if_ok_text"
+                android:gravity="center_vertical"
+                android:text="@string/detalhe_loto_leitura"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_ok_text"
+                android:visibility="gone" />
+
+            <!-- Decisão de engenharia: aprovar o fecho, devolver ao técnico ou reclassificar a prioridade -->
+            <LinearLayout
+                android:id="@+id/blocoEngenharia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/if_item_gap"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/FinsaFix.TituloSeccao"
+                    android:text="@string/decisao_titulo" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoAprovarFecho"
+                    style="@style/Widget.FinsaFix.Button.Tonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/decisao_aprovar_fecho"
+                    app:icon="@drawable/ic_verified" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoDevolver"
+                    style="@style/Widget.FinsaFix.Button.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/decisao_devolver"
+                    app:icon="@drawable/ic_reply" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoOficina"
+                    style="@style/Widget.FinsaFix.Button.Tonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/decisao_oficina"
+                    app:icon="@drawable/ic_wrench" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoAtribuir"
+                    style="@style/Widget.FinsaFix.Button.Tonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/decisao_atribuir"
+                    app:icon="@drawable/ic_groups" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoReclassificar"
+                    style="@style/Widget.FinsaFix.Button.Tonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/decisao_reclassificar"
+                    app:icon="@drawable/ic_tune" />
+            </LinearLayout>
+
+            <!-- Ações de quem reportou (só com a avaria pendente) -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/if_item_gap"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoEditar"
+                    style="@style/Widget.FinsaFix.Button.Tonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detalhe_editar"
+                    app:icon="@drawable/ic_edit" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoEliminar"
+                    style="@style/Widget.FinsaFix.Button.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/detalhe_eliminar"
+                    android:textColor="@color/if_error_text"
+                    app:icon="@drawable/ic_close"
+                    app:iconTint="@color/if_error_text" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textoSoQuemReportou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/if_on_surface_variant"
+                android:gravity="center_vertical"
+                android:text="@string/detalhe_so_quem_reportou"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_on_surface_variant"
+                android:visibility="gone" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Nota para quem vem a seguir (deixada em progresso) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cartaoProgresso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/if_item_gap"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/if_warn_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/if_card_padding">
+
+            <TextView
+                android:id="@+id/textoRetoma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_pause"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/if_on_warn_container"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Title"
+                android:textColor="@color/if_on_warn_container" />
+
+            <TextView
+                android:id="@+id/textoOrdemMotivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_on_warn_container" />
+
+            <TextView
+                android:id="@+id/textoNota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_note"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/if_on_warn_container"
+                android:textAppearance="@style/TextAppearance.FinsaFix.Body"
+                android:textColor="@color/if_on_warn_container" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

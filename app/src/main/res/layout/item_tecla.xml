@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uma tecla do teclado numérico: 72 dp de altura, número grande. -->
+<com.google.android.material.button.MaterialButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.FinsaFix.Button.Tonal"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:minHeight="@dimen/if_keypad_key"
+    android:textAppearance="@style/TextAppearance.FinsaFix.HeadlineSmall"
+    app:iconGravity="textStart"
+    app:iconPadding="0dp" />

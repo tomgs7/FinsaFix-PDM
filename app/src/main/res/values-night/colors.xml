@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FinsaFix · tokens Material 3 (escuro). Gerado a partir do protótipo. -->
+<resources>
+    <color name="if_primary">#D2263C</color>
+    <color name="if_on_primary">#FFFFFF</color>
+    <color name="if_primary_text">#FFB3B1</color>
+    <color name="if_primary_container">#6E121E</color>
+    <color name="if_on_primary_container">#FFDAD7</color>
+    <color name="if_inverse_primary">#B00E28</color>
+    <color name="if_background">#121316</color>
+    <color name="if_surface_lowest">#1E1F23</color>
+    <color name="if_surface_low">#242529</color>
+    <color name="if_surface_container">#292A2E</color>
+    <color name="if_surface_high">#323338</color>
+    <color name="if_surface_highest">#3C3D42</color>
+    <color name="if_on_surface">#E4E2E6</color>
+    <color name="if_on_surface_variant">#C6C6CF</color>
+    <color name="if_outline">#90909A</color>
+    <color name="if_outline_variant">#404048</color>
+    <color name="if_inverse_surface">#E4E2E6</color>
+    <color name="if_inverse_on_surface">#303034</color>
+    <color name="if_error">#C82E2E</color>
+    <color name="if_on_error">#FFFFFF</color>
+    <color name="if_error_text">#FFB4AB</color>
+    <color name="if_error_container">#631616</color>
+    <color name="if_on_error_container">#FFDAD6</color>
+    <color name="if_warn_text">#F5C26B</color>
+    <color name="if_warn_container">#523E00</color>
+    <color name="if_on_warn_container">#FFDF96</color>
+    <color name="if_ok_text">#8FE0A9</color>
+    <color name="if_ok_container">#12522C</color>
+    <color name="if_on_ok_container">#B0F2C4</color>
+    <color name="if_info_text">#ADC6FF</color>
+    <color name="if_secondary_container">#3E3C42</color>
+    <color name="if_on_secondary_container">#E6E1E8</color>
+</resources>

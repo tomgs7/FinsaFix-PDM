@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Tablet na horizontal (como o protótipo): à esquerda a marca, o posto e, em baixo, a hora;
+    à direita "Quem está ao serviço?", centrado na vertical.
+    fillViewport faz cada coluna ocupar a altura do ecrã; só há scroll se o conteúdo não couber.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/margem_entrada"
+    android:paddingVertical="@dimen/if_section_gap"
+    android:baselineAligned="false">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/margem_entrada"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/cabecalho"
+                layout="@layout/parte_entrada_marca" />
+
+            <include
+                android:id="@+id/infoPosto"
+                layout="@layout/parte_entrada_posto" />
+
+            <!-- Espaço flexível: empurra a hora para o fundo da coluna. -->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:minHeight="@dimen/if_section_gap" />
+
+            <include
+                android:id="@+id/hora"
+                layout="@layout/parte_entrada_hora" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <include
+                    android:id="@+id/quemEsta"
+                    layout="@layout/parte_entrada_pessoas" />
+            </com.google.android.material.card.MaterialCardView>
+        </FrameLayout>
+    </ScrollView>
+</LinearLayout>
